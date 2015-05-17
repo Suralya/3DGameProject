@@ -1,0 +1,1 @@
+Hier bitte alle Teile des Interfaces lagern, mit entsprechender Benennung als .png!
