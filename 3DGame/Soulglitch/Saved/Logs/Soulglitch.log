@@ -1,0 +1,1048 @@
+﻿[2015.05.21-14.22.19:340][  0]Log file open, 05/21/15 16:22:19
+[2015.05.21-14.22.19:340][  0]LogInit:Display: Running engine for game: Soulglitch
+[2015.05.21-14.22.19:340][  0]LogInit:Display: RandInit(1094442787) SRandInit(1094442788).
+[2015.05.21-14.22.19:340][  0]LogTaskGraph: Started task graph with 4 named threads and 7 total threads.
+[2015.05.21-14.22.19:340][  0]LogStats: Stats thread started
+[2015.05.21-14.22.19:340][  0]LogInit: Version: 4.8.0-2554075+++depot+UE4-Releases+4.8
+[2015.05.21-14.22.19:340][  0]LogInit: API Version: 2554075
+[2015.05.21-14.22.19:340][  0]LogInit: Compiled (64-bit): May 16 2015 12:18:55
+[2015.05.21-14.22.19:340][  0]LogInit: Compiled with Visual C++: 18.00.21005.01
+[2015.05.21-14.22.19:340][  0]LogInit: Build Configuration: Development
+[2015.05.21-14.22.19:340][  0]LogInit: Branch Name: ++depot+UE4-Releases+4.8
+[2015.05.21-14.22.19:340][  0]LogInit: Command line: 
+[2015.05.21-14.22.19:340][  0]LogInit: Base directory: D:/Programme/unreal/Epic Games/4.8/Engine/Binaries/Win64/
+[2015.05.21-14.22.19:356][  0]LogInit: Using libcurl 7.41.0
+[2015.05.21-14.22.19:356][  0]LogInit:  - built for x86_64-pc-win32
+[2015.05.21-14.22.19:356][  0]LogInit:  - supports SSL with WinSSL
+[2015.05.21-14.22.19:356][  0]LogInit:  - other features:
+[2015.05.21-14.22.19:356][  0]LogInit:      CURL_VERSION_SSL
+[2015.05.21-14.22.19:356][  0]LogInit:      CURL_VERSION_IPV6
+[2015.05.21-14.22.19:356][  0]LogInit:      CURL_VERSION_ASYNCHDNS
+[2015.05.21-14.22.19:356][  0]LogInit:      CURL_VERSION_LARGEFILE
+[2015.05.21-14.22.19:356][  0]LogInit:      CURL_VERSION_IDN
+[2015.05.21-14.22.19:356][  0]LogInit:  CurlRequestOptions (configurable via config and command line):
+[2015.05.21-14.22.19:356][  0]LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+[2015.05.21-14.22.19:356][  0]LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+[2015.05.21-14.22.19:356][  0]LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+[2015.05.21-14.22.19:356][  0]LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+[2015.05.21-14.22.19:371][  0]LogOnline:Warning: No default platform service specified for OnlineSubsystem
+[2015.05.21-14.22.19:389][  0]LogInit: Presizing for 0 objects not considered by GC, pre-allocating 0 bytes.
+[2015.05.21-14.22.19:394][  0]LogInit: Object subsystem initialized
+[2015.05.21-14.22.19:396][  0]LogConsoleResponse:Warning: Skipping Unknown console variable: 'TranslucentSortAxis = (X=0.000000,Y=-1.000000,Z=0.000000)'
+[2015.05.21-14.22.19:396][  0]LogConsoleResponse:Warning:   Found in ini file 'D:/3DGameProject/3DGame/Soulglitch/Saved/Config/Windows/Engine.ini', in section '[/Script/Engine.RendererSettings]'
+[2015.05.21-14.22.19:396][  0]LogConsoleResponse:Warning: Skipping Unknown console variable: 'UIScaleRule = ShortestSide'
+[2015.05.21-14.22.19:396][  0]LogConsoleResponse:Warning:   Found in ini file 'D:/3DGameProject/3DGame/Soulglitch/Saved/Config/Windows/Engine.ini', in section '[/Script/Engine.RendererSettings]'
+[2015.05.21-14.22.19:396][  0]LogConsoleResponse:Warning: Skipping Unknown console variable: 'UIScaleCurve = (EditorCurveData=(Keys=),ExternalCurve=None)'
+[2015.05.21-14.22.19:396][  0]LogConsoleResponse:Warning:   Found in ini file 'D:/3DGameProject/3DGame/Soulglitch/Saved/Config/Windows/Engine.ini', in section '[/Script/Engine.RendererSettings]'
+[2015.05.21-14.22.19:396][  0]LogInit: Selected Device Profile: [Windows]
+[2015.05.21-14.22.19:396][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2015.05.21-14.22.19:404][  0]LogInit: Computer: GD0414-10
+[2015.05.21-14.22.19:404][  0]LogInit: User: tiplavius
+[2015.05.21-14.22.19:404][  0]LogInit: CPU Page size=4096, Cores=4
+[2015.05.21-14.22.19:404][  0]LogInit: High frequency timer resolution =3.117812 MHz
+[2015.05.21-14.22.19:404][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx)
+[2015.05.21-14.22.19:404][  0]LogMemory: Platform Memory Stats for Windows
+[2015.05.21-14.22.19:404][  0]LogMemory: Process Physical Memory: 49.37 MB used, 49.37 MB peak
+[2015.05.21-14.22.19:404][  0]LogMemory: Process Virtual Memory: 21.56 MB used, 21.56 MB peak
+[2015.05.21-14.22.19:404][  0]LogMemory: Physical Memory: 5547.61 MB used, 32623.18 MB total
+[2015.05.21-14.22.19:404][  0]LogMemory: Virtual Memory: 281.34 MB used, 8388608.00 MB total
+[2015.05.21-14.22.19:449][  0]LogTextLocalizationManager: The requested culture ('de_DE') has no localization data; falling back to 'en' for localization and internationalization data.
+[2015.05.21-14.22.19:658][  0]LogTextLocalizationManager:Warning: Loaded localization resources contain conflicting entries for (Namespace:ContentBrowser, Key:ImportAssetToolTip):
+Localization Resource: (D:/Programme/unreal/Epic Games/4.8/Engine/Content/Localization/Editor/en/Editor.locres) Source String Hash: (-630476809) Localized String: (Import to {0}...)
+Localization Resource: (D:/Programme/unreal/Epic Games/4.8/Engine/Content/Localization/Editor/en/Editor.locres) Source String Hash: (1271782899) Localized String: (Imports an asset from file to this folder.)
+[2015.05.21-14.22.19:991][  0]LogD3D11RHI: Found D3D11 adapter 0: NVIDIA GeForce GTX 970 (Feature Level 11_0)
+[2015.05.21-14.22.19:991][  0]LogD3D11RHI: Adapter has 4009MB of dedicated video memory, 0MB of dedicated system memory, and 16055MB of shared system memory, 1 output[s]
+[2015.05.21-14.22.19:999][  0]LogD3D11RHI: Found D3D11 adapter 1: Intel(R) HD Graphics P4600/P4700 (Feature Level 11_0)
+[2015.05.21-14.22.19:999][  0]LogD3D11RHI: Adapter has 64MB of dedicated video memory, 0MB of dedicated system memory, and 1632MB of shared system memory, 1 output[s]
+[2015.05.21-14.22.19:999][  0]LogD3D11RHI: Chosen D3D11 Adapter Id = 0
+[2015.05.21-14.22.20:005][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2015.05.21-14.22.20:015][  0]LogD3D11RHI: Async texture creation enabled
+[2015.05.21-14.22.20:029][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2015.05.21-14.22.20:914][  0]LogTemp:Display: Loaded TP DesktopTargetPlatform
+[2015.05.21-14.22.20:934][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2015.05.21-14.22.20:953][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2015.05.21-14.22.20:972][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2015.05.21-14.22.20:993][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2015.05.21-14.22.21:012][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2015.05.21-14.22.21:029][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2015.05.21-14.22.21:047][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2015.05.21-14.22.21:064][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2015.05.21-14.22.21:083][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2015.05.21-14.22.21:100][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2015.05.21-14.22.21:118][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2015.05.21-14.22.21:177][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2015.05.21-14.22.21:193][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2015.05.21-14.22.21:210][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2015.05.21-14.22.21:228][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2015.05.21-14.22.21:228][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2015.05.21-14.22.21:523][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2015.05.21-14.22.21:574][  0]LogDerivedDataCache: Loaded boot cache 0.05s 71MB C:/Users/tiplavius/AppData/Local/UnrealEngine/4.8/DerivedDataCache/Boot.ddc.
+[2015.05.21-14.22.21:574][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/tiplavius/AppData/Local/UnrealEngine/4.8/DerivedDataCache/Boot.ddc
+[2015.05.21-14.22.21:574][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../../3DGameProject/3DGame/Soulglitch/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2015.05.21-14.22.21:574][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2015.05.21-14.22.21:574][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../../3DGameProject/3DGame/Soulglitch/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2015.05.21-14.22.21:574][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2015.05.21-14.22.21:695][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2015.05.21-14.22.21:706][  0]LogDerivedDataCache: Using Local data cache path C:/Users/tiplavius/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2015.05.21-14.22.21:883][  0]LogInit: Selected Device Profile: [Windows]
+[2015.05.21-14.22.21:890][  0]ImportText (ComponentSweepMultiTests): Missing closing parenthesis: (RootShapeAsset="/Engine/BasicShapes/Cube.Cube",ShapeType="TriggerCapsule",HitResult=(Time=0.50,Location=(X=-100.000015,Y=0.0,Z=100.000015),ImpactPoint=(X=-50.0,Y=0.0,Z=50.0),Normal=(X=-1.0,Y=-0.0,Z=0.0),ImpactNormal=(X=0.0,Y=0.0,Z=1.0),TraceStart=(X=-200.0,Y=0.0,Z=200.0),TraceEnd=(X=0.0,Y=0.0,Z=0.0))
+[2015.05.21-14.22.21:891][  0]ImportText (LineTraceSingleByChannelTests): Missing closing parenthesis: (RootShapeAsset="/Engine/BasicShapes/Cube.Cube",HitResult=(Time=0.50,Location=(X=-100.000015,Y=0.0,Z=100.000015),ImpactPoint=(X=-50.0,Y=0.0,Z=50.0),Normal=(X=-1.0,Y=-0.0,Z=0.0),ImpactNormal=(X=0.0,Y=0.0,Z=1.0),TraceStart=(X=-200.0,Y=0.0,Z=200.0),TraceEnd=(X=0.0,Y=0.0,Z=0.0))
+[2015.05.21-14.22.21:925][  0]LogMeshUtilities: No automatic mesh reduction module available
+[2015.05.21-14.22.21:925][  0]LogMeshUtilities: No automatic mesh merging module available
+[2015.05.21-14.22.22:360][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2015.05.21-14.22.23:372][  0]UdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2015.05.21-14.22.23:639][  0]SourceControl: Info Source control is disabled
+[2015.05.21-14.22.23:665][  0]SourceControl: Info Source control is disabled
+[2015.05.21-14.22.23:679][  0]SourceControl: Info Source control is disabled
+[2015.05.21-14.22.23:692][  0]SourceControl: Info Source control is disabled
+[2015.05.21-14.22.24:016][  0]LogObj: 26119 objects as part of root set at end of initial load.
+[2015.05.21-14.22.24:016][  0]LogUObjectAllocator: 5327488 out of 0 bytes used by permanent object pool.
+[2015.05.21-14.22.24:089][  0]LogEngine: Initializing Engine...
+[2015.05.21-14.22.24:094][  0]LogHMD: Can't find Oculus library dev build: is proper Runtime installed? Version: 0.6.0.0
+[2015.05.21-14.22.24:095][  0]LogHMD:Warning: SteamVR failed to initialize.  Error: 109
+[2015.05.21-14.22.24:238][  0]LogAIModule: Creating AISystem for world NewWorld
+[2015.05.21-14.22.24:244][  0]LogInit: XAudio2 using 'Realtek Digital Output (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2015.05.21-14.22.24:267][  0]LogInit: FAudioDevice initialized.
+[2015.05.21-14.22.24:312][  0]LogDerivedDataCache: Saved boot cache 0.05s 71MB C:/Users/tiplavius/AppData/Local/UnrealEngine/4.8/DerivedDataCache/Boot.ddc.
+[2015.05.21-14.22.24:316][  0]LogInit: Texture streaming: Disabled
+[2015.05.21-14.22.24:392][  0]LogAnalytics: Creating configured Analytics provider AnalyticsET
+[2015.05.21-14.22.24:392][  0]LogAnalytics: [UEEditor.Rocket.Release] APIServer = http://et2.epicgames.com/ET2/. AppVersion = 4.8.0-2554075+++depot+UE4-Releases+4.8
+[2015.05.21-14.22.24:392][  0]LogAnalytics: [UEEditor.Rocket.Release] SetUserId 0228b62e47ae0d3a0266018046db9772|af2bf208dcdd4c00aeb2c32150495343|d70cd801-e1b0-4bd8-9bc0-77e6b51cbe45
+[2015.05.21-14.22.24:392][  0]LogAnalytics: [UEEditor.Rocket.Release] AnalyticsET::StartSession
+[2015.05.21-14.22.24:447][  0]LogInit: Transaction tracking system initialized
+[2015.05.21-14.22.24:660][  0]BlueprintLog: New page: Editor Load
+[2015.05.21-14.22.24:701][  0]LogAssetRegistry: FAssetRegistry took 0.0095 seconds to start up
+[2015.05.21-14.22.24:702][  0]LogDirectoryWatcher:Warning: Failed to begin reading directory changes for ../../../Engine/Plugins/Experimental/CharacterAI/Content/. Error: 0
+[2015.05.21-14.22.25:848][  0]LogConsoleManager:Warning: Console variable 'r.VSync' wasn't set ('GameSetting' has a lower priority than 'SystemSettingsIni')
+[2015.05.21-14.22.25:849][  0]LogConsoleResponse:Display: 
+[2015.05.21-14.22.25:962][  0]LogCook:Display: Done creating registry. It took  0.00s.
+[2015.05.21-14.22.26:285][  0]SourceControl: Info Source control is disabled
+[2015.05.21-14.22.26:285][  0]Cmd: MAP LOAD FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/TopDownBP/Maps/TopDownExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2015.05.21-14.22.26:286][  0]LightingResults: New page: Lighting Build
+[2015.05.21-14.22.26:301][  0]MapCheck: New page: Map Check
+[2015.05.21-14.22.26:301][  0]LightingResults: New page: Lighting Build
+[2015.05.21-14.22.26:308][  0]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000014D76DE0
+[2015.05.21-14.22.26:700][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.26:700][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.26:700][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.26:700][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.26:734][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.26:734][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.26:735][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.26:735][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.21-14.22.27:046][  0]LogAIModule: Creating AISystem for world TopDownExampleMap
+[2015.05.21-14.22.27:053][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2015.05.21-14.22.27:054][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2015.05.21-14.22.27:124][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 70.021ms to complete.
+[2015.05.21-14.22.27:124][  0]LogFileHelpers: Loading map 'TopDownExampleMap' took 0.839
+[2015.05.21-14.22.27:296][  0]LogCollectionManager: Loaded 0 collections in 0.002124 seconds
+[2015.05.21-14.22.27:302][  0]LogContentBrowser: Native class hierarchy populated in 0.0058 seconds. Added 1792 classes and 301 folders.
+[2015.05.21-14.22.27:356][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2015.05.21-14.22.27:388][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2015.05.21-14.22.27:408][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0004 seconds. Added 1 classes and 2 folders.
+[2015.05.21-14.22.27:444][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2015.05.21-14.22.27:503][  0]LogLoad: Full Startup: 9.38 seconds (BP compile: 0.25 seconds)
+[2015.05.21-14.22.27:572][  0]LogContentStreaming: Texture pool size is 0.000000MB
+[2015.05.21-14.22.27:594][  0]LogContentStreaming: Texture pool size now 400 MB
+[2015.05.21-14.22.27:700][  0]LogRenderer: Reallocating scene render targets to support 1208x576 (Frame:2).
+[2015.05.21-14.22.27:954][  5]LogAssetRegistry: Asset discovery search completed in 3.2624 seconds
+[2015.05.21-14.26.40:200][507]Cmd: MAP LOAD FILE="../../../Engine/Content/Maps/Templates/Template_Default.umap" TEMPLATE=1 SHOWPROGRESS=1 FEATURELEVEL=3
+[2015.05.21-14.26.40:280][507]LightingResults: New page: Lighting Build
+[2015.05.21-14.26.40:315][507]LoadErrors: New page: Loading map: Template_Default.umap
+[2015.05.21-14.26.40:316][507]MapCheck: New page: Map Check
+[2015.05.21-14.26.40:316][507]LightingResults: New page: Lighting Build
+[2015.05.21-14.26.40:331][507]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000000E8EEA20
+[2015.05.21-14.26.40:393][507]LogAIModule: Creating AISystem for world Untitled_1
+[2015.05.21-14.26.40:413][507]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2015.05.21-14.26.40:428][507]Cmd: MAP CHECKDEP NOCLEARLOG
+[2015.05.21-14.26.40:506][507]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 77.975ms to complete.
+[2015.05.21-14.26.40:507][507]LogFileHelpers: Loading map 'Template_Default' took 0.307
+[2015.05.21-14.26.41:999][684]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.21-14.26.47:502][320]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.21-14.27.32:197][618]LogPrimitiveComponent: Zero scaling not supported (/Temp/Untitled_1.Untitled_1:PersistentLevel.Floor.StaticMeshComponent0)
+[2015.05.21-14.27.32:198][618]LogPrimitiveComponent: Zero scaling not supported (/Temp/Untitled_1.Untitled_1:PersistentLevel.Floor.StaticMeshComponent0)
+[2015.05.21-14.27.34:999][950]Cmd: TRANSACTION UNDO
+[2015.05.21-14.27.34:999][950]LogEditorTransaction: Undo Set actor scale
+[2015.05.21-14.27.35:167][966]Cmd: TRANSACTION UNDO
+[2015.05.21-14.27.35:167][966]LogEditorTransaction: Undo Set actor scale
+[2015.05.21-14.27.35:544][991]Cmd: TRANSACTION UNDO
+[2015.05.21-14.27.35:544][991]LogEditorTransaction: Undo Set actor scale
+[2015.05.21-14.27.43:017][876]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.21-14.28.13:191][432]LogActorFactory: Actor Factory created Cube
+[2015.05.21-14.28.13:764][499]LogActorFactory: Actor Factory created Cube
+[2015.05.21-14.28.49:612][714]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.21-14.28.50:658][832]Cmd: DELETE
+[2015.05.21-14.28.50:658][832]Cmd: ACTOR DELETE
+[2015.05.21-14.28.50:659][832]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-14.28.50:677][832]LogEditorActor: Deleted 1 Actors (0.019 secs)
+[2015.05.21-14.28.51:578][940]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.31.05:765][813]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/Untitled_1" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2015.05.21-14.31.05:835][813]LogSavePackage: Save=20.183064ms
+[2015.05.21-14.31.05:835][813]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1AE29C6E045779C1605BD04B167C5F58F.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1.umap'
+[2015.05.21-14.31.28:537][304]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/ground.prot.fbx)
+[2015.05.21-14.31.28:554][304]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.31.28:554][304]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.31.28:554][304]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.31.28:554][304]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.31.28:554][304]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.31.28:554][304]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.31.36:764][304]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/ground.prot.fbx
+[2015.05.21-14.31.36:770][304]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.31.36:772][304]LogLinker:Warning: Can't find file '/Temp/lambert1'
+[2015.05.21-14.31.36:772][304]LogLinker:Warning: Can't find file '/Temp/lambert1'
+[2015.05.21-14.31.36:773][304]LogLinker:Warning: Can't find file '/Temp/lambert1'
+[2015.05.21-14.31.36:773][304]LogUObjectGlobals:Warning: Failed to find object 'MaterialInterface /Temp/lambert1.lambert1'
+[2015.05.21-14.31.36:777][304]LogMaterial: Missing cached shader map for material lambert1, compiling. 
+[2015.05.21-14.31.36:805][304]LogFbx:Warning: Triangulating static mesh pPlane1
+[2015.05.21-14.31.36:828][304]LogFbx: == Initial material list:
+[2015.05.21-14.31.36:828][304]LogFbx: 0: lambert1
+[2015.05.21-14.31.36:828][304]LogFbx: == After sorting:
+[2015.05.21-14.31.36:828][304]LogFbx: 0: lambert1
+[2015.05.21-14.31.36:828][304]LogFbx: == Mapping table:
+[2015.05.21-14.31.36:828][304]LogFbx:   sort 0 -> 0
+[2015.05.21-14.31.36:828][304]LogStaticMesh: Building static mesh ground_prot...
+[2015.05.21-14.31.36:833][304]LogStaticMesh: Built static mesh [0.005181.2s] /Temp/ground_prot.ground_prot
+[2015.05.21-14.31.36:850][304]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.31.43:670][ 71]LogActorFactory: Actor Factory created ground_prot
+[2015.05.21-14.31.44:942][223]LogActorFactory: Actor Factory created ground_prot
+[2015.05.21-14.32.14:907][848]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/Untitled_1" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2015.05.21-14.32.14:934][848]LogSavePackage: Save=10.514104ms
+[2015.05.21-14.32.14:934][848]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1C1C4F1AC424E74C03A473599E3687AC1.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1.umap'
+[2015.05.21-14.32.46:528][879]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/border_long.fbx)
+[2015.05.21-14.32.46:543][879]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.32.46:543][879]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.32.46:543][879]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.32.46:543][879]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.32.46:543][879]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.32.46:543][879]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.32.55:247][879]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/border_long.fbx
+[2015.05.21-14.32.55:252][879]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.32.55:254][879]LogFbx:Warning: Triangulating static mesh pCube3
+[2015.05.21-14.32.55:256][879]LogFbx: == Initial material list:
+[2015.05.21-14.32.55:256][879]LogFbx: 0: lambert1
+[2015.05.21-14.32.55:256][879]LogFbx: == After sorting:
+[2015.05.21-14.32.55:256][879]LogFbx: 0: lambert1
+[2015.05.21-14.32.55:256][879]LogFbx: == Mapping table:
+[2015.05.21-14.32.55:256][879]LogFbx:   sort 0 -> 0
+[2015.05.21-14.32.55:256][879]LogStaticMesh: Building static mesh border_long...
+[2015.05.21-14.32.55:257][879]LogStaticMesh: Built static mesh [0.001370.2s] /Game/Prototypen/border_long.border_long
+[2015.05.21-14.32.55:263][879]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.33.05:664][552]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/box_prot.fbx)
+[2015.05.21-14.33.05:667][552]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.33.05:667][552]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.33.05:667][552]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.33.05:667][552]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.33.05:667][552]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.33.05:667][552]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.33.08:292][552]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/box_prot.fbx
+[2015.05.21-14.33.08:297][552]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.33.08:300][552]LogFbx:Warning: Triangulating static mesh pCube2
+[2015.05.21-14.33.08:301][552]LogFbx: == Initial material list:
+[2015.05.21-14.33.08:301][552]LogFbx: 0: lambert1
+[2015.05.21-14.33.08:301][552]LogFbx: == After sorting:
+[2015.05.21-14.33.08:301][552]LogFbx: 0: lambert1
+[2015.05.21-14.33.08:301][552]LogFbx: == Mapping table:
+[2015.05.21-14.33.08:301][552]LogFbx:   sort 0 -> 0
+[2015.05.21-14.33.08:303][552]LogStaticMesh: Building static mesh box_prot...
+[2015.05.21-14.33.08:304][552]LogStaticMesh: Built static mesh [0.002702.2s] /Game/Prototypen/box_prot.box_prot
+[2015.05.21-14.33.08:308][552]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.33.19:766][206]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/chair_prot.fbx)
+[2015.05.21-14.33.19:783][206]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.33.19:783][206]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.33.19:783][206]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.33.19:783][206]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.33.19:783][206]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.33.19:783][206]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.33.20:791][206]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/chair_prot.fbx
+[2015.05.21-14.33.20:797][206]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.33.20:799][206]LogFbx:Warning: Triangulating static mesh pCube10
+[2015.05.21-14.33.20:807][206]LogFbx: == Initial material list:
+[2015.05.21-14.33.20:807][206]LogFbx: 0: lambert1
+[2015.05.21-14.33.20:807][206]LogFbx: == After sorting:
+[2015.05.21-14.33.20:807][206]LogFbx: 0: lambert1
+[2015.05.21-14.33.20:807][206]LogFbx: == Mapping table:
+[2015.05.21-14.33.20:807][206]LogFbx:   sort 0 -> 0
+[2015.05.21-14.33.20:809][206]LogStaticMesh: Building static mesh chair_prot...
+[2015.05.21-14.33.20:811][206]LogStaticMesh: Built static mesh [0.003903.2s] /Game/Prototypen/chair_prot.chair_prot
+[2015.05.21-14.33.20:812][206]LogStaticMesh:Warning: chair_prot has degenerate tangent bases which will result in incorrect shading. 
+[2015.05.21-14.33.25:183][206]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.33.29:434][394]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/ground.prot.fbx)
+[2015.05.21-14.33.29:437][394]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.33.29:437][394]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.33.29:437][394]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.33.29:438][394]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.33.29:438][394]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.33.29:438][394]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.33.30:330][394]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/ground.prot.fbx
+[2015.05.21-14.33.30:336][394]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.33.30:338][394]LogFbx:Warning: Triangulating static mesh pPlane1
+[2015.05.21-14.33.30:360][394]LogFbx: == Initial material list:
+[2015.05.21-14.33.30:360][394]LogFbx: 0: lambert1
+[2015.05.21-14.33.30:360][394]LogFbx: == After sorting:
+[2015.05.21-14.33.30:360][394]LogFbx: 0: lambert1
+[2015.05.21-14.33.30:360][394]LogFbx: == Mapping table:
+[2015.05.21-14.33.30:360][394]LogFbx:   sort 0 -> 0
+[2015.05.21-14.33.30:361][394]LogStaticMesh: Building static mesh ground_prot...
+[2015.05.21-14.33.30:365][394]LogStaticMesh: Built static mesh [0.004775.2s] /Game/Prototypen/ground_prot.ground_prot
+[2015.05.21-14.33.30:372][394]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.33.34:584][533]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/lamp_prot.fbx)
+[2015.05.21-14.33.34:588][533]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.33.34:588][533]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.33.34:588][533]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.33.34:588][533]LogFbx: ItemName: Geometry, ItemCount : 2
+[2015.05.21-14.33.34:588][533]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.33.34:588][533]LogFbx: ItemName: Model, ItemCount : 2
+[2015.05.21-14.33.36:042][533]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/lamp_prot.fbx
+[2015.05.21-14.33.36:047][533]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.33.36:050][533]LogFbx:Warning: Triangulating static mesh pCube5
+[2015.05.21-14.33.36:051][533]LogFbx:Warning: Triangulating static mesh pCube6
+[2015.05.21-14.33.36:052][533]LogFbx: == Initial material list:
+[2015.05.21-14.33.36:052][533]LogFbx: 0: lambert1
+[2015.05.21-14.33.36:052][533]LogFbx: 1: lambert1
+[2015.05.21-14.33.36:052][533]LogFbx:   remap 1 -> 0
+[2015.05.21-14.33.36:053][533]LogFbx: == After sorting:
+[2015.05.21-14.33.36:053][533]LogFbx: 0: lambert1
+[2015.05.21-14.33.36:053][533]LogFbx: == Mapping table:
+[2015.05.21-14.33.36:053][533]LogFbx:   sort 0 -> 0
+[2015.05.21-14.33.36:053][533]LogFbx:   sort 1 -> 0
+[2015.05.21-14.33.36:055][533]LogStaticMesh: Building static mesh lamp_prot...
+[2015.05.21-14.33.36:057][533]LogStaticMesh: Built static mesh [0.003995.2s] /Game/Prototypen/lamp_prot.lamp_prot
+[2015.05.21-14.33.36:062][533]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.33.40:435][690]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/lolaster_prot.fbx)
+[2015.05.21-14.33.40:439][690]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.33.40:439][690]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.33.40:439][690]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.33.40:439][690]LogFbx: ItemName: Geometry, ItemCount : 7
+[2015.05.21-14.33.40:439][690]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.33.40:439][690]LogFbx: ItemName: Model, ItemCount : 7
+[2015.05.21-14.33.41:490][690]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/lolaster_prot.fbx
+[2015.05.21-14.33.41:497][690]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.33.41:500][690]LogFbx:Warning: Triangulating static mesh pCube7
+[2015.05.21-14.33.41:501][690]LogFbx:Warning: Triangulating static mesh pCube8
+[2015.05.21-14.33.41:503][690]LogFbx:Warning: Triangulating static mesh pCube9
+[2015.05.21-14.33.41:504][690]LogFbx:Warning: Triangulating static mesh pCylinder2
+[2015.05.21-14.33.41:509][690]LogFbx:Warning: Triangulating static mesh pCylinder3
+[2015.05.21-14.33.41:513][690]LogFbx:Warning: Triangulating static mesh pCylinder4
+[2015.05.21-14.33.41:518][690]LogFbx:Warning: Triangulating static mesh pCylinder5
+[2015.05.21-14.33.41:522][690]LogFbx: == Initial material list:
+[2015.05.21-14.33.41:522][690]LogFbx: 0: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx: 1: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx: 2: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx: 3: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx: 4: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx: 5: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx: 6: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx:   remap 1 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   remap 2 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   remap 3 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   remap 4 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   remap 5 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   remap 6 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx: == After sorting:
+[2015.05.21-14.33.41:522][690]LogFbx: 0: lambert1
+[2015.05.21-14.33.41:522][690]LogFbx: == Mapping table:
+[2015.05.21-14.33.41:522][690]LogFbx:   sort 0 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   sort 1 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   sort 2 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   sort 3 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   sort 4 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   sort 5 -> 0
+[2015.05.21-14.33.41:522][690]LogFbx:   sort 6 -> 0
+[2015.05.21-14.33.41:523][690]LogStaticMesh: Building static mesh lolaster_prot...
+[2015.05.21-14.33.41:531][690]LogStaticMesh: Built static mesh [0.007858.2s] /Game/Prototypen/lolaster_prot.lolaster_prot
+[2015.05.21-14.33.41:537][690]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.33.42:555][802]LogActorFactory: Actor Factory created lolaster_prot
+[2015.05.21-14.33.44:510][ 33]LogActorFactory: Actor Factory created lolaster_prot
+[2015.05.21-14.34.10:475][810]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/pillar_prot.fbx)
+[2015.05.21-14.34.10:480][810]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.34.10:480][810]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.34.10:480][810]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.34.10:480][810]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.34.10:480][810]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.34.10:480][810]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.34.12:627][810]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/pillar_prot.fbx
+[2015.05.21-14.34.12:632][810]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.34.12:634][810]LogFbx:Warning: Triangulating static mesh pCube4
+[2015.05.21-14.34.12:636][810]LogFbx: == Initial material list:
+[2015.05.21-14.34.12:636][810]LogFbx: 0: lambert1
+[2015.05.21-14.34.12:636][810]LogFbx: == After sorting:
+[2015.05.21-14.34.12:636][810]LogFbx: 0: lambert1
+[2015.05.21-14.34.12:636][810]LogFbx: == Mapping table:
+[2015.05.21-14.34.12:636][810]LogFbx:   sort 0 -> 0
+[2015.05.21-14.34.12:637][810]LogStaticMesh: Building static mesh pillar_prot...
+[2015.05.21-14.34.12:638][810]LogStaticMesh: Built static mesh [0.001140.2s] /Game/Prototypen/pillar_prot.pillar_prot
+[2015.05.21-14.34.12:642][810]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.34.16:509][920]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/trash_prot.fbx)
+[2015.05.21-14.34.16:513][920]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.34.16:513][920]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.34.16:513][920]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.34.16:513][920]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.34.16:513][920]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.34.16:513][920]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.34.17:518][920]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/trash_prot.fbx
+[2015.05.21-14.34.17:524][920]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.34.17:527][920]LogFbx:Warning: Triangulating static mesh pCylinder1
+[2015.05.21-14.34.17:537][920]LogFbx: == Initial material list:
+[2015.05.21-14.34.17:537][920]LogFbx: 0: lambert1
+[2015.05.21-14.34.17:537][920]LogFbx: == After sorting:
+[2015.05.21-14.34.17:537][920]LogFbx: 0: lambert1
+[2015.05.21-14.34.17:537][920]LogFbx: == Mapping table:
+[2015.05.21-14.34.17:537][920]LogFbx:   sort 0 -> 0
+[2015.05.21-14.34.17:538][920]LogStaticMesh: Building static mesh trash_prot...
+[2015.05.21-14.34.17:542][920]LogStaticMesh: Built static mesh [0.003774.2s] /Game/Prototypen/trash_prot.trash_prot
+[2015.05.21-14.34.17:544][920]LogStaticMesh:Warning: trash_prot has degenerate tangent bases which will result in incorrect shading. 
+[2015.05.21-14.34.19:196][920]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.34.22:440][ 50]LogFactory: FactoryCreateBinary: StaticMesh with FbxFactory (0 0 ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/wall_prot.fbx)
+[2015.05.21-14.34.22:444][ 50]LogFbx: ItemName: GlobalSettings, ItemCount : 1
+[2015.05.21-14.34.22:444][ 50]LogFbx: ItemName: AnimationStack, ItemCount : 1
+[2015.05.21-14.34.22:444][ 50]LogFbx: ItemName: AnimationLayer, ItemCount : 1
+[2015.05.21-14.34.22:444][ 50]LogFbx: ItemName: Geometry, ItemCount : 1
+[2015.05.21-14.34.22:444][ 50]LogFbx: ItemName: Material, ItemCount : 1
+[2015.05.21-14.34.22:444][ 50]LogFbx: ItemName: Model, ItemCount : 1
+[2015.05.21-14.34.23:415][ 50]LogFbx: Loading FBX Scene from ../../../../../../../3DGameProject/3DGame/GameAssets/Prototyp/Dummy/wall_prot.fbx
+[2015.05.21-14.34.23:420][ 50]LogFbx: FBX Scene Loaded Succesfully
+[2015.05.21-14.34.23:423][ 50]LogFbx:Warning: Triangulating static mesh pCube1
+[2015.05.21-14.34.23:425][ 50]LogFbx: == Initial material list:
+[2015.05.21-14.34.23:425][ 50]LogFbx: 0: lambert1
+[2015.05.21-14.34.23:425][ 50]LogFbx: == After sorting:
+[2015.05.21-14.34.23:425][ 50]LogFbx: 0: lambert1
+[2015.05.21-14.34.23:425][ 50]LogFbx: == Mapping table:
+[2015.05.21-14.34.23:425][ 50]LogFbx:   sort 0 -> 0
+[2015.05.21-14.34.23:427][ 50]LogStaticMesh: Building static mesh wall_prot...
+[2015.05.21-14.34.23:428][ 50]LogStaticMesh: Built static mesh [0.002539.2s] /Game/Prototypen/wall_prot.wall_prot
+[2015.05.21-14.34.23:432][ 50]FBXImport:Warning: Warning Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2015.05.21-14.34.29:700][791]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.34.30:515][878]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.34.31:187][954]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-14.34.36:691][602]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.34.38:076][764]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-14.36.08:007][528]LogActorFactory: Actor Factory created wall_prot
+[2015.05.21-14.36.08:370][571]LogActorFactory: Actor Factory created wall_prot
+[2015.05.21-14.36.33:040][498]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-14.36.35:161][747]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.36.35:931][837]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot)
+[2015.05.21-14.36.58:884][562]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.37.27:703][956]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.37.46:984][256]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot)
+[2015.05.21-14.37.47:776][347]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.38.09:085][838]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.38.17:374][768]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.38.18:179][863]Cmd: DELETE
+[2015.05.21-14.38.18:179][863]Cmd: ACTOR DELETE
+[2015.05.21-14.38.18:179][863]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-14.38.18:194][863]LogEditorActor: Deleted 1 Actors (0.016 secs)
+[2015.05.21-14.38.21:306][228]Cmd: TRANSACTION UNDO
+[2015.05.21-14.38.21:306][228]LogEditorTransaction: Undo Delete Actors
+[2015.05.21-14.38.29:994][187]LogActorFactory: Actor Factory created ground_prot
+[2015.05.21-14.38.32:287][453]LogActorFactory: Actor Factory created ground_prot
+[2015.05.21-14.38.40:269][394]Cmd: TRANSACTION UNDO
+[2015.05.21-14.38.40:269][394]LogEditorTransaction: Undo Snap Actors To Floor
+[2015.05.21-14.38.43:297][726]Cmd: DELETE
+[2015.05.21-14.38.43:297][726]Cmd: ACTOR DELETE
+[2015.05.21-14.38.43:297][726]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-14.38.43:311][726]LogEditorActor: Deleted 1 Actors (0.015 secs)
+[2015.05.21-14.38.45:118][943]Cmd: TRANSACTION UNDO
+[2015.05.21-14.38.45:118][943]LogEditorTransaction: Undo Delete Actors
+[2015.05.21-14.39.16:526][603]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.39.18:704][855]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.39.34:138][656]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-14.39.35:622][829]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.39.48:721][383]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot)
+[2015.05.21-14.42.03:816][ 20]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2015.05.21-14.42.04:391][ 76]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.42.31:095][237]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-14.42.31:472][278]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-14.42.31:790][313]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-14.42.32:102][349]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.42.32:537][398]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-14.42.32:988][449]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-14.42.33:365][491]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot5)
+[2015.05.21-14.42.33:876][549]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-14.42.34:171][581]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-14.42.34:547][623]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.42.46:291][ 10]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot5)
+[2015.05.21-14.42.46:644][ 49]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-14.42.47:136][105]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-14.42.47:508][146]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.42.47:884][188]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot6)
+[2015.05.21-14.42.48:287][233]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot7)
+[2015.05.21-14.42.50:047][440]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot5)
+[2015.05.21-14.43.04:912][212]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot7)
+[2015.05.21-14.43.05:455][274]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot6)
+[2015.05.21-14.43.06:248][366]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.43.06:682][415]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-14.43.07:111][463]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-14.43.07:581][516]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot5)
+[2015.05.21-14.43.10:726][880]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-14.43.13:856][246]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot5)
+[2015.05.21-14.43.14:358][303]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-14.43.14:983][375]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-14.43.15:409][423]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-14.43.15:830][470]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot6)
+[2015.05.21-14.43.16:330][527]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot7)
+[2015.05.21-14.44.05:947][327]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot14)
+[2015.05.21-14.44.06:568][398]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.44.08:685][648]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot22)
+[2015.05.21-14.44.20:126][897]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot24)
+[2015.05.21-14.44.22:508][145]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot71)
+[2015.05.21-14.44.29:699][972]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-14.44.29:713][972]LogEditorActor: Deleted 1 Actors (0.014 secs)
+[2015.05.21-14.45.28:607][362]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-14.45.29:877][506]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot47)
+[2015.05.21-14.45.30:598][576]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2015.05.21-14.45.31:102][624]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot71)
+[2015.05.21-14.45.55:804][856]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot33)
+[2015.05.21-14.46.50:172][663]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-14.47.15:885][475]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot)
+[2015.05.21-14.47.45:620][841]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot)
+[2015.05.21-14.47.46:481][937]Cmd: DELETE
+[2015.05.21-14.47.46:481][937]Cmd: ACTOR DELETE
+[2015.05.21-14.47.46:482][937]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-14.47.46:496][937]LogEditorActor: Deleted 1 Actors (0.014 secs)
+[2015.05.21-14.47.47:499][ 57]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot2)
+[2015.05.21-14.47.58:271][262]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot55)
+[2015.05.21-14.48.28:532][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/Untitled_1" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/Untitled_1_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2015.05.21-14.48.28:565][705]LogSavePackage: Save=29.313505ms
+[2015.05.21-14.48.28:565][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1_Auto1E1E5BBFC4E6D01D7A593898956C46484.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/Untitled_1_Auto1.umap'
+[2015.05.21-14.48.28:567][705]LogFileHelpers: Editor autosave (incl. sublevels) for '/Temp/Untitled_1' took 0.052
+[2015.05.21-14.48.28:567][705]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.052
+[2015.05.21-14.48.28:570][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Temp/ground_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:581][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Temp/ground_prot.ground_prot]
+[2015.05.21-14.48.28:581][705]OBJ SavePackage: Finished generating thumbnails for package [/Temp/ground_prot]
+[2015.05.21-14.48.28:581][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/ground_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/ground_prot_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2015.05.21-14.48.28:591][705]LogSavePackage: Save=8.985147ms
+[2015.05.21-14.48.28:591][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/ground_prot_Auto1284546254327F9CEA684598B8F653690.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/ground_prot_Auto1.uasset'
+[2015.05.21-14.48.28:594][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Temp/lambert1] ([1] browsable assets)...
+[2015.05.21-14.48.28:604][705]OBJ SavePackage:     Rendered thumbnail for [Material /Temp/lambert1.lambert1]
+[2015.05.21-14.48.28:604][705]OBJ SavePackage: Finished generating thumbnails for package [/Temp/lambert1]
+[2015.05.21-14.48.28:604][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/lambert1" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/lambert1_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2015.05.21-14.48.28:615][705]LogSavePackage: Save=9.460481ms
+[2015.05.21-14.48.28:615][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lambert1_Auto13167EAE044D344062882BE98180C0CAA.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/lambert1_Auto1.uasset'
+[2015.05.21-14.48.28:619][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/border_long] ([1] browsable assets)...
+[2015.05.21-14.48.28:628][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/border_long.border_long]
+[2015.05.21-14.48.28:628][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/border_long]
+[2015.05.21-14.48.28:639][705]LogSavePackage: Save=9.531043ms
+[2015.05.21-14.48.28:639][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/border_long_Auto14F237D084CFBABE95303D39837A3A0B0.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/border_long_Auto1.uasset'
+[2015.05.21-14.48.28:642][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/box_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:652][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/box_prot.box_prot]
+[2015.05.21-14.48.28:652][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/box_prot]
+[2015.05.21-14.48.28:652][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/box_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/box_prot_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2015.05.21-14.48.28:663][705]LogSavePackage: Save=9.777690ms
+[2015.05.21-14.48.28:663][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/box_prot_Auto18DD26D2548AEC2EB05059A96F4753863.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/box_prot_Auto1.uasset'
+[2015.05.21-14.48.28:666][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/chair_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:676][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/chair_prot.chair_prot]
+[2015.05.21-14.48.28:676][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/chair_prot]
+[2015.05.21-14.48.28:676][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/chair_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/chair_prot_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2015.05.21-14.48.28:687][705]LogSavePackage: Save=9.666394ms
+[2015.05.21-14.48.28:687][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/chair_prot_Auto12CB20B8547FF3AF541F0538439757DDB.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/chair_prot_Auto1.uasset'
+[2015.05.21-14.48.28:690][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/ground_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:699][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/ground_prot.ground_prot]
+[2015.05.21-14.48.28:699][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/ground_prot]
+[2015.05.21-14.48.28:710][705]LogSavePackage: Save=8.870003ms
+[2015.05.21-14.48.28:710][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/ground_prot_Auto1CA26D2BC4613919A3DE177832BCDCFB1.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/ground_prot_Auto1.uasset'
+[2015.05.21-14.48.28:713][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/lamp_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:722][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/lamp_prot.lamp_prot]
+[2015.05.21-14.48.28:722][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/lamp_prot]
+[2015.05.21-14.48.28:722][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/lamp_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/lamp_prot_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2015.05.21-14.48.28:733][705]LogSavePackage: Save=9.616680ms
+[2015.05.21-14.48.28:733][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lamp_prot_Auto13EE262164103A5B2DC2CB88B6EE14594.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/lamp_prot_Auto1.uasset'
+[2015.05.21-14.48.28:736][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/lolaster_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:745][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/lolaster_prot.lolaster_prot]
+[2015.05.21-14.48.28:745][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/lolaster_prot]
+[2015.05.21-14.48.28:757][705]LogSavePackage: Save=10.530141ms
+[2015.05.21-14.48.28:757][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lolaster_prot_Auto1933C1A8D4701A677D4A6908A94A10FBD.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/lolaster_prot_Auto1.uasset'
+[2015.05.21-14.48.28:760][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/pillar_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:770][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/pillar_prot.pillar_prot]
+[2015.05.21-14.48.28:770][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/pillar_prot]
+[2015.05.21-14.48.28:782][705]LogSavePackage: Save=9.993868ms
+[2015.05.21-14.48.28:782][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/pillar_prot_Auto156D1002746FD3211956ACCBFB48F0C3D.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/pillar_prot_Auto1.uasset'
+[2015.05.21-14.48.28:785][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/trash_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:795][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/trash_prot.trash_prot]
+[2015.05.21-14.48.28:795][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/trash_prot]
+[2015.05.21-14.48.28:795][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/trash_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/trash_prot_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2015.05.21-14.48.28:806][705]LogSavePackage: Save=9.699751ms
+[2015.05.21-14.48.28:806][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/trash_prot_Auto1143F1E3D4B23F6007A705BB4E53867B1.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/trash_prot_Auto1.uasset'
+[2015.05.21-14.48.28:809][705]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Prototypen/wall_prot] ([1] browsable assets)...
+[2015.05.21-14.48.28:818][705]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/Prototypen/wall_prot.wall_prot]
+[2015.05.21-14.48.28:818][705]OBJ SavePackage: Finished generating thumbnails for package [/Game/Prototypen/wall_prot]
+[2015.05.21-14.48.28:818][705]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/wall_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/wall_prot_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2015.05.21-14.48.28:830][705]LogSavePackage: Save=10.687303ms
+[2015.05.21-14.48.28:831][705]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/wall_prot_Auto17572DE234309FC15BC8B1483BD6BB240.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Game/Prototypen/wall_prot_Auto1.uasset'
+[2015.05.21-14.48.28:832][705]LogFileHelpers: Auto-saving content packages took 0.263
+[2015.05.21-14.55.20:294][413]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot65)
+[2015.05.21-14.55.20:776][457]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot55)
+[2015.05.21-14.55.21:201][496]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot45)
+[2015.05.21-14.55.21:608][540]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot45)
+[2015.05.21-14.55.22:147][601]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot35)
+[2015.05.21-14.55.22:722][664]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot4)
+[2015.05.21-14.55.23:220][718]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot3)
+[2015.05.21-14.55.23:641][764]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot3)
+[2015.05.21-14.55.24:035][808]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot2)
+[2015.05.21-14.55.25:133][933]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot71)
+[2015.05.21-14.56.27:006][817]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot2)
+[2015.05.21-14.56.31:004][254]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot3)
+[2015.05.21-14.56.34:984][706]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot4)
+[2015.05.21-14.56.38:420][ 93]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot2)
+[2015.05.21-14.56.40:649][332]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot4)
+[2015.05.21-14.56.41:606][429]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot361)
+[2015.05.21-14.56.42:186][492]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot371)
+[2015.05.21-14.56.42:630][539]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot381)
+[2015.05.21-14.57.08:137][390]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot2)
+[2015.05.21-14.57.08:811][459]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot3)
+[2015.05.21-14.57.09:436][527]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot4)
+[2015.05.21-14.57.25:502][313]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot2)
+[2015.05.21-14.57.25:979][364]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot3)
+[2015.05.21-14.57.26:433][413]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot5)
+[2015.05.21-14.57.27:146][492]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot4)
+[2015.05.21-14.57.27:854][570]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot6)
+[2015.05.21-14.57.28:358][624]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot148)
+[2015.05.21-14.57.29:110][705]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot7)
+[2015.05.21-14.57.45:353][532]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot65)
+[2015.05.21-14.57.46:245][632]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot421)
+[2015.05.21-14.57.46:872][701]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.57.49:522][  0]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.57.50:110][ 64]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.57.50:497][100]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot421)
+[2015.05.21-14.57.52:247][289]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.58.19:940][380]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot7)
+[2015.05.21-14.58.25:127][955]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.58.39:717][601]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot55)
+[2015.05.21-14.58.42:401][890]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.58.43:140][972]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot7)
+[2015.05.21-14.58.44:149][ 86]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot421)
+[2015.05.21-14.58.45:007][182]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot411)
+[2015.05.21-14.58.49:776][727]Cmd: TRANSACTION UNDO
+[2015.05.21-14.58.49:776][727]LogEditorTransaction: Undo Move Actors
+[2015.05.21-14.58.50:600][787]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot7)
+[2015.05.21-14.58.53:757][134]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.58.57:995][614]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot411)
+[2015.05.21-14.58.59:360][769]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot55)
+[2015.05.21-14.59.04:811][376]Cmd: TRANSACTION UNDO
+[2015.05.21-14.59.04:811][376]LogEditorTransaction: Undo Move Actors
+[2015.05.21-14.59.06:344][532]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.59.14:240][421]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot65)
+[2015.05.21-14.59.14:909][495]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot55)
+[2015.05.21-14.59.17:255][765]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-14.59.20:241][ 96]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot55)
+[2015.05.21-14.59.21:105][179]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.59.22:182][301]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-14.59.43:562][726]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot63)
+[2015.05.21-14.59.44:420][822]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot53)
+[2015.05.21-14.59.45:551][950]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-14.59.47:008][116]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot54)
+[2015.05.21-14.59.47:767][200]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-14.59.51:470][602]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.59.52:152][678]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot55)
+[2015.05.21-14.59.53:358][815]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot421)
+[2015.05.21-14.59.54:425][935]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot65)
+[2015.05.21-14.59.55:093][  8]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot8)
+[2015.05.21-14.59.58:281][370]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-14.59.59:011][451]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot65)
+[2015.05.21-15.00.00:331][591]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-15.00.03:982][991]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot65)
+[2015.05.21-15.00.04:974][102]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-15.00.05:920][208]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot10)
+[2015.05.21-15.00.09:003][558]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot64)
+[2015.05.21-15.00.09:723][638]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot54)
+[2015.05.21-15.00.10:537][720]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot10)
+[2015.05.21-15.00.19:895][779]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot63)
+[2015.05.21-15.00.21:177][904]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot11)
+[2015.05.21-15.00.22:434][ 45]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-15.00.23:789][199]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot10)
+[2015.05.21-15.00.24:529][281]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot11)
+[2015.05.21-15.00.28:859][783]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot52)
+[2015.05.21-15.00.29:880][897]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot11)
+[2015.05.21-15.00.34:018][351]Cmd: TRANSACTION UNDO
+[2015.05.21-15.00.34:018][351]LogEditorTransaction: Undo Move Actors
+[2015.05.21-15.00.49:986][122]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot182)
+[2015.05.21-15.00.50:664][185]Cmd: TRANSACTION UNDO
+[2015.05.21-15.00.50:664][185]LogEditorTransaction: Undo Clicking on Actors
+[2015.05.21-15.00.51:245][225]Cmd: TRANSACTION UNDO
+[2015.05.21-15.00.51:245][225]LogEditorTransaction: Undo Set actor rotation
+[2015.05.21-15.00.52:699][388]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot12)
+[2015.05.21-15.01.21:548][574]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot13)
+[2015.05.21-15.01.36:813][296]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot12)
+[2015.05.21-15.01.37:451][366]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot13)
+[2015.05.21-15.01.40:603][719]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot52)
+[2015.05.21-15.01.43:072][993]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot13)
+[2015.05.21-15.01.43:807][ 74]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot42)
+[2015.05.21-15.01.44:860][192]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot13)
+[2015.05.21-15.01.48:442][600]Cmd: TRANSACTION UNDO
+[2015.05.21-15.01.48:442][600]LogEditorTransaction: Undo Move Actors
+[2015.05.21-15.01.52:711][ 40]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot42)
+[2015.05.21-15.01.54:306][222]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot52)
+[2015.05.21-15.01.55:181][319]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot42)
+[2015.05.21-15.01.56:838][501]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot14)
+[2015.05.21-15.01.59:930][850]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot42)
+[2015.05.21-15.02.00:989][952]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot14)
+[2015.05.21-15.02.07:594][705]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot52)
+[2015.05.21-15.02.08:584][816]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot42)
+[2015.05.21-15.02.10:063][980]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot14)
+[2015.05.21-15.02.12:979][291]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot42)
+[2015.05.21-15.02.13:789][381]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot14)
+[2015.05.21-15.02.14:282][434]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot25)
+[2015.05.21-15.02.21:969][285]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot355)
+[2015.05.21-15.02.53:262][561]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/Untitled_1" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/Untitled_1_Auto2.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2015.05.21-15.02.53:402][561]LogSavePackage: Save=136.443436ms
+[2015.05.21-15.02.53:402][561]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1_Auto26751DEE44E7C48A1817BE68601443DA8.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Autosaves/Temp/Untitled_1_Auto2.umap'
+[2015.05.21-15.02.53:405][561]LogFileHelpers: Editor autosave (incl. sublevels) for '/Temp/Untitled_1' took 0.160
+[2015.05.21-15.02.53:405][561]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.160
+[2015.05.21-15.03.23:521][ 53]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot127)
+[2015.05.21-15.03.39:083][825]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot355)
+[2015.05.21-15.04.29:076][639]Cmd: TRANSACTION UNDO
+[2015.05.21-15.04.29:076][639]LogEditorTransaction: Undo Move Actors
+[2015.05.21-15.04.29:082][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot18.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:083][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot20.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:083][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot5.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:084][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot7.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:084][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot26.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:085][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot50.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:085][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot47.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:086][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.GroupActor_0.GroupComponent) Component already registered.
+[2015.05.21-15.04.29:086][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot37.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.29:087][639]LogActorComponent: ~FComponentReregisterContext: (/Temp/Untitled_1.Untitled_1:PersistentLevel.ground_prot34.StaticMeshComponent0) Component already registered.
+[2015.05.21-15.04.56:202][741]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot339)
+[2015.05.21-15.04.57:328][864]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2015.05.21-15.04.57:886][924]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot496)
+[2015.05.21-15.05.01:801][219]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot134)
+[2015.05.21-15.05.04:737][548]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot365)
+[2015.05.21-15.05.06:020][689]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot29)
+[2015.05.21-15.05.23:573][ 80]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot78)
+[2015.05.21-15.05.24:836][216]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot11)
+[2015.05.21-15.05.29:771][612]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot40)
+[2015.05.21-15.05.31:051][732]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot11)
+[2015.05.21-15.05.32:195][858]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot10)
+[2015.05.21-15.05.32:686][910]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot9)
+[2015.05.21-15.05.33:130][957]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot8)
+[2015.05.21-15.05.33:516][997]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot7)
+[2015.05.21-15.05.33:900][ 37]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot6)
+[2015.05.21-15.05.34:502][102]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot2)
+[2015.05.21-15.05.34:928][147]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot4)
+[2015.05.21-15.05.35:657][227]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot3)
+[2015.05.21-15.05.36:130][277]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot5)
+[2015.05.21-15.05.53:663][260]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot91)
+[2015.05.21-15.05.54:579][361]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot90)
+[2015.05.21-15.05.54:970][402]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot89)
+[2015.05.21-15.05.56:089][525]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot88)
+[2015.05.21-15.05.56:659][585]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot87)
+[2015.05.21-15.05.57:250][647]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot86)
+[2015.05.21-15.05.57:796][704]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot82)
+[2015.05.21-15.05.58:345][761]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot83)
+[2015.05.21-15.05.59:141][847]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot84)
+[2015.05.21-15.05.59:916][929]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot85)
+[2015.05.21-15.06.00:749][  4]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot161)
+[2015.05.21-15.06.01:385][ 69]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot160)
+[2015.05.21-15.06.01:968][131]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot159)
+[2015.05.21-15.06.02:653][205]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot158)
+[2015.05.21-15.06.03:663][317]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot157)
+[2015.05.21-15.06.04:188][371]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot146)
+[2015.05.21-15.06.05:344][498]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot142)
+[2015.05.21-15.06.06:778][657]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot143)
+[2015.05.21-15.06.07:439][726]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot144)
+[2015.05.21-15.06.08:257][816]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot145)
+[2015.05.21-15.06.30:162][283]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot355)
+[2015.05.21-15.06.31:164][378]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot375)
+[2015.05.21-15.06.32:630][543]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot385)
+[2015.05.21-15.06.33:441][629]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot355)
+[2015.05.21-15.06.34:000][689]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot354)
+[2015.05.21-15.06.34:854][783]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot365)
+[2015.05.21-15.06.35:250][824]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot364)
+[2015.05.21-15.06.36:086][916]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot375)
+[2015.05.21-15.06.36:465][955]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot374)
+[2015.05.21-15.06.37:900][112]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot355)
+[2015.05.21-15.06.38:650][194]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot354)
+[2015.05.21-15.06.39:183][251]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot365)
+[2015.05.21-15.06.39:566][290]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot364)
+[2015.05.21-15.06.46:776][ 95]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot365)
+[2015.05.21-15.06.48:891][331]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot355)
+[2015.05.21-15.06.55:057][948]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot358)
+[2015.05.21-15.06.55:635][ 10]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot357)
+[2015.05.21-15.07.41:247][ 21]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot583)
+[2015.05.21-15.07.44:161][276]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot619)
+[2015.05.21-15.07.56:719][368]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot598)
+[2015.05.21-15.07.57:882][468]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot654)
+[2015.05.21-15.07.59:607][615]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot278)
+[2015.05.21-15.08.02:955][967]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot372)
+[2015.05.21-15.08.04:133][ 68]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot583)
+[2015.05.21-15.08.04:801][123]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot667)
+[2015.05.21-15.08.16:340][139]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot669)
+[2015.05.21-15.08.25:346][ 63]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2015.05.21-15.08.45:729][309]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot677)
+[2015.05.21-15.08.49:593][704]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot642)
+[2015.05.21-15.09.04:754][368]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-15.09.11:563][102]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-15.09.20:362][103]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-15.09.52:261][599]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2015.05.21-15.09.58:436][282]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.21-15.09.59:290][374]Cmd: DELETE
+[2015.05.21-15.09.59:290][374]Cmd: ACTOR DELETE
+[2015.05.21-15.09.59:291][374]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-15.09.59:307][374]LogEditorActor: Deleted 1 Actors (0.018 secs)
+[2015.05.21-15.10.27:836][774]LogActorFactory: Actor Factory created Cube
+[2015.05.21-15.10.29:122][927]LogActorFactory: Actor Factory created Cube
+[2015.05.21-15.10.46:635][816]Cmd: DELETE
+[2015.05.21-15.10.46:635][816]Cmd: ACTOR DELETE
+[2015.05.21-15.10.46:636][816]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-15.10.46:652][816]LogEditorActor: Deleted 1 Actors (0.017 secs)
+[2015.05.21-15.10.50:473][260]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.21-15.12.37:318][395]Cmd: TRANSACTION UNDO
+[2015.05.21-15.12.37:318][395]LogEditorTransaction: Undo Move Actors
+[2015.05.21-15.13.31:982][671]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-15.13.38:410][404]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-15.13.54:967][269]LogActorFactory: Actor Factory created wall_prot
+[2015.05.21-15.13.56:440][444]LogActorFactory: Actor Factory created wall_prot
+[2015.05.21-15.14.10:002][269]Cmd: DELETE
+[2015.05.21-15.14.10:002][269]Cmd: ACTOR DELETE
+[2015.05.21-15.14.10:003][269]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.21-15.14.10:022][269]LogEditorActor: Deleted 1 Actors (0.020 secs)
+[2015.05.21-15.14.24:554][975]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot604)
+[2015.05.21-15.14.25:654][ 88]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.21-15.14.26:162][145]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_prot9)
+[2015.05.21-15.14.56:355][717]Cmd: TRANSACTION UNDO
+[2015.05.21-15.14.56:355][717]LogEditorTransaction: Undo Select Brush Surface
+[2015.05.21-15.14.56:822][752]Cmd: TRANSACTION UNDO
+[2015.05.21-15.14.56:822][752]LogEditorTransaction: Undo Apply Material to Selected Surfaces
+[2015.05.21-15.15.00:061][122]Cmd: TRANSACTION UNDO
+[2015.05.21-15.15.00:061][122]LogEditorTransaction: Undo Apply Material to Selected Surfaces
+[2015.05.21-15.15.03:874][530]Cmd: TRANSACTION UNDO
+[2015.05.21-15.15.03:875][530]LogEditorTransaction: Undo Apply Material to Selected Surfaces
+[2015.05.21-15.15.33:088][946]Cmd: TRANSACTION UNDO
+[2015.05.21-15.15.33:088][946]LogEditorTransaction: Undo Move Actors
+[2015.05.21-15.15.47:625][654]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2015.05.21-15.17.47:747][830]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2015.05.21-15.18.24:382][154]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (ground_prot142)
+[2015.05.21-15.18.45:104][596]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/Untitled_1" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2015.05.21-15.18.45:355][596]LogSavePackage: Save=227.983276ms
+[2015.05.21-15.18.45:355][596]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1E87EC52F4796E51F434925B61AA1C2D6.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/Untitled_1.umap'
+[2015.05.21-15.18.49:289][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/border_long" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/border_long.uasset" SILENT=true
+[2015.05.21-15.18.49:300][767]LogSavePackage: Save=9.867818ms
+[2015.05.21-15.18.49:300][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/border_long47BDE2B94DED9A1CC8C7D39ACC9980BD.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/border_long.uasset'
+[2015.05.21-15.18.49:316][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/box_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/box_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:327][767]LogSavePackage: Save=9.995792ms
+[2015.05.21-15.18.49:327][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/box_protE754161F48DCCB81BA17ADBB11B567BB.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/box_prot.uasset'
+[2015.05.21-15.18.49:350][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/chair_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/chair_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:361][767]LogSavePackage: Save=9.661583ms
+[2015.05.21-15.18.49:361][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/chair_prot30FFAAFC42FD86CD092F9BBD7C31C6F5.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/chair_prot.uasset'
+[2015.05.21-15.18.49:377][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/ground_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/ground_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:387][767]LogSavePackage: Save=8.975204ms
+[2015.05.21-15.18.49:387][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/ground_prot936C328E475DA474933DEF9FAC5048BC.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/ground_prot.uasset'
+[2015.05.21-15.18.49:403][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/lamp_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/lamp_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:414][767]LogSavePackage: Save=9.799821ms
+[2015.05.21-15.18.49:414][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lamp_prot6BD4E266435023520C9EBD99E5E4C37E.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/lamp_prot.uasset'
+[2015.05.21-15.18.49:430][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/lolaster_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/lolaster_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:441][767]LogSavePackage: Save=10.126653ms
+[2015.05.21-15.18.49:441][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lolaster_prot2EB64CEB42E10C25C463CCB4D3294D06.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/lolaster_prot.uasset'
+[2015.05.21-15.18.49:458][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/pillar_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/pillar_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:469][767]LogSavePackage: Save=9.890269ms
+[2015.05.21-15.18.49:469][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/pillar_prot3E55F51149882610B6AF56ABE344ABF5.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/pillar_prot.uasset'
+[2015.05.21-15.18.49:485][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/trash_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/trash_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:496][767]LogSavePackage: Save=10.010546ms
+[2015.05.21-15.18.49:496][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/trash_protFB84EE3145AF46C0C2B473A280E772FE.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/trash_prot.uasset'
+[2015.05.21-15.18.49:511][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Prototypen/wall_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/wall_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:523][767]LogSavePackage: Save=10.186952ms
+[2015.05.21-15.18.49:523][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/wall_prot52EE12DE4977900395472DACBD047060.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Content/Prototypen/wall_prot.uasset'
+[2015.05.21-15.18.49:539][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/ground_prot" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/ground_prot.uasset" SILENT=true
+[2015.05.21-15.18.49:549][767]LogSavePackage: Save=8.870003ms
+[2015.05.21-15.18.49:549][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/ground_protF9EDFBAF49D9008166C896A8BFE8CE7E.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/ground_prot.uasset'
+[2015.05.21-15.18.49:566][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Temp/lambert1" FILE="../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lambert1.uasset" SILENT=true
+[2015.05.21-15.18.49:577][767]LogSavePackage: Save=9.347901ms
+[2015.05.21-15.18.49:577][767]LogSavePackage: Moving '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lambert111D84E1146E9FF99C8A2A597B917E245.tmp' to '../../../../../../../3DGameProject/3DGame/Soulglitch/Saved/lambert1.uasset'
+[2015.05.21-15.18.49:893][768]Cmd: QUIT_EDITOR
+[2015.05.21-15.18.50:169][768]LogExit: Preparing to exit.
+[2015.05.21-15.18.50:692][768]LogExit: Editor shut down
+[2015.05.21-15.18.50:693][768]LogExit: Transaction tracking system shut down
+[2015.05.21-15.18.50:694][768]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000001D71E200
+[2015.05.21-15.18.50:694][768]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000001D71DEE0
+[2015.05.21-15.18.50:694][768]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000016C15120
+[2015.05.21-15.18.50:695][768]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000016012700
+[2015.05.21-15.18.50:806][768]LogExit: Object subsystem successfully closed.
+[2015.05.21-15.18.50:912][768]LogModuleManager: Shutting down and abandoning module NewLevelDialog (189)
+[2015.05.21-15.18.50:912][768]LogModuleManager: Shutting down and abandoning module CrashTracker (188)
+[2015.05.21-15.18.50:912][768]LogModuleManager: Shutting down and abandoning module SceneOutliner (187)
+[2015.05.21-15.18.50:912][768]LogModuleManager: Shutting down and abandoning module SuperSearch (186)
+[2015.05.21-15.18.50:913][768]LogModuleManager: Shutting down and abandoning module WidgetCarousel (185)
+[2015.05.21-15.18.50:913][768]LogModuleManager: Shutting down and abandoning module AddContentDialog (184)
+[2015.05.21-15.18.50:913][768]LogModuleManager: Shutting down and abandoning module EditorWidgets (183)
+[2015.05.21-15.18.50:913][768]LogModuleManager: Shutting down and abandoning module CollectionManager (182)
+[2015.05.21-15.18.50:913][768]LogModuleManager: Shutting down and abandoning module StatsViewer (181)
+[2015.05.21-15.18.50:913][768]LogModuleManager: Shutting down and abandoning module FoliageEdit (180)
+[2015.05.21-15.18.50:913][768]LogModuleManager: Shutting down and abandoning module LandscapeEditor (179)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module ActorPickerMode (178)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module GeometryMode (177)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module TextureAlignMode (176)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module BspMode (175)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module PlacementMode (174)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module AutomationWorker (173)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module CharacterAI (172)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module SmartSnapping (171)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module ViewportSnapping (170)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module LogVisualizer (169)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (168)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module IntroTutorials (167)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (166)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (165)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (164)
+[2015.05.21-15.18.50:914][768]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (163)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (162)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (161)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (160)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module MergeActors (159)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module SizeMap (158)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module TreeMap (157)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module ReferenceViewer (156)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (155)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module HardwareTargeting (154)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (153)
+[2015.05.21-15.18.51:858][768]LogModuleManager: Shutting down and abandoning module UndoHistory (152)
+[2015.05.21-15.18.51:859][768]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (151)
+[2015.05.21-15.18.51:859][768]LogModuleManager: Shutting down and abandoning module UserFeedback (150)
+[2015.05.21-15.18.51:859][768]LogModuleManager: Shutting down and abandoning module XmlParser (149)
+[2015.05.21-15.18.51:859][768]LogModuleManager: Shutting down and abandoning module Blutility (148)
+[2015.05.21-15.18.51:859][768]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (147)
+[2015.05.21-15.18.51:859][768]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (146)
+[2015.05.21-15.18.51:859][768]LogModuleManager: Shutting down and abandoning module InputBindingEditor (145)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (144)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module SettingsEditor (143)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module ProjectLauncher (142)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module SessionFrontend (141)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module ProfilerClient (140)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (139)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module DeviceManager (138)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module AutomationController (137)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module AutomationWindow (136)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module Layers (135)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (134)
+[2015.05.21-15.18.51:860][768]LogModuleManager: Shutting down and abandoning module DetailCustomizations (133)
+[2015.05.21-15.18.51:861][768]LogModuleManager: Shutting down and abandoning module PackagesDialog (132)
+[2015.05.21-15.18.51:861][768]LogModuleManager: Shutting down and abandoning module AssetRegistry (131)
+[2015.05.21-15.18.51:931][768]LogModuleManager: Shutting down and abandoning module Persona (130)
+[2015.05.21-15.18.51:931][768]LogModuleManager: Shutting down and abandoning module SlateReflector (129)
+[2015.05.21-15.18.51:931][768]LogModuleManager: Shutting down and abandoning module LevelEditor (128)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module Kismet (127)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module GraphEditor (126)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module ClassViewer (125)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module Toolbox (124)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module ModuleUI (123)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module MovieSceneTools (122)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module OutputLog (121)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module GammaUI (120)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module Documentation (119)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (118)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (117)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module AnalyticsET (116)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module Analytics (115)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module AITestSuite (114)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module GameplayDebugger (113)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module AIModule (112)
+[2015.05.21-15.18.51:932][768]LogModuleManager: Shutting down and abandoning module ProfilerService (111)
+[2015.05.21-15.18.52:050][768]LogModuleManager: Shutting down and abandoning module TaskGraph (110)
+[2015.05.21-15.18.52:050][768]LogModuleManager: Shutting down and abandoning module SlateRemote (109)
+[2015.05.21-15.18.52:050][768]LogModuleManager: Shutting down and abandoning module SteamVRController (108)
+[2015.05.21-15.18.52:050][768]LogModuleManager: Shutting down and abandoning module SteamVR (107)
+[2015.05.21-15.18.52:050][768]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (106)
+[2015.05.21-15.18.52:050][768]LogModuleManager: Shutting down and abandoning module OculusRift (105)
+[2015.05.21-15.18.52:050][768]LogModuleManager: Shutting down and abandoning module LeapMotionController (104)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (103)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module CableComponent (102)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module MessagingDebugger (101)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (100)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (99)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module PluginBrowser (98)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module MainFrame (97)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module EpicSurvey (96)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module DesktopPlatform (95)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (94)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module HotReload (93)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (92)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module UObjectPlugin (91)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (90)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (89)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module SourceControl (88)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module GitSourceControl (87)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module BlankPlugin (86)
+[2015.05.21-15.18.52:060][768]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (85)
+[2015.05.21-15.18.52:061][768]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (84)
+[2015.05.21-15.18.52:061][768]LogModuleManager: Shutting down and abandoning module MeshPaint (83)
+[2015.05.21-15.18.52:061][768]LogModuleManager: Shutting down and abandoning module ContentBrowser (82)
+[2015.05.21-15.18.52:061][768]LogModuleManager: Shutting down and abandoning module Paper2DEditor (81)
+[2015.05.21-15.18.52:061][768]LogModuleManager: Shutting down and abandoning module UdpMessaging (80)
+[2015.05.21-15.18.52:161][768]LogModuleManager: Shutting down and abandoning module Paper2D (79)
+[2015.05.21-15.18.52:161][768]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (78)
+[2015.05.21-15.18.52:163][768]LogModuleManager: Shutting down and abandoning module Media (77)
+[2015.05.21-15.18.52:163][768]LogModuleManager: Shutting down and abandoning module WmfMedia (76)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (75)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module PropertyEditor (74)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (73)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module FunctionalTesting (72)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (71)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (70)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module MessageLog (69)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module Sequencer (68)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module AssetTools (67)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module UMGEditor (66)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module UMG (65)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module Slate (64)
+[2015.05.21-15.18.52:164][768]LogModuleManager: Shutting down and abandoning module EditorStyle (63)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module SessionServices (62)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (61)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (60)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module XAudio2 (59)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module Networking (57)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module Core (56)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module KismetCompiler (55)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module PhysXFormats (54)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module MeshUtilities (53)
+[2015.05.21-15.18.52:168][768]LogModuleManager: Shutting down and abandoning module DerivedDataCache (52)
+[2015.05.21-15.18.52:225][768]LogDerivedDataCache: Shutdown
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (51)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (50)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (49)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (48)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (47)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (46)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (45)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module ImageWrapper (44)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (43)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (42)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (41)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (40)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (39)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (38)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (37)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (36)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Messaging (35)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (34)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (33)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (32)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (31)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (30)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (29)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (28)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (27)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (26)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (25)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (24)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (23)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (22)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module DesktopTargetPlatform (21)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TargetPlatform (20)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module InputCore (19)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Settings (18)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (16)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module HTTP (15)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (14)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module TextureCompressor (13)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module ShaderCore (12)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module Landscape (11)
+[2015.05.21-15.18.52:225][768]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (10)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module OpenGLDrv (9)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module D3D11RHI (8)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module Renderer (7)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module Engine (6)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module CoreUObject (5)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module NetworkFile (4)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module StreamingFile (3)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module SandboxFile (2)
+[2015.05.21-15.18.52:227][768]LogModuleManager: Shutting down and abandoning module PakFile (1)
+[2015.05.21-15.18.52:227][768]LogExit: Exiting.
+[2015.05.21-15.18.52:237][768]Log file closed, 05/21/15 17:18:52
