@@ -1,0 +1,942 @@
+﻿[2015.05.25-19.49.11:665][  0]Log file open, 05/25/15 21:49:11
+[2015.05.25-19.49.11:665][  0]LogInit:Display: Running engine for game: Soulglitch
+[2015.05.25-19.49.11:665][  0]LogInit:Display: RandInit(950242213) SRandInit(950242214).
+[2015.05.25-19.49.11:665][  0]LogTaskGraph: Started task graph with 4 named threads and 7 total threads.
+[2015.05.25-19.49.11:665][  0]LogStats: Stats thread started
+[2015.05.25-19.49.11:665][  0]LogInit: Version: 4.8.0-2554075+++depot+UE4-Releases+4.8
+[2015.05.25-19.49.11:665][  0]LogInit: API Version: 2554075
+[2015.05.25-19.49.11:665][  0]LogInit: Compiled (64-bit): May 16 2015 12:18:55
+[2015.05.25-19.49.11:665][  0]LogInit: Compiled with Visual C++: 18.00.21005.01
+[2015.05.25-19.49.11:665][  0]LogInit: Build Configuration: Development
+[2015.05.25-19.49.11:665][  0]LogInit: Branch Name: ++depot+UE4-Releases+4.8
+[2015.05.25-19.49.11:665][  0]LogInit: Command line:  
+[2015.05.25-19.49.11:665][  0]LogInit: Base directory: D:/Programme/Unreal/Epic Games/4.8/Engine/Binaries/Win64/
+[2015.05.25-19.49.11:698][  0]LogInit: Using libcurl 7.41.0
+[2015.05.25-19.49.11:698][  0]LogInit:  - built for x86_64-pc-win32
+[2015.05.25-19.49.11:698][  0]LogInit:  - supports SSL with WinSSL
+[2015.05.25-19.49.11:698][  0]LogInit:  - other features:
+[2015.05.25-19.49.11:698][  0]LogInit:      CURL_VERSION_SSL
+[2015.05.25-19.49.11:698][  0]LogInit:      CURL_VERSION_IPV6
+[2015.05.25-19.49.11:698][  0]LogInit:      CURL_VERSION_ASYNCHDNS
+[2015.05.25-19.49.11:698][  0]LogInit:      CURL_VERSION_LARGEFILE
+[2015.05.25-19.49.11:698][  0]LogInit:      CURL_VERSION_IDN
+[2015.05.25-19.49.11:699][  0]LogInit:  CurlRequestOptions (configurable via config and command line):
+[2015.05.25-19.49.11:699][  0]LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+[2015.05.25-19.49.11:699][  0]LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+[2015.05.25-19.49.11:699][  0]LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+[2015.05.25-19.49.11:699][  0]LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+[2015.05.25-19.49.11:706][  0]LogOnline:Warning: No default platform service specified for OnlineSubsystem
+[2015.05.25-19.49.11:795][  0]LogInit: Presizing for 0 objects not considered by GC, pre-allocating 0 bytes.
+[2015.05.25-19.49.11:939][  0]LogInit: Object subsystem initialized
+[2015.05.25-19.49.12:024][  0]LogConsoleResponse:Warning: Skipping Unknown console variable: 'TranslucentSortAxis = (X=0.000000,Y=-1.000000,Z=0.000000)'
+[2015.05.25-19.49.12:024][  0]LogConsoleResponse:Warning:   Found in ini file 'D:/Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/Config/Windows/Engine.ini', in section '[/Script/Engine.RendererSettings]'
+[2015.05.25-19.49.12:024][  0]LogConsoleResponse:Warning: Skipping Unknown console variable: 'UIScaleRule = ShortestSide'
+[2015.05.25-19.49.12:024][  0]LogConsoleResponse:Warning:   Found in ini file 'D:/Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/Config/Windows/Engine.ini', in section '[/Script/Engine.RendererSettings]'
+[2015.05.25-19.49.12:024][  0]LogConsoleResponse:Warning: Skipping Unknown console variable: 'UIScaleCurve = (EditorCurveData=(Keys=),ExternalCurve=None)'
+[2015.05.25-19.49.12:024][  0]LogConsoleResponse:Warning:   Found in ini file 'D:/Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/Config/Windows/Engine.ini', in section '[/Script/Engine.RendererSettings]'
+[2015.05.25-19.49.12:060][  0]LogInit: Selected Device Profile: [Windows]
+[2015.05.25-19.49.12:060][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2015.05.25-19.49.12:109][  0]LogInit: Computer: SURALYA
+[2015.05.25-19.49.12:109][  0]LogInit: User: TinaPlavius
+[2015.05.25-19.49.12:109][  0]LogInit: CPU Page size=4096, Cores=4
+[2015.05.25-19.49.12:109][  0]LogInit: High frequency timer resolution =3.906279 MHz
+[2015.05.25-19.49.12:109][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2015.05.25-19.49.12:109][  0]LogMemory: Platform Memory Stats for Windows
+[2015.05.25-19.49.12:109][  0]LogMemory: Process Physical Memory: 51.06 MB used, 51.06 MB peak
+[2015.05.25-19.49.12:109][  0]LogMemory: Process Virtual Memory: 24.25 MB used, 24.25 MB peak
+[2015.05.25-19.49.12:109][  0]LogMemory: Physical Memory: 3812.33 MB used, 16310.92 MB total
+[2015.05.25-19.49.12:109][  0]LogMemory: Virtual Memory: 283.71 MB used, 8388608.00 MB total
+[2015.05.25-19.49.12:882][  0]LogTextLocalizationManager: The requested culture ('de_DE') has no localization data; falling back to 'en' for localization and internationalization data.
+[2015.05.25-19.49.13:160][  0]LogTextLocalizationManager:Warning: Loaded localization resources contain conflicting entries for (Namespace:ContentBrowser, Key:ImportAssetToolTip):
+Localization Resource: (D:/Programme/Unreal/Epic Games/4.8/Engine/Content/Localization/Editor/en/Editor.locres) Source String Hash: (-630476809) Localized String: (Import to {0}...)
+Localization Resource: (D:/Programme/Unreal/Epic Games/4.8/Engine/Content/Localization/Editor/en/Editor.locres) Source String Hash: (1271782899) Localized String: (Imports an asset from file to this folder.)
+[2015.05.25-19.49.13:758][  0]LogD3D11RHI: Found D3D11 adapter 0: NVIDIA GeForce GTX 970 (Feature Level 11_0)
+[2015.05.25-19.49.13:758][  0]LogD3D11RHI: Adapter has 3906MB of dedicated video memory, 0MB of dedicated system memory, and 7899MB of shared system memory, 2 output[s]
+[2015.05.25-19.49.13:758][  0]LogD3D11RHI: Chosen D3D11 Adapter Id = 0
+[2015.05.25-19.49.13:767][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2015.05.25-19.49.13:781][  0]LogD3D11RHI: Async texture creation enabled
+[2015.05.25-19.49.14:006][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2015.05.25-19.49.16:110][  0]LogTemp:Display: Loaded TP DesktopTargetPlatform
+[2015.05.25-19.49.16:154][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2015.05.25-19.49.16:176][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2015.05.25-19.49.16:197][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2015.05.25-19.49.16:218][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2015.05.25-19.49.16:232][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2015.05.25-19.49.16:244][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2015.05.25-19.49.16:256][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2015.05.25-19.49.16:268][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2015.05.25-19.49.16:279][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2015.05.25-19.49.16:290][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2015.05.25-19.49.16:302][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2015.05.25-19.49.16:390][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2015.05.25-19.49.16:401][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2015.05.25-19.49.16:413][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2015.05.25-19.49.16:426][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2015.05.25-19.49.16:426][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2015.05.25-19.49.17:106][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2015.05.25-19.49.17:244][  0]LogDerivedDataCache: Loaded boot cache 0.14s 52MB C:/Users/Tina Plavius/AppData/Local/UnrealEngine/4.8/DerivedDataCache/Boot.ddc.
+[2015.05.25-19.49.17:244][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/Tina Plavius/AppData/Local/UnrealEngine/4.8/DerivedDataCache/Boot.ddc
+[2015.05.25-19.49.17:244][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2015.05.25-19.49.17:244][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2015.05.25-19.49.17:244][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2015.05.25-19.49.17:244][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2015.05.25-19.49.17:377][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2015.05.25-19.49.17:388][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Tina Plavius/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2015.05.25-19.49.23:347][  0]LogInit: Selected Device Profile: [Windows]
+[2015.05.25-19.49.23:469][  0]ImportText (ComponentSweepMultiTests): Missing closing parenthesis: (RootShapeAsset="/Engine/BasicShapes/Cube.Cube",ShapeType="TriggerCapsule",HitResult=(Time=0.50,Location=(X=-100.000015,Y=0.0,Z=100.000015),ImpactPoint=(X=-50.0,Y=0.0,Z=50.0),Normal=(X=-1.0,Y=-0.0,Z=0.0),ImpactNormal=(X=0.0,Y=0.0,Z=1.0),TraceStart=(X=-200.0,Y=0.0,Z=200.0),TraceEnd=(X=0.0,Y=0.0,Z=0.0))
+[2015.05.25-19.49.23:470][  0]ImportText (LineTraceSingleByChannelTests): Missing closing parenthesis: (RootShapeAsset="/Engine/BasicShapes/Cube.Cube",HitResult=(Time=0.50,Location=(X=-100.000015,Y=0.0,Z=100.000015),ImpactPoint=(X=-50.0,Y=0.0,Z=50.0),Normal=(X=-1.0,Y=-0.0,Z=0.0),ImpactNormal=(X=0.0,Y=0.0,Z=1.0),TraceStart=(X=-200.0,Y=0.0,Z=200.0),TraceEnd=(X=0.0,Y=0.0,Z=0.0))
+[2015.05.25-19.49.23:703][  0]LogMeshUtilities: No automatic mesh reduction module available
+[2015.05.25-19.49.23:703][  0]LogMeshUtilities: No automatic mesh merging module available
+[2015.05.25-19.49.25:920][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2015.05.25-19.49.35:442][  0]UdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2015.05.25-19.49.36:077][  0]SourceControl: Info Source control is disabled
+[2015.05.25-19.49.36:125][  0]SourceControl: Info Source control is disabled
+[2015.05.25-19.49.36:159][  0]SourceControl: Info Source control is disabled
+[2015.05.25-19.49.36:181][  0]SourceControl: Info Source control is disabled
+[2015.05.25-19.49.37:149][  0]LogObj: 26119 objects as part of root set at end of initial load.
+[2015.05.25-19.49.37:149][  0]LogUObjectAllocator: 5327488 out of 0 bytes used by permanent object pool.
+[2015.05.25-19.49.37:749][  0]LogEngine: Initializing Engine...
+[2015.05.25-19.49.37:769][  0]LogHMD: Can't find Oculus library dev build: is proper Runtime installed? Version: 0.6.0.0
+[2015.05.25-19.49.37:786][  0]LogHMD:Warning: SteamVR failed to initialize.  Error: 109
+[2015.05.25-19.49.38:421][  0]LogAIModule: Creating AISystem for world NewWorld
+[2015.05.25-19.49.38:568][  0]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-19.49.38:610][  0]LogInit: FAudioDevice initialized.
+[2015.05.25-19.49.38:656][  0]LogDerivedDataCache: Saved boot cache 0.05s 52MB C:/Users/Tina Plavius/AppData/Local/UnrealEngine/4.8/DerivedDataCache/Boot.ddc.
+[2015.05.25-19.49.38:661][  0]LogInit: Texture streaming: Disabled
+[2015.05.25-19.49.38:917][  0]LogAnalytics: Creating configured Analytics provider AnalyticsET
+[2015.05.25-19.49.38:917][  0]LogAnalytics: [UEEditor.Rocket.Release] APIServer = http://et2.epicgames.com/ET2/. AppVersion = 4.8.0-2554075+++depot+UE4-Releases+4.8
+[2015.05.25-19.49.38:917][  0]LogAnalytics: [UEEditor.Rocket.Release] SetUserId 4c93af1c4753a41a15a194aecff4b726|af2bf208dcdd4c00aeb2c32150495343|60aec012-d062-4fd2-bf5c-42dcf3918f53
+[2015.05.25-19.49.38:926][  0]LogAnalytics: [UEEditor.Rocket.Release] AnalyticsET::StartSession
+[2015.05.25-19.49.39:032][  0]LogInit: Transaction tracking system initialized
+[2015.05.25-19.49.40:076][  0]BlueprintLog: New page: Editor Load
+[2015.05.25-19.49.40:207][  0]LogAssetRegistry: FAssetRegistry took 0.0404 seconds to start up
+[2015.05.25-19.49.40:207][  0]LogDirectoryWatcher:Warning: Failed to begin reading directory changes for ../../../Engine/Plugins/Experimental/CharacterAI/Content/. Error: 0
+[2015.05.25-19.49.43:001][  0]LogConsoleManager:Warning: Console variable 'r.VSync' wasn't set ('GameSetting' has a lower priority than 'SystemSettingsIni')
+[2015.05.25-19.49.43:001][  0]LogConsoleResponse:Display: 
+[2015.05.25-19.49.43:788][  0]LogCook:Display: Done creating registry. It took  0.00s.
+[2015.05.25-19.49.44:643][  0]SourceControl: Info Source control is disabled
+[2015.05.25-19.49.44:698][  0]Cmd: MAP LOAD FILE="../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/TopDownBP/Maps/TopDownExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2015.05.25-19.49.44:726][  0]LightingResults: New page: Lighting Build
+[2015.05.25-19.49.44:864][  0]MapCheck: New page: Map Check
+[2015.05.25-19.49.44:864][  0]LightingResults: New page: Lighting Build
+[2015.05.25-19.49.45:020][  0]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000001ACF1800
+[2015.05.25-19.49.46:733][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.46:734][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.46:734][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.46:734][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.46:756][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.46:757][  0]LogBlueprint:Warning: Generic delegate signature ref (InputTouchHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputTouchHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.46:757][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.46:757][  0]LogBlueprint:Warning: Generic delegate signature ref (InputActionHandlerDynamicSignature__DelegateSignature). Explicitly setting it to: '/Script/Engine.InputActionHandlerDynamicSignature__DelegateSignature'. Make sure this is correct (there could be multiple native delegate types with this name)?
+[2015.05.25-19.49.47:883][  0]LogAIModule: Creating AISystem for world TopDownExampleMap
+[2015.05.25-19.49.48:236][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2015.05.25-19.49.48:268][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2015.05.25-19.49.48:326][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 49.487ms to complete.
+[2015.05.25-19.49.48:327][  0]LogFileHelpers: Loading map 'TopDownExampleMap' took 3.657
+[2015.05.25-19.49.48:931][  0]LogCollectionManager: Loaded 0 collections in 0.001335 seconds
+[2015.05.25-19.49.48:938][  0]LogContentBrowser: Native class hierarchy populated in 0.0065 seconds. Added 1792 classes and 301 folders.
+[2015.05.25-19.49.49:058][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2015.05.25-19.49.49:279][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2015.05.25-19.49.49:635][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
+[2015.05.25-19.49.49:966][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2015.05.25-19.49.50:049][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2015.05.25-19.49.50:098][  0]LogLoad: Full Startup: 43.00 seconds (BP compile: 0.56 seconds)
+[2015.05.25-19.49.50:752][  0]LogContentStreaming: Texture pool size is 0.000000MB
+[2015.05.25-19.49.50:835][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2015.05.25-19.49.51:337][  0]LogRenderer: Reallocating scene render targets to support 1112x928 (Frame:2).
+[2015.05.25-19.49.54:179][  9]LogAssetRegistry: Asset discovery search completed in 13.9832 seconds
+[2015.05.25-19.50.44:263][940]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.25-19.51.14:089][425]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-19.51.49:469][641]Cmd: TRANSACTION UNDO
+[2015.05.25-19.51.49:469][641]LogEditorTransaction: Undo Move Actors
+[2015.05.25-19.51.52:670][999]Cmd: TRANSACTION UNDO
+[2015.05.25-19.51.52:670][999]LogEditorTransaction: Undo Move Actors
+[2015.05.25-19.51.56:730][461]Cmd: TRANSACTION UNDO
+[2015.05.25-19.51.56:730][461]LogEditorTransaction: Undo Move Actors
+[2015.05.25-19.52.26:922][ 44]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.25-19.52.30:953][525]Cmd: TRANSACTION UNDO
+[2015.05.25-19.52.30:953][525]LogEditorTransaction: Undo Clicking on Actors
+[2015.05.25-19.52.40:999][704]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.25-19.52.47:331][460]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (SkySphereBlueprint)
+[2015.05.25-19.53.02:100][225]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2015.05.25-19.53.04:054][432]Cmd: DELETE
+[2015.05.25-19.53.04:054][432]Cmd: ACTOR DELETE
+[2015.05.25-19.53.04:086][432]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.53.04:094][432]LogActorComponent: UnregisterComponent: (/Engine/Transient.CharMoveComp) Not registered. Aborting.
+[2015.05.25-19.53.04:217][432]LogEditorActor: Deleted 1 Actors (0.131 secs)
+[2015.05.25-19.53.05:780][616]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-19.53.05:888][616]PIE: New page: PIE session: TopDownExampleMap (May 25, 2015, 11:53:05 PM)
+[2015.05.25-19.53.05:889][616]LogPlayLevel: Creating play world package: /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap
+[2015.05.25-19.53.05:926][616]LogPlayLevel: PIE: StaticDuplicateObject took: (0.036913s)
+[2015.05.25-19.53.05:933][616]LogAIModule: Creating AISystem for world TopDownExampleMap
+[2015.05.25-19.53.05:933][616]LogPlayLevel: PIE: World Init took: (0.000784s)
+[2015.05.25-19.53.05:934][616]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/TopDownBP/Maps/TopDownExampleMap.TopDownExampleMap to /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap (0.044274s)
+[2015.05.25-19.53.05:951][616]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-19.53.05:957][616]LogInit: FAudioDevice initialized.
+[2015.05.25-19.53.06:030][616]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-19.53.06:063][616]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-19.53.06:063][616]LogWorld: Bringing World /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap up for play (max tick rate 0) at 2015.05.25-21.53.06
+[2015.05.25-19.53.06:063][616]LogActor:Warning: GameSession /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap:PersistentLevel.GameSession_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-19.53.06:064][616]LogActor:Warning: GameNetworkManager /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap:PersistentLevel.GameNetworkManager_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-19.53.06:075][616]LogWorld: Bringing up level for play took: 0.024390
+[2015.05.25-19.53.06:135][616]PIE: Info Play in editor start time for /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap 0.008
+[2015.05.25-19.53.13:223][442]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000000E212520
+[2015.05.25-19.54.06:321][160]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube8)
+[2015.05.25-19.54.06:975][235]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube)
+[2015.05.25-19.54.07:363][279]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube2)
+[2015.05.25-19.54.09:111][486]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Cube4)
+[2015.05.25-19.54.23:282][169]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-19.54.26:918][601]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-19.54.26:918][601]PIE: New page: PIE session: TopDownExampleMap (May 25, 2015, 11:54:26 PM)
+[2015.05.25-19.54.26:919][601]LogPlayLevel: Creating play world package: /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap
+[2015.05.25-19.54.26:936][601]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017367s)
+[2015.05.25-19.54.26:937][601]LogAIModule: Creating AISystem for world TopDownExampleMap
+[2015.05.25-19.54.26:937][601]LogPlayLevel: PIE: World Init took: (0.001315s)
+[2015.05.25-19.54.26:937][601]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/TopDownBP/Maps/TopDownExampleMap.TopDownExampleMap to /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap (0.018837s)
+[2015.05.25-19.54.26:954][601]LogInit: XAudio2 using 'Lautsprecher (2- Plantronics GameCom 780)' : 6 channels at 44.1 kHz using 16 bits per sample (channel mask 0x60f)
+[2015.05.25-19.54.26:959][601]LogInit: FAudioDevice initialized.
+[2015.05.25-19.54.26:990][601]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-19.54.26:994][601]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-19.54.26:994][601]LogWorld: Bringing World /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap up for play (max tick rate 0) at 2015.05.25-21.54.26
+[2015.05.25-19.54.26:994][601]LogActor:Warning: GameSession /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap:PersistentLevel.GameSession_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-19.54.26:994][601]LogActor:Warning: GameNetworkManager /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap.TopDownExampleMap:PersistentLevel.GameNetworkManager_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-19.54.26:995][601]LogWorld: Bringing up level for play took: 0.003744
+[2015.05.25-19.54.26:995][601]PIE: Info Play in editor start time for /Game/TopDownBP/Maps/UEDPIE_0_TopDownExampleMap 0.868
+[2015.05.25-19.54.34:150][452]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000000E04F6A0
+[2015.05.25-19.54.37:076][800]Cmd: DELETE
+[2015.05.25-19.54.37:076][800]Cmd: ACTOR DELETE
+[2015.05.25-19.54.37:076][800]LogEditorActor: Deleted Actor: Brush
+[2015.05.25-19.54.37:096][800]LogEditorActor: Deleted 1 Actors (0.020 secs)
+[2015.05.25-19.54.45:539][802]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.45:539][802]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.45:540][802]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.45:540][802]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.45:554][802]LogEditorActor: Deleted 4 Actors (0.015 secs)
+[2015.05.25-19.54.49:487][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:487][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:487][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:487][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:488][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:488][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:488][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:488][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:488][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:489][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:489][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:489][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:489][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:489][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:490][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:490][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:490][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:490][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:490][271]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-19.54.49:502][271]LogEditorActor: Deleted 19 Actors (0.015 secs)
+[2015.05.25-19.55.04:705][ 88]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-19.55.48:712][336]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2015.05.25-19.56.09:463][782]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2015.05.25-19.56.27:750][966]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-19.56.50:970][740]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2015.05.25-19.56.55:965][331]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2015.05.25-19.57.26:085][909]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (SkySphereBlueprint)
+[2015.05.25-19.57.36:460][147]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (SkySphereBlueprint)
+[2015.05.25-19.58.14:609][683]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (SkySphereBlueprint)
+[2015.05.25-19.59.37:459][653]LogSavePackage: Save=72.171494ms
+[2015.05.25-19.59.37:459][653]LogSavePackage: Moving '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/TopDownExampleMap26EFF87A8495C613D3B9A4F92D89351E6.tmp' to '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/Maps/TopDownExampleMap2.umap'
+[2015.05.25-19.59.37:486][653]LogFileHelpers: Saving map 'TopDownExampleMap2' took 0.860
+[2015.05.25-20.00.18:076][121]LogEditorViewport: Clicking on Actor (LMB): TopDownCharacter_C (TopDownCharacter)
+[2015.05.25-20.00.25:626][  2]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.00.25:626][  2]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:00:25 AM)
+[2015.05.25-20.00.25:626][  2]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.00.25:644][  2]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018542s)
+[2015.05.25-20.00.25:645][  2]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.00.25:646][  2]LogPlayLevel: PIE: World Init took: (0.001113s)
+[2015.05.25-20.00.25:646][  2]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.019820s)
+[2015.05.25-20.00.25:691][  2]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.00.25:697][  2]LogInit: FAudioDevice initialized.
+[2015.05.25-20.00.25:728][  2]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.00.25:731][  2]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.00.25:731][  2]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.00.25
+[2015.05.25-20.00.25:731][  2]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.00.25:731][  2]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.00.25:732][  2]LogWorld: Bringing up level for play took: 0.002612
+[2015.05.25-20.00.25:732][  2]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 -0.398
+[2015.05.25-20.00.38:687][548]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000024884B80
+[2015.05.25-20.01.55:889][524]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-20.02.49:348][913]LogUnrealMath: Expression Error : No value recognized
+[2015.05.25-20.02.49:348][913]LogUnrealMath: Expression Error : Error in expression
+[2015.05.25-20.08.23:079][655]Cmd: TRANSACTION UNDO
+[2015.05.25-20.08.23:079][655]LogEditorTransaction: Undo Move Actors
+[2015.05.25-20.08.39:443][585]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (SkySphereBlueprint)
+[2015.05.25-20.09.44:550][347]LogActorComponent: UnregisterComponent: (/Engine/Transient.CharMoveComp) Not registered. Aborting.
+[2015.05.25-20.09.44:672][347]LogSavePackage: Save=60.908348ms
+[2015.05.25-20.09.44:672][347]LogSavePackage: Moving '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/TopDownExampleMap2634006C54B6C8498082F4083EF54B6F3.tmp' to '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/Maps/TopDownExampleMap2.umap'
+[2015.05.25-20.12.37:486][973]LogSavePackage: Save=42.478531ms
+[2015.05.25-20.12.37:486][973]LogSavePackage: Moving '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/TopDownExampleMap243F7660447D6F8D68A6BD2B05C2C85A4.tmp' to '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/Maps/TopDownExampleMap2.umap'
+[2015.05.25-20.12.38:358][ 74]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.12.38:358][ 74]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:12:38 AM)
+[2015.05.25-20.12.38:358][ 74]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.12.38:377][ 74]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018846s)
+[2015.05.25-20.12.38:378][ 74]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.12.38:378][ 74]LogPlayLevel: PIE: World Init took: (0.001073s)
+[2015.05.25-20.12.38:378][ 74]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.020082s)
+[2015.05.25-20.12.38:397][ 74]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.12.38:404][ 74]LogInit: FAudioDevice initialized.
+[2015.05.25-20.12.38:431][ 74]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.12.38:434][ 74]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.12.38:434][ 74]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.12.38
+[2015.05.25-20.12.38:434][ 74]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.12.38:434][ 74]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.12.38:435][ 74]LogWorld: Bringing up level for play took: 0.002843
+[2015.05.25-20.12.38:435][ 74]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.299
+[2015.05.25-20.12.45:402][904]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000024885120
+[2015.05.25-20.15.00:630][ 80]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.15.00:630][ 80]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:15:00 AM)
+[2015.05.25-20.15.00:630][ 80]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.15.00:648][ 80]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017498s)
+[2015.05.25-20.15.00:648][ 80]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.15.00:649][ 80]LogPlayLevel: PIE: World Init took: (0.001178s)
+[2015.05.25-20.15.00:649][ 80]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.018827s)
+[2015.05.25-20.15.00:667][ 80]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.15.00:673][ 80]LogInit: FAudioDevice initialized.
+[2015.05.25-20.15.00:704][ 80]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.15.00:707][ 80]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.15.00:707][ 80]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.15.00
+[2015.05.25-20.15.00:707][ 80]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.15.00:707][ 80]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.15.00:707][ 80]LogWorld: Bringing up level for play took: 0.002623
+[2015.05.25-20.15.00:708][ 80]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.571
+[2015.05.25-20.15.08:557][ 16]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000000E2123E0
+[2015.05.25-20.21.56:175][731]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2015.05.25-20.23.18:417][552]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-20.25.06:379][427]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.25.06:379][427]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:25:06 AM)
+[2015.05.25-20.25.06:379][427]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.25.06:398][427]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018933s)
+[2015.05.25-20.25.06:399][427]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.25.06:400][427]LogPlayLevel: PIE: World Init took: (0.001258s)
+[2015.05.25-20.25.06:400][427]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.020333s)
+[2015.05.25-20.25.06:400][427]LogActorComponent: UnregisterComponent: (/Engine/Transient.CharMoveComp) Not registered. Aborting.
+[2015.05.25-20.25.06:422][427]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.25.06:429][427]LogInit: FAudioDevice initialized.
+[2015.05.25-20.25.06:461][427]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.25.06:465][427]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.25.06:465][427]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.25.06
+[2015.05.25-20.25.06:465][427]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.25.06:465][427]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.25.06:466][427]LogWorld: Bringing up level for play took: 0.003088
+[2015.05.25-20.25.06:467][427]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.324
+[2015.05.25-20.25.18:116][816]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000035CB13A0
+[2015.05.25-20.25.20:738][124]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.25.20:738][124]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:25:20 AM)
+[2015.05.25-20.25.20:738][124]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.25.20:755][124]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016259s)
+[2015.05.25-20.25.20:755][124]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.25.20:756][124]LogPlayLevel: PIE: World Init took: (0.001002s)
+[2015.05.25-20.25.20:756][124]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.017425s)
+[2015.05.25-20.25.20:777][124]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.25.20:783][124]LogInit: FAudioDevice initialized.
+[2015.05.25-20.25.20:810][124]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.25.20:813][124]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.25.20:813][124]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.25.20
+[2015.05.25-20.25.20:813][124]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.25.20:813][124]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.25.20:814][124]LogWorld: Bringing up level for play took: 0.002872
+[2015.05.25-20.25.20:815][124]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.672
+[2015.05.25-20.25.24:884][604]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000036113D80
+[2015.05.25-20.25.44:852][995]LogEditorViewport: Clicking on Actor (LMB): TopDownCharacter_C (TopDownCharacter)
+[2015.05.25-20.26.09:046][863]LogActorFactory: Actor Factory created lolaster_prot
+[2015.05.25-20.26.11:403][145]LogActorFactory: Actor Factory created lolaster_prot
+[2015.05.25-20.28.15:093][927]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-20.29.18:553][462]Cmd: DELETE
+[2015.05.25-20.29.18:553][462]Cmd: ACTOR DELETE
+[2015.05.25-20.29.18:555][462]LogEditorActor: Deleted Actor: Brush
+[2015.05.25-20.29.18:555][462]LogActorComponent: UnregisterComponent: (/Engine/Transient.CharMoveComp) Not registered. Aborting.
+[2015.05.25-20.29.18:586][462]LogEditorActor: Deleted 1 Actors (0.031 secs)
+[2015.05.25-20.29.43:887][477]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.25-20.31.36:386][860]LogEditorViewport: Clicking Background
+[2015.05.25-20.31.46:487][ 53]LogEditorViewport: Clicking Background
+[2015.05.25-20.32.01:456][823]LogSavePackage: Save=76.638664ms
+[2015.05.25-20.32.01:456][823]LogSavePackage: Moving '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/TopDownExampleMap2B5EEE1B44247D950B0B7DE81AA1E8F7E.tmp' to '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/Maps/TopDownExampleMap2.umap'
+[2015.05.25-20.32.40:226][358]LogEditorViewport: Clicking on Actor (LMB): Brush (Box Brush18)
+[2015.05.25-20.32.45:607][  0]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2015.05.25-20.33.11:881][105]Cmd: EDCALLBACK SURFPROPS
+[2015.05.25-20.33.57:856][535]LogEditorViewport: Clicking Background
+[2015.05.25-20.34.12:097][237]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.25-20.34.38:983][326]Cmd: TRANSACTION UNDO
+[2015.05.25-20.34.38:983][326]LogEditorTransaction: Undo Move Actors
+[2015.05.25-20.35.12:928][202]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (lolaster_prot)
+[2015.05.25-20.36.00:349][587]Cmd: TRANSACTION UNDO
+[2015.05.25-20.36.00:349][587]LogEditorTransaction: Undo Create Actors
+[2015.05.25-20.36.00:351][587]LogActorComponent: ~FComponentReregisterContext: (/Game/Maps/TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.ModelComponent_1005) Component already registered.
+[2015.05.25-20.36.00:823][625]Cmd: TRANSACTION UNDO
+[2015.05.25-20.36.00:823][625]LogEditorTransaction: Undo Create Actors
+[2015.05.25-20.36.00:839][625]LogActorComponent: ~FComponentReregisterContext: (/Game/Maps/TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.ModelComponent_1005) Component already registered.
+[2015.05.25-20.36.01:263][673]Cmd: TRANSACTION UNDO
+[2015.05.25-20.36.01:263][673]LogEditorTransaction: Undo Create Actors
+[2015.05.25-20.36.01:265][673]LogActorComponent: ~FComponentReregisterContext: (/Game/Maps/TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.ModelComponent_1005) Component already registered.
+[2015.05.25-20.36.01:764][731]Cmd: TRANSACTION UNDO
+[2015.05.25-20.36.01:764][731]LogEditorTransaction: Undo Create Actors
+[2015.05.25-20.36.01:767][731]LogActorComponent: ~FComponentReregisterContext: (/Game/Maps/TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.ModelComponent_1005) Component already registered.
+[2015.05.25-20.36.32:261][193]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.36.32:262][193]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:36:32 AM)
+[2015.05.25-20.36.32:262][193]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.36.32:279][193]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017451s)
+[2015.05.25-20.36.32:280][193]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.36.32:280][193]LogPlayLevel: PIE: World Init took: (0.000977s)
+[2015.05.25-20.36.32:280][193]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.018585s)
+[2015.05.25-20.36.32:280][193]LogActorComponent: UnregisterComponent: (/Engine/Transient.CharMoveComp) Not registered. Aborting.
+[2015.05.25-20.36.32:305][193]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.36.32:311][193]LogInit: FAudioDevice initialized.
+[2015.05.25-20.36.32:339][193]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.36.32:343][193]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.36.32:343][193]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.36.32
+[2015.05.25-20.36.32:343][193]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.36.32:344][193]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.36.32:344][193]LogWorld: Bringing up level for play took: 0.003518
+[2015.05.25-20.36.32:345][193]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.197
+[2015.05.25-20.37.05:411][153]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000321EDC60
+[2015.05.25-20.37.58:946][723]LogActorFactory: Actor Factory created table_prot
+[2015.05.25-20.38.04:205][353]LogActorFactory: Actor Factory created table_prot
+[2015.05.25-20.38.14:750][604]LogActorFactory: Actor Factory created chair_prot
+[2015.05.25-20.38.17:335][913]LogActorFactory: Actor Factory created chair_prot
+[2015.05.25-20.38.36:196][158]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (chair_prot)
+[2015.05.25-20.38.38:058][379]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (table_prot)
+[2015.05.25-20.38.44:190][108]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (chair_prot)
+[2015.05.25-20.39.49:395][825]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2015.05.25-20.40.44:734][300]LogActorFactory: Actor Factory created SM_GlassWindow
+[2015.05.25-20.40.46:256][480]LogActorFactory: Actor Factory created SM_GlassWindow
+[2015.05.25-20.41.29:714][664]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (table_prot)
+[2015.05.25-20.41.31:556][881]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (chair_prot)
+[2015.05.25-20.41.45:065][458]LogActorFactory: Actor Factory created table_lamp_prot
+[2015.05.25-20.41.46:790][663]LogActorFactory: Actor Factory created table_lamp_prot
+[2015.05.25-20.43.19:560][664]LogStaticMesh: Building static mesh trash_prot...
+[2015.05.25-20.43.19:601][664]LogStaticMesh: Built static mesh [0.041401.2s] /Game/Prototypen/trash_prot.trash_prot
+[2015.05.25-20.43.19:657][668]LogActorFactory: Actor Factory created trash_prot
+[2015.05.25-20.43.21:786][920]LogActorFactory: Actor Factory created trash_prot
+[2015.05.25-20.43.27:999][655]LogActorFactory: Actor Factory created wall_lamp_prot
+[2015.05.25-20.43.29:535][836]LogActorFactory: Actor Factory created wall_lamp_prot
+[2015.05.25-20.43.40:323][120]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2015.05.25-20.43.54:065][759]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_lamp_prot)
+[2015.05.25-20.43.57:465][162]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_lamp_prot2)
+[2015.05.25-20.44.03:691][899]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_lamp_prot2)
+[2015.05.25-20.44.06:408][220]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (wall_lamp_prot)
+[2015.05.25-20.44.21:554][992]LogStaticMesh: Building static mesh pillar_prot...
+[2015.05.25-20.44.21:561][992]LogStaticMesh: Built static mesh [0.006902.2s] /Game/Prototypen/pillar_prot.pillar_prot
+[2015.05.25-20.44.21:656][  1]LogActorFactory: Actor Factory created pillar_prot
+[2015.05.25-20.44.25:392][447]LogActorFactory: Actor Factory created pillar_prot
+[2015.05.25-20.44.26:711][590]LogActorFactory: Actor Factory created pillar_prot
+[2015.05.25-20.44.28:809][839]LogActorFactory: Actor Factory created pillar_prot
+[2015.05.25-20.44.34:557][523]Cmd: DELETE
+[2015.05.25-20.44.34:557][523]Cmd: ACTOR DELETE
+[2015.05.25-20.44.34:558][523]LogEditorActor: Deleted Actor: StaticMeshActor
+[2015.05.25-20.44.34:571][523]LogEditorActor: Deleted 1 Actors (0.014 secs)
+[2015.05.25-20.44.35:590][645]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (pillar_prot)
+[2015.05.25-20.44.44:403][691]Cmd: TRANSACTION UNDO
+[2015.05.25-20.44.44:403][691]LogEditorTransaction: Undo Move Actors
+[2015.05.25-20.44.45:505][802]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (pillar_prot)
+[2015.05.25-20.45.37:132][879]LogEditorViewport: Clicking Background
+[2015.05.25-20.45.42:338][496]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (pillar_prot)
+[2015.05.25-20.45.46:006][926]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.45.46:006][926]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:45:46 AM)
+[2015.05.25-20.45.46:007][926]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.45.46:027][926]LogPlayLevel: PIE: StaticDuplicateObject took: (0.020757s)
+[2015.05.25-20.45.46:028][926]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.45.46:029][926]LogPlayLevel: PIE: World Init took: (0.001233s)
+[2015.05.25-20.45.46:029][926]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.022137s)
+[2015.05.25-20.45.46:051][926]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.45.46:057][926]LogInit: FAudioDevice initialized.
+[2015.05.25-20.45.46:090][926]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.45.46:094][926]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.45.46:094][926]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.45.46
+[2015.05.25-20.45.46:094][926]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.45.46:094][926]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.45.46:095][926]LogWorld: Bringing up level for play took: 0.004068
+[2015.05.25-20.45.46:096][926]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 -0.057
+[2015.05.25-20.46.06:451][362]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000375628E0
+[2015.05.25-20.46.10:112][798]MapCheck: New page: Map Check
+[2015.05.25-20.46.10:139][798]Cmd: MAP REBUILD ALLVISIBLE
+[2015.05.25-20.46.10:145][798]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2015.05.25-20.46.10:208][798]LightingResults: New page: Lighting Build - May 26, 2015, 12:46:10 AM
+[2015.05.25-20.46.15:501][798]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2015.05.25-20.46.15:502][798]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2015.05.25-20.46.15:502][798]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2015.05.25-20.46.15:502][798]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2015.05.25-20.46.15:502][798]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2015.05.25-20.46.15:654][798]LogEditorBuildUtils: Build time 0:00:05
+[2015.05.25-20.46.16:947][909]Job is a success!
+[2015.05.25-20.46.17:081][911]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT)
+[2015.05.25-20.46.17:138][911]LogTexture:Display: Building textures: LQ_Lightmap_0_3 (DXT1)
+[2015.05.25-20.46.17:140][911]LogTexture:Display: Building textures: HQ_Lightmap0_3 (AutoDXT)
+[2015.05.25-20.46.17:142][911]LogTexture:Display: Building textures: LQ_Lightmap_0_2 (DXT1)
+[2015.05.25-20.46.17:157][911]LogTexture:Display: Building textures: HQ_Lightmap0_2 (AutoDXT)
+[2015.05.25-20.46.17:194][911]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1)
+[2015.05.25-20.46.17:308][911]LogTexture:Display: Building textures: ShadowMapTexture2D_0 (BGRA8)
+[2015.05.25-20.46.17:332][911]LogTexture:Display: Building textures: ShadowMapTexture2D_1 (BGRA8)
+[2015.05.25-20.46.17:333][911]LogTexture:Display: Building textures: ShadowMapTexture2D_2 (BGRA8)
+[2015.05.25-20.46.17:402][911]Lightmass on SURALYA: 1.32 sec total, 84 ms importing, 1 ms setup, 270 ms photons, 959 ms processing, 0 ms extra exporting [133/133 mappings]. Threads: 6.54 sec total, 2.24 sec processing.
+[2015.05.25-20.46.17:442][911]LogStaticLightingSystem: Illumination: 7.20 sec (314 ms encoding lightmaps)
+[2015.05.25-20.46.17:442][911]LogStaticLightingSystem: Lightmap texture memory:  1.7 MB (0.3 MB streaming, 1.3 MB non-streaming), 6 textures
+[2015.05.25-20.46.17:442][911]LogStaticLightingSystem: Shadowmap texture memory: 2.8 MB (0.2 MB streaming, 2.7 MB non-streaming), 3 textures
+[2015.05.25-20.46.17:509][912]Cmd: MAP CHECK NOTIFYRESULTS
+[2015.05.25-20.46.17:509][912]MapCheck: New page: TopDownExampleMap2 - May 26, 2015, 12:46:17 AM
+[2015.05.25-20.46.17:572][912]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 62.954ms to complete.
+[2015.05.25-20.46.34:355][917]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.46.34:355][917]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:46:34 AM)
+[2015.05.25-20.46.34:356][917]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.46.34:373][917]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017146s)
+[2015.05.25-20.46.34:373][917]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.46.34:374][917]LogPlayLevel: PIE: World Init took: (0.000979s)
+[2015.05.25-20.46.34:374][917]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.018295s)
+[2015.05.25-20.46.34:390][917]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.46.34:396][917]LogInit: FAudioDevice initialized.
+[2015.05.25-20.46.34:428][917]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.46.34:433][917]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.46.34:433][917]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.46.34
+[2015.05.25-20.46.34:433][917]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.46.34:433][917]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.46.34:434][917]LogWorld: Bringing up level for play took: 0.004359
+[2015.05.25-20.46.34:435][917]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.282
+[2015.05.25-20.46.36:789][183]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000024A865C0
+[2015.05.25-20.47.44:561][273]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.47.44:561][273]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:47:44 AM)
+[2015.05.25-20.47.44:562][273]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.47.44:588][273]LogPlayLevel: PIE: StaticDuplicateObject took: (0.026587s)
+[2015.05.25-20.47.44:589][273]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.47.44:589][273]LogPlayLevel: PIE: World Init took: (0.001041s)
+[2015.05.25-20.47.44:589][273]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.027786s)
+[2015.05.25-20.47.44:606][273]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.47.44:612][273]LogInit: FAudioDevice initialized.
+[2015.05.25-20.47.44:639][273]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.47.44:644][273]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.47.44:644][273]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.47.44
+[2015.05.25-20.47.44:644][273]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.47.44:644][273]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_10 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.47.44:645][273]LogWorld: Bringing up level for play took: 0.004267
+[2015.05.25-20.47.44:646][273]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.493
+[2015.05.25-20.47.46:279][460]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000242C9DA0
+[2015.05.25-20.47.46:836][526]MapCheck: New page: Map Check
+[2015.05.25-20.47.46:844][526]Cmd: MAP REBUILD ALLVISIBLE
+[2015.05.25-20.47.46:844][526]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2015.05.25-20.47.46:883][526]LightingResults: New page: Lighting Build - May 26, 2015, 12:47:46 AM
+[2015.05.25-20.47.51:463][526]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2015.05.25-20.47.51:463][526]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2015.05.25-20.47.51:463][526]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2015.05.25-20.47.51:463][526]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2015.05.25-20.47.51:463][526]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2015.05.25-20.47.51:595][526]LogEditorBuildUtils: Build time 0:00:04
+[2015.05.25-20.47.52:768][616]Job is a success!
+[2015.05.25-20.47.52:884][617]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT)
+[2015.05.25-20.47.52:938][617]LogTexture:Display: Building textures: LQ_Lightmap_1_3 (DXT1)
+[2015.05.25-20.47.52:941][617]LogTexture:Display: Building textures: HQ_Lightmap1_3 (AutoDXT)
+[2015.05.25-20.47.52:943][617]LogTexture:Display: Building textures: LQ_Lightmap_1_2 (DXT1)
+[2015.05.25-20.47.52:958][617]LogTexture:Display: Building textures: HQ_Lightmap1_2 (AutoDXT)
+[2015.05.25-20.47.52:994][617]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1)
+[2015.05.25-20.47.53:109][617]LogTexture:Display: Building textures: ShadowMapTexture2D_3 (BGRA8)
+[2015.05.25-20.47.53:132][617]LogTexture:Display: Building textures: ShadowMapTexture2D_4 (BGRA8)
+[2015.05.25-20.47.53:134][617]LogTexture:Display: Building textures: ShadowMapTexture2D_5 (BGRA8)
+[2015.05.25-20.47.53:154][617]Lightmass on SURALYA: 1.25 sec total, 73 ms importing, 1 ms setup, 278 ms photons, 892 ms processing, 0 ms extra exporting [133/133 mappings]. Threads: 6.07 sec total, 2.23 sec processing.
+[2015.05.25-20.47.53:212][617]LogStaticLightingSystem: Illumination: 6.29 sec (313 ms encoding lightmaps)
+[2015.05.25-20.47.53:212][617]LogStaticLightingSystem: Lightmap texture memory:  1.7 MB (0.3 MB streaming, 1.3 MB non-streaming), 6 textures
+[2015.05.25-20.47.53:212][617]LogStaticLightingSystem: Shadowmap texture memory: 5.7 MB (0.4 MB streaming, 5.3 MB non-streaming), 6 textures
+[2015.05.25-20.47.53:456][618]Cmd: MAP CHECK NOTIFYRESULTS
+[2015.05.25-20.47.53:456][618]MapCheck: New page: TopDownExampleMap2 - May 26, 2015, 12:47:53 AM
+[2015.05.25-20.47.53:525][618]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 69.648ms to complete.
+[2015.05.25-20.47.54:998][791]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.47.54:998][791]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:47:54 AM)
+[2015.05.25-20.47.54:998][791]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.47.55:016][791]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018126s)
+[2015.05.25-20.47.55:017][791]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.47.55:018][791]LogPlayLevel: PIE: World Init took: (0.001372s)
+[2015.05.25-20.47.55:018][791]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.019676s)
+[2015.05.25-20.47.55:036][791]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.47.55:041][791]LogInit: FAudioDevice initialized.
+[2015.05.25-20.47.55:074][791]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.47.55:078][791]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.47.55:078][791]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.47.55
+[2015.05.25-20.47.55:078][791]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.47.55:078][791]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_11 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.47.55:079][791]LogWorld: Bringing up level for play took: 0.004292
+[2015.05.25-20.47.55:080][791]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.926
+[2015.05.25-20.48.10:674][644]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000321EE660
+[2015.05.25-20.48.23:624][194]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight)
+[2015.05.25-20.48.40:587][207]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.48.40:587][207]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:48:40 AM)
+[2015.05.25-20.48.40:588][207]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.48.40:615][207]LogPlayLevel: PIE: StaticDuplicateObject took: (0.027332s)
+[2015.05.25-20.48.40:616][207]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.48.40:617][207]LogPlayLevel: PIE: World Init took: (0.001551s)
+[2015.05.25-20.48.40:617][207]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.029059s)
+[2015.05.25-20.48.40:635][207]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.48.40:641][207]LogInit: FAudioDevice initialized.
+[2015.05.25-20.48.40:673][207]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.48.40:678][207]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.48.40:678][207]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.48.40
+[2015.05.25-20.48.40:678][207]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.48.40:678][207]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_12 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.48.40:679][207]LogWorld: Bringing up level for play took: 0.004390
+[2015.05.25-20.48.40:679][207]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.525
+[2015.05.25-20.48.42:197][383]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000014853100
+[2015.05.25-20.49.01:714][706]MapCheck: New page: Map Check
+[2015.05.25-20.49.01:729][706]Cmd: MAP REBUILD ALLVISIBLE
+[2015.05.25-20.49.01:730][706]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2015.05.25-20.49.01:772][706]LightingResults: New page: Lighting Build - May 26, 2015, 12:49:01 AM
+[2015.05.25-20.49.06:319][706]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2015.05.25-20.49.06:319][706]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2015.05.25-20.49.06:319][706]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2015.05.25-20.49.06:319][706]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2015.05.25-20.49.06:319][706]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2015.05.25-20.49.06:459][706]LogEditorBuildUtils: Build time 0:00:04
+[2015.05.25-20.49.07:632][807]Job is a success!
+[2015.05.25-20.49.07:753][808]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT)
+[2015.05.25-20.49.07:802][808]LogTexture:Display: Building textures: LQ_Lightmap_0_3 (DXT1)
+[2015.05.25-20.49.07:805][808]LogTexture:Display: Building textures: HQ_Lightmap0_3 (AutoDXT)
+[2015.05.25-20.49.07:807][808]LogTexture:Display: Building textures: LQ_Lightmap_0_2 (DXT1)
+[2015.05.25-20.49.07:823][808]LogTexture:Display: Building textures: HQ_Lightmap0_2 (AutoDXT)
+[2015.05.25-20.49.07:857][808]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1)
+[2015.05.25-20.49.07:976][808]LogTexture:Display: Building textures: ShadowMapTexture2D_6 (BGRA8)
+[2015.05.25-20.49.08:000][808]LogTexture:Display: Building textures: ShadowMapTexture2D_7 (BGRA8)
+[2015.05.25-20.49.08:001][808]LogTexture:Display: Building textures: ShadowMapTexture2D_8 (BGRA8)
+[2015.05.25-20.49.08:019][808]Lightmass on SURALYA: 1.27 sec total, 72 ms importing, 1 ms setup, 254 ms photons, 939 ms processing, 0 ms extra exporting [133/133 mappings]. Threads: 6.39 sec total, 2.19 sec processing.
+[2015.05.25-20.49.08:081][808]LogStaticLightingSystem: Illumination: 6.27 sec (312 ms encoding lightmaps)
+[2015.05.25-20.49.08:081][808]LogStaticLightingSystem: Lightmap texture memory:  1.7 MB (0.3 MB streaming, 1.3 MB non-streaming), 6 textures
+[2015.05.25-20.49.08:081][808]LogStaticLightingSystem: Shadowmap texture memory: 8.5 MB (0.5 MB streaming, 8.0 MB non-streaming), 9 textures
+[2015.05.25-20.49.08:309][809]Cmd: MAP CHECK NOTIFYRESULTS
+[2015.05.25-20.49.08:310][809]MapCheck: New page: TopDownExampleMap2 - May 26, 2015, 12:49:08 AM
+[2015.05.25-20.49.08:362][809]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 52.077ms to complete.
+[2015.05.25-20.49.13:313][401]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.49.13:313][401]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:49:13 AM)
+[2015.05.25-20.49.13:313][401]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.49.13:331][401]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017584s)
+[2015.05.25-20.49.13:331][401]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.49.13:332][401]LogPlayLevel: PIE: World Init took: (0.001032s)
+[2015.05.25-20.49.13:332][401]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.018778s)
+[2015.05.25-20.49.13:350][401]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.49.13:356][401]LogInit: FAudioDevice initialized.
+[2015.05.25-20.49.13:386][401]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.49.13:391][401]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.49.13:391][401]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.49.13
+[2015.05.25-20.49.13:391][401]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.49.13:392][401]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_13 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.49.13:392][401]LogWorld: Bringing up level for play took: 0.004367
+[2015.05.25-20.49.13:393][401]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 -0.762
+[2015.05.25-20.49.29:918][367]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000321B6B60
+[2015.05.25-20.49.38:692][414]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight)
+[2015.05.25-20.50.11:081][274]LogEditorViewport: Clicking Background
+[2015.05.25-20.50.14:544][688]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight2)
+[2015.05.25-20.50.28:966][409]MapCheck: New page: Map Check
+[2015.05.25-20.50.28:982][409]Cmd: MAP REBUILD ALLVISIBLE
+[2015.05.25-20.50.28:982][409]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2015.05.25-20.50.29:024][409]LightingResults: New page: Lighting Build - May 26, 2015, 12:50:29 AM
+[2015.05.25-20.50.33:563][409]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2015.05.25-20.50.33:564][409]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2015.05.25-20.50.33:564][409]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2015.05.25-20.50.33:564][409]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2015.05.25-20.50.33:564][409]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2015.05.25-20.50.33:679][409]LogEditorBuildUtils: Build time 0:00:04
+[2015.05.25-20.50.34:771][496]Job is a success!
+[2015.05.25-20.50.34:893][498]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT)
+[2015.05.25-20.50.34:941][498]LogTexture:Display: Building textures: LQ_Lightmap_1_3 (DXT1)
+[2015.05.25-20.50.34:943][498]LogTexture:Display: Building textures: HQ_Lightmap1_3 (AutoDXT)
+[2015.05.25-20.50.34:946][498]LogTexture:Display: Building textures: LQ_Lightmap_1_2 (DXT1)
+[2015.05.25-20.50.34:960][498]LogTexture:Display: Building textures: HQ_Lightmap1_2 (AutoDXT)
+[2015.05.25-20.50.34:992][498]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1)
+[2015.05.25-20.50.35:105][498]LogTexture:Display: Building textures: ShadowMapTexture2D_9 (BGRA8)
+[2015.05.25-20.50.35:130][498]LogTexture:Display: Building textures: ShadowMapTexture2D_10 (BGRA8)
+[2015.05.25-20.50.35:131][498]LogTexture:Display: Building textures: ShadowMapTexture2D_11 (BGRA8)
+[2015.05.25-20.50.35:157][498]Lightmass on SURALYA: 1.22 sec total, 73 ms importing, 1 ms setup, 256 ms photons, 886 ms processing, 0 ms extra exporting [133/133 mappings]. Threads: 6.04 sec total, 2.23 sec processing.
+[2015.05.25-20.50.35:217][498]LogStaticLightingSystem: Illumination: 6.15 sec (301 ms encoding lightmaps)
+[2015.05.25-20.50.35:217][498]LogStaticLightingSystem: Lightmap texture memory:  1.7 MB (0.3 MB streaming, 1.3 MB non-streaming), 6 textures
+[2015.05.25-20.50.35:217][498]LogStaticLightingSystem: Shadowmap texture memory: 11.4 MB (0.7 MB streaming, 10.7 MB non-streaming), 12 textures
+[2015.05.25-20.50.35:558][499]Cmd: MAP CHECK NOTIFYRESULTS
+[2015.05.25-20.50.35:558][499]MapCheck: New page: TopDownExampleMap2 - May 26, 2015, 12:50:35 AM
+[2015.05.25-20.50.35:621][499]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 62.462ms to complete.
+[2015.05.25-20.50.35:638][499]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.50.35:638][499]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:50:35 AM)
+[2015.05.25-20.50.35:638][499]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.50.35:663][499]LogPlayLevel: PIE: StaticDuplicateObject took: (0.025163s)
+[2015.05.25-20.50.35:664][499]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.50.35:664][499]LogPlayLevel: PIE: World Init took: (0.001008s)
+[2015.05.25-20.50.35:664][499]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.026337s)
+[2015.05.25-20.50.35:683][499]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.50.35:690][499]LogInit: FAudioDevice initialized.
+[2015.05.25-20.50.35:722][499]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.50.35:727][499]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.50.35:727][499]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.50.35
+[2015.05.25-20.50.35:727][499]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.50.35:727][499]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_14 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.50.35:728][499]LogWorld: Bringing up level for play took: 0.004322
+[2015.05.25-20.50.35:729][499]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 -0.426
+[2015.05.25-20.50.58:561][221]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000242CBE20
+[2015.05.25-20.51.15:629][254]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight)
+[2015.05.25-20.51.19:860][755]Cmd: MODE ROTGRID=0
+[2015.05.25-20.52.29:687][ 77]LogEditorViewport: Clicking on Actor (LMB): NavMeshBoundsVolume (NavigationMeshBoundsVolume)
+[2015.05.25-20.52.48:602][306]LogEditorViewport: Clicking Background
+[2015.05.25-20.52.54:194][958]LogSavePackage: Save=117.687958ms
+[2015.05.25-20.52.54:194][958]LogSavePackage: Moving '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/TopDownExampleMap2A4A68EA543B60D7492E9E9B66B832591.tmp' to '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/Maps/TopDownExampleMap2.umap'
+[2015.05.25-20.53.00:849][752]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.53.00:849][752]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:53:00 AM)
+[2015.05.25-20.53.00:849][752]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.53.00:876][752]LogPlayLevel: PIE: StaticDuplicateObject took: (0.026554s)
+[2015.05.25-20.53.00:877][752]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.53.00:877][752]LogPlayLevel: PIE: World Init took: (0.001246s)
+[2015.05.25-20.53.00:877][752]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.027964s)
+[2015.05.25-20.53.00:899][752]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.53.00:905][752]LogInit: FAudioDevice initialized.
+[2015.05.25-20.53.00:935][752]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.53.00:940][752]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.53.00:940][752]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.53.00
+[2015.05.25-20.53.00:940][752]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.53.00:940][752]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_15 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.53.00:940][752]LogWorld: Bringing up level for play took: 0.004372
+[2015.05.25-20.53.00:941][752]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 0.785
+[2015.05.25-20.53.03:125][  8]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000332DAA20
+[2015.05.25-20.53.03:789][ 86]MapCheck: New page: Map Check
+[2015.05.25-20.53.03:804][ 86]Cmd: MAP REBUILD ALLVISIBLE
+[2015.05.25-20.53.03:805][ 86]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2015.05.25-20.53.03:844][ 86]LightingResults: New page: Lighting Build - May 26, 2015, 12:53:03 AM
+[2015.05.25-20.53.08:389][ 86]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2015.05.25-20.53.08:389][ 86]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2015.05.25-20.53.08:389][ 86]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2015.05.25-20.53.08:389][ 86]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2015.05.25-20.53.08:389][ 86]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2015.05.25-20.53.08:529][ 86]LogEditorBuildUtils: Build time 0:00:04
+[2015.05.25-20.53.09:676][184]Job is a success!
+[2015.05.25-20.53.09:797][185]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT)
+[2015.05.25-20.53.09:847][185]LogTexture:Display: Building textures: LQ_Lightmap_0_3 (DXT1)
+[2015.05.25-20.53.09:849][185]LogTexture:Display: Building textures: HQ_Lightmap0_3 (AutoDXT)
+[2015.05.25-20.53.09:851][185]LogTexture:Display: Building textures: LQ_Lightmap_0_2 (DXT1)
+[2015.05.25-20.53.09:866][185]LogTexture:Display: Building textures: HQ_Lightmap0_2 (AutoDXT)
+[2015.05.25-20.53.09:899][185]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1)
+[2015.05.25-20.53.10:024][185]LogTexture:Display: Building textures: ShadowMapTexture2D_12 (BGRA8)
+[2015.05.25-20.53.10:047][185]LogTexture:Display: Building textures: ShadowMapTexture2D_13 (BGRA8)
+[2015.05.25-20.53.10:050][185]LogTexture:Display: Building textures: ShadowMapTexture2D_14 (BGRA8)
+[2015.05.25-20.53.10:068][185]Lightmass on SURALYA: 1.26 sec total, 81 ms importing, 1 ms setup, 260 ms photons, 907 ms processing, 0 ms extra exporting [118/118 mappings]. Threads: 6.18 sec total, 2.43 sec processing.
+[2015.05.25-20.53.10:123][185]LogStaticLightingSystem: Illumination: 6.24 sec (316 ms encoding lightmaps)
+[2015.05.25-20.53.10:123][185]LogStaticLightingSystem: Lightmap texture memory:  1.7 MB (0.3 MB streaming, 1.3 MB non-streaming), 6 textures
+[2015.05.25-20.53.10:123][185]LogStaticLightingSystem: Shadowmap texture memory: 14.2 MB (0.9 MB streaming, 13.3 MB non-streaming), 15 textures
+[2015.05.25-20.53.10:375][186]Cmd: MAP CHECK NOTIFYRESULTS
+[2015.05.25-20.53.10:375][186]MapCheck: New page: TopDownExampleMap2 - May 26, 2015, 12:53:10 AM
+[2015.05.25-20.53.10:443][186]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 67.808ms to complete.
+[2015.05.25-20.53.11:246][280]LogPlayLevel: PIE:  No blueprints needed recompiling
+[2015.05.25-20.53.11:246][280]PIE: New page: PIE session: TopDownExampleMap2 (May 26, 2015, 12:53:11 AM)
+[2015.05.25-20.53.11:247][280]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_TopDownExampleMap2
+[2015.05.25-20.53.11:263][280]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016487s)
+[2015.05.25-20.53.11:264][280]LogAIModule: Creating AISystem for world TopDownExampleMap2
+[2015.05.25-20.53.11:264][280]LogPlayLevel: PIE: World Init took: (0.001241s)
+[2015.05.25-20.53.11:265][280]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/TopDownExampleMap2.TopDownExampleMap2 to /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 (0.017897s)
+[2015.05.25-20.53.11:282][280]LogInit: XAudio2 using 'Lautsprecher (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2015.05.25-20.53.11:288][280]LogInit: FAudioDevice initialized.
+[2015.05.25-20.53.11:316][280]LogWorld: Game class is 'TopDownGameMode_C'
+[2015.05.25-20.53.11:321][280]LogWorld:Warning: *** WARNING - PATHS MAY NOT BE VALID ***
+[2015.05.25-20.53.11:321][280]LogWorld: Bringing World /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2 up for play (max tick rate 0) at 2015.05.25-22.53.11
+[2015.05.25-20.53.11:321][280]LogActor:Warning: GameSession /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameSession_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.53.11:321][280]LogActor:Warning: GameNetworkManager /Game/Maps/UEDPIE_0_TopDownExampleMap2.TopDownExampleMap2:PersistentLevel.GameNetworkManager_16 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2015.05.25-20.53.11:321][280]LogWorld: Bringing up level for play took: 0.004410
+[2015.05.25-20.53.11:322][280]PIE: Info Play in editor start time for /Game/Maps/UEDPIE_0_TopDownExampleMap2 -0.834
+[2015.05.25-20.53.27:633][222]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000022B6F100
+[2015.05.25-20.53.35:995][202]LogSavePackage: Save=139.742706ms
+[2015.05.25-20.53.35:995][202]LogSavePackage: Moving '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/TopDownExampleMap2F1BF803140F7483E05458EA58D25AE7C.tmp' to '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/Maps/TopDownExampleMap2.umap'
+[2015.05.25-20.54.02:461][346]LogSavePackage: Save=137.035263ms
+[2015.05.25-20.54.02:461][346]LogSavePackage: Moving '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Saved/TopDownExampleMap23E85DDF44601FB128F6703AEC96A5140.tmp' to '../../../../../../../Studium/3DProjekt/3DGame/3DGame/Soulglitch/Content/Maps/TopDownExampleMap2.umap'
+[2015.05.25-20.55.16:131][833]LogEditorViewport: Clicking Background
+[2015.05.25-20.55.21:369][411]Cmd: QUIT_EDITOR
+[2015.05.25-20.55.21:626][411]LogExit: Preparing to exit.
+[2015.05.25-20.55.22:788][411]LogExit: Editor shut down
+[2015.05.25-20.55.22:788][411]LogExit: Transaction tracking system shut down
+[2015.05.25-20.55.22:791][411]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000000A1EF9C0
+[2015.05.25-20.55.22:792][411]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000001866B420
+[2015.05.25-20.55.22:792][411]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000229899E0
+[2015.05.25-20.55.22:792][411]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000134647C0
+[2015.05.25-20.55.22:792][411]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000134676A0
+[2015.05.25-20.55.22:792][411]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000013466340
+[2015.05.25-20.55.23:120][411]LogExit: Object subsystem successfully closed.
+[2015.05.25-20.55.23:268][411]LogModuleManager: Shutting down and abandoning module CrashTracker (188)
+[2015.05.25-20.55.23:268][411]LogModuleManager: Shutting down and abandoning module SceneOutliner (187)
+[2015.05.25-20.55.23:268][411]LogModuleManager: Shutting down and abandoning module SuperSearch (186)
+[2015.05.25-20.55.23:269][411]LogModuleManager: Shutting down and abandoning module WidgetCarousel (185)
+[2015.05.25-20.55.23:269][411]LogModuleManager: Shutting down and abandoning module AddContentDialog (184)
+[2015.05.25-20.55.23:269][411]LogModuleManager: Shutting down and abandoning module EditorWidgets (183)
+[2015.05.25-20.55.23:269][411]LogModuleManager: Shutting down and abandoning module CollectionManager (182)
+[2015.05.25-20.55.23:269][411]LogModuleManager: Shutting down and abandoning module StatsViewer (181)
+[2015.05.25-20.55.23:269][411]LogModuleManager: Shutting down and abandoning module FoliageEdit (180)
+[2015.05.25-20.55.23:269][411]LogModuleManager: Shutting down and abandoning module LandscapeEditor (179)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module ActorPickerMode (178)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module GeometryMode (177)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module TextureAlignMode (176)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module BspMode (175)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module PlacementMode (174)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module AutomationWorker (173)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module CharacterAI (172)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module SmartSnapping (171)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module ViewportSnapping (170)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module LogVisualizer (169)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (168)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module IntroTutorials (167)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (166)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (165)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (164)
+[2015.05.25-20.55.23:270][411]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (163)
+[2015.05.25-20.55.23:620][411]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (162)
+[2015.05.25-20.55.23:620][411]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (161)
+[2015.05.25-20.55.23:620][411]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (160)
+[2015.05.25-20.55.23:620][411]LogModuleManager: Shutting down and abandoning module MergeActors (159)
+[2015.05.25-20.55.23:620][411]LogModuleManager: Shutting down and abandoning module SizeMap (158)
+[2015.05.25-20.55.23:620][411]LogModuleManager: Shutting down and abandoning module TreeMap (157)
+[2015.05.25-20.55.23:624][411]LogModuleManager: Shutting down and abandoning module ReferenceViewer (156)
+[2015.05.25-20.55.23:624][411]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (155)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module HardwareTargeting (154)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (153)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module UndoHistory (152)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (151)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module UserFeedback (150)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module XmlParser (149)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module Blutility (148)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (147)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (146)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module InputBindingEditor (145)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (144)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module SettingsEditor (143)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module ProjectLauncher (142)
+[2015.05.25-20.55.23:625][411]LogModuleManager: Shutting down and abandoning module SessionFrontend (141)
+[2015.05.25-20.55.23:626][411]LogModuleManager: Shutting down and abandoning module ProfilerClient (140)
+[2015.05.25-20.55.23:626][411]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (139)
+[2015.05.25-20.55.23:626][411]LogModuleManager: Shutting down and abandoning module DeviceManager (138)
+[2015.05.25-20.55.23:626][411]LogModuleManager: Shutting down and abandoning module AutomationController (137)
+[2015.05.25-20.55.23:627][411]LogModuleManager: Shutting down and abandoning module AutomationWindow (136)
+[2015.05.25-20.55.23:635][411]LogModuleManager: Shutting down and abandoning module Layers (135)
+[2015.05.25-20.55.23:645][411]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (134)
+[2015.05.25-20.55.23:645][411]LogModuleManager: Shutting down and abandoning module DetailCustomizations (133)
+[2015.05.25-20.55.23:645][411]LogModuleManager: Shutting down and abandoning module PackagesDialog (132)
+[2015.05.25-20.55.23:645][411]LogModuleManager: Shutting down and abandoning module AssetRegistry (131)
+[2015.05.25-20.55.23:732][411]LogModuleManager: Shutting down and abandoning module Persona (130)
+[2015.05.25-20.55.23:736][411]LogModuleManager: Shutting down and abandoning module SlateReflector (129)
+[2015.05.25-20.55.23:746][411]LogModuleManager: Shutting down and abandoning module LevelEditor (128)
+[2015.05.25-20.55.23:747][411]LogModuleManager: Shutting down and abandoning module Kismet (127)
+[2015.05.25-20.55.23:747][411]LogModuleManager: Shutting down and abandoning module GraphEditor (126)
+[2015.05.25-20.55.23:766][411]LogModuleManager: Shutting down and abandoning module ClassViewer (125)
+[2015.05.25-20.55.23:766][411]LogModuleManager: Shutting down and abandoning module Toolbox (124)
+[2015.05.25-20.55.23:766][411]LogModuleManager: Shutting down and abandoning module ModuleUI (123)
+[2015.05.25-20.55.23:766][411]LogModuleManager: Shutting down and abandoning module MovieSceneTools (122)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module OutputLog (121)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module GammaUI (120)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module Documentation (119)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (118)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (117)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module AnalyticsET (116)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module Analytics (115)
+[2015.05.25-20.55.23:776][411]LogModuleManager: Shutting down and abandoning module AITestSuite (114)
+[2015.05.25-20.55.23:777][411]LogModuleManager: Shutting down and abandoning module GameplayDebugger (113)
+[2015.05.25-20.55.23:777][411]LogModuleManager: Shutting down and abandoning module AIModule (112)
+[2015.05.25-20.55.23:777][411]LogModuleManager: Shutting down and abandoning module ProfilerService (111)
+[2015.05.25-20.55.23:790][411]LogModuleManager: Shutting down and abandoning module TaskGraph (110)
+[2015.05.25-20.55.23:801][411]LogModuleManager: Shutting down and abandoning module SlateRemote (109)
+[2015.05.25-20.55.23:801][411]LogModuleManager: Shutting down and abandoning module SteamVRController (108)
+[2015.05.25-20.55.23:801][411]LogModuleManager: Shutting down and abandoning module SteamVR (107)
+[2015.05.25-20.55.23:801][411]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (106)
+[2015.05.25-20.55.23:801][411]LogModuleManager: Shutting down and abandoning module OculusRift (105)
+[2015.05.25-20.55.23:801][411]LogModuleManager: Shutting down and abandoning module LeapMotionController (104)
+[2015.05.25-20.55.23:813][411]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (103)
+[2015.05.25-20.55.23:813][411]LogModuleManager: Shutting down and abandoning module CableComponent (102)
+[2015.05.25-20.55.23:813][411]LogModuleManager: Shutting down and abandoning module MessagingDebugger (101)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (100)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (99)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module PluginBrowser (98)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module MainFrame (97)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module EpicSurvey (96)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module DesktopPlatform (95)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (94)
+[2015.05.25-20.55.23:827][411]LogModuleManager: Shutting down and abandoning module HotReload (93)
+[2015.05.25-20.55.23:828][411]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (92)
+[2015.05.25-20.55.23:828][411]LogModuleManager: Shutting down and abandoning module UObjectPlugin (91)
+[2015.05.25-20.55.23:828][411]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (90)
+[2015.05.25-20.55.23:828][411]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (89)
+[2015.05.25-20.55.23:831][411]LogModuleManager: Shutting down and abandoning module SourceControl (88)
+[2015.05.25-20.55.23:831][411]LogModuleManager: Shutting down and abandoning module GitSourceControl (87)
+[2015.05.25-20.55.23:831][411]LogModuleManager: Shutting down and abandoning module BlankPlugin (86)
+[2015.05.25-20.55.23:831][411]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (85)
+[2015.05.25-20.55.23:831][411]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (84)
+[2015.05.25-20.55.23:831][411]LogModuleManager: Shutting down and abandoning module MeshPaint (83)
+[2015.05.25-20.55.23:831][411]LogModuleManager: Shutting down and abandoning module ContentBrowser (82)
+[2015.05.25-20.55.23:832][411]LogModuleManager: Shutting down and abandoning module Paper2DEditor (81)
+[2015.05.25-20.55.23:842][411]LogModuleManager: Shutting down and abandoning module UdpMessaging (80)
+[2015.05.25-20.55.23:942][411]LogModuleManager: Shutting down and abandoning module Paper2D (79)
+[2015.05.25-20.55.23:942][411]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (78)
+[2015.05.25-20.55.23:951][411]LogModuleManager: Shutting down and abandoning module Media (77)
+[2015.05.25-20.55.23:951][411]LogModuleManager: Shutting down and abandoning module WmfMedia (76)
+[2015.05.25-20.55.23:952][411]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (75)
+[2015.05.25-20.55.23:952][411]LogModuleManager: Shutting down and abandoning module PropertyEditor (74)
+[2015.05.25-20.55.23:952][411]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (73)
+[2015.05.25-20.55.23:967][411]LogModuleManager: Shutting down and abandoning module FunctionalTesting (72)
+[2015.05.25-20.55.23:968][411]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (71)
+[2015.05.25-20.55.23:974][411]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (70)
+[2015.05.25-20.55.23:974][411]LogModuleManager: Shutting down and abandoning module MessageLog (69)
+[2015.05.25-20.55.23:974][411]LogModuleManager: Shutting down and abandoning module Sequencer (68)
+[2015.05.25-20.55.23:976][411]LogModuleManager: Shutting down and abandoning module AssetTools (67)
+[2015.05.25-20.55.23:992][411]LogModuleManager: Shutting down and abandoning module UMGEditor (66)
+[2015.05.25-20.55.24:002][411]LogModuleManager: Shutting down and abandoning module UMG (65)
+[2015.05.25-20.55.24:010][411]LogModuleManager: Shutting down and abandoning module Slate (64)
+[2015.05.25-20.55.24:010][411]LogModuleManager: Shutting down and abandoning module EditorStyle (63)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module SessionServices (62)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (61)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (60)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module XAudio2 (59)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module Networking (57)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module Core (56)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module KismetCompiler (55)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module PhysXFormats (54)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module MeshUtilities (53)
+[2015.05.25-20.55.24:016][411]LogModuleManager: Shutting down and abandoning module DerivedDataCache (52)
+[2015.05.25-20.55.24:021][411]LogDerivedDataCache: Shutdown
+[2015.05.25-20.55.24:021][411]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (51)
+[2015.05.25-20.55.24:021][411]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (50)
+[2015.05.25-20.55.24:021][411]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (49)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (48)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (47)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (46)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (45)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module ImageWrapper (44)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (43)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (42)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (41)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (40)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (39)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (38)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (37)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (36)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module Messaging (35)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (34)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (33)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (32)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (31)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (30)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (29)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (28)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (27)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (26)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (25)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (24)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (23)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (22)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module DesktopTargetPlatform (21)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module TargetPlatform (20)
+[2015.05.25-20.55.24:023][411]LogModuleManager: Shutting down and abandoning module InputCore (19)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module Settings (18)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (16)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module HTTP (15)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (14)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module TextureCompressor (13)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module ShaderCore (12)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module Landscape (11)
+[2015.05.25-20.55.24:024][411]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (10)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module OpenGLDrv (9)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module D3D11RHI (8)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module Renderer (7)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module Engine (6)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module CoreUObject (5)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module NetworkFile (4)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module StreamingFile (3)
+[2015.05.25-20.55.24:029][411]LogModuleManager: Shutting down and abandoning module SandboxFile (2)
+[2015.05.25-20.55.24:030][411]LogModuleManager: Shutting down and abandoning module PakFile (1)
+[2015.05.25-20.55.24:031][411]LogExit: Exiting.
+[2015.05.25-20.55.24:054][411]Log file closed, 05/25/15 22:55:24
