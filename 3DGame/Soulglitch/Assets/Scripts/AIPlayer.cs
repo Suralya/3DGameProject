@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AIPlayer : MonoBehaviour {
+public class AIPlayer : Player {
 
 	// Use this for initialization
 	void Start () {

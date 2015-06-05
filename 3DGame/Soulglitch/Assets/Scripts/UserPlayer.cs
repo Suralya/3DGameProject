@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UserPlayer : MonoBehaviour {
+public class UserPlayer : Player {
 
 	// Use this for initialization
 	void Start () {
