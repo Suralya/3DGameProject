@@ -9,7 +9,14 @@ public class Player : MonoBehaviour {
 	public Vector3 moveDestination;
 	public float moveSpeed = 10.0f;
 
+	public int HP = 25;
 	public int AP = 5;
+
+	public int attackRange = 1;
+
+	public bool moving = false;
+	public bool attacking = false;
+	public bool selected = false;
 
 	//movement animation
 	public List<Vector3> positionQueue = new List<Vector3>();
@@ -32,6 +39,7 @@ public class Player : MonoBehaviour {
 
 	public virtual void TurnUpdate()
 	{
-
+		moving = false;
+		attacking = false;	
 	}
 }

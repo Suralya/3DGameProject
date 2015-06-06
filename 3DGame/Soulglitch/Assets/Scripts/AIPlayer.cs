@@ -12,4 +12,20 @@ public class AIPlayer : Player {
 	void Update () {
 	
 	}
+
+	public override void TurnUpdate ()
+	{
+		if (Vector3.Distance(moveDestination, transform.position) > 0.1f) {
+			transform.position += (moveDestination - transform.position).normalized * moveSpeed * Time.deltaTime;
+			
+			if (Vector3.Distance(moveDestination, transform.position) <= 0.1f) {
+				transform.position = moveDestination;
+				//AP--;
+			}
+		} else {
+			moveDestination = new Vector3(0 + Mathf.Floor(GameManager.instance.mapSizeX/2),1.5f, -0 + Mathf.Floor(GameManager.instance.mapSizeY/2));
+		}
+
+	}
+
 }

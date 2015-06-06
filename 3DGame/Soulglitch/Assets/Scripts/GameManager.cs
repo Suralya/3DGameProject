@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
+	public static GameManager instance;
+
 	public int maxrounds = 10;
 	public int roundcount =0;
 	public int mapSizeX = 28;
 	public int mapSizeY = 27;
 
-	public bool UserTurn = true;
+	public bool _userTurn = true;
 
 	public GameObject TilePrefab;
 	public List<Tile> map = new List<Tile> ();
@@ -19,7 +21,12 @@ public class GameManager : MonoBehaviour {
 
 	Tile temptile=new Tile();
 	Player tempplayer=new Player();
-	
+
+	void Awake() {
+		instance = this;
+	}
+
+
 	void Start () {
 		findTiles ();
 		for (int i=map.Count-1; i>=0; i--) {
@@ -27,11 +34,24 @@ public class GameManager : MonoBehaviour {
 		}
 		findUserPlayers ();
 		findAIPlayers ();
+
+		nextTurn();
 	}
 	
 
 	void Update () {
 		//wincheck ();
+
+		if (_userTurn == true) {
+			foreach (UserPlayer User in UserPlayers) {
+				User.TurnUpdate ();
+			}
+		} else {
+			foreach (AIPlayer AI in AIPlayers) {
+				AI.TurnUpdate ();
+			}
+
+		}
 	}
 
 	public void findTiles(){
@@ -66,14 +86,41 @@ public class GameManager : MonoBehaviour {
 
 	public void nextTurn() {
 		failcheck ();
-		if (UserTurn) {
+		if (_userTurn) {
+			UserTrun();
+
 			//reset Userplayerpoints
-			UserTurn=false;
+			_userTurn=false;
 		} else {
+			UserPlayers.Find (delegate(Player obj) {
+				return(obj.selected);
+			}).selected = false;
+
+			AITurn();
+			removeTileHighlights();
 			//reset AIPlayerpoints
-			UserTurn = true;
+			_userTurn = true;
 			roundcount ++;
 		}
+	}
+
+	public void UserTrun(){
+		//Ablauf der Runde des Spielers
+		Debug.Log ("It's your turn");
+		UserPlayers [0].selected = true;
+		//foreach (UserPlayer User in UserPlayers) {
+		//	User.TurnUpdate ();
+		//}
+
+	}
+
+	public void AITurn(){
+		//Ablauf der Runde des Gegners
+		Debug.Log ("It's the enemys turn");
+	//	foreach (AIPlayer AI in AIPlayers) {
+	//		AI.TurnUpdate ();
+	//	}
+		//nextTurn();
 	}
 
 
@@ -81,6 +128,7 @@ public class GameManager : MonoBehaviour {
 	{
 		if (roundcount >= maxrounds) {
 			//GameLost
+			Debug.Log ("You Lost");
 		}
 	}
 
@@ -88,4 +136,41 @@ public class GameManager : MonoBehaviour {
 	public void wincheck(){
 	//if all AIPlayer aus AIPlayers =dead - then spiel gewonnen
 	}
+
+	public void highlightTilesAt(Vector2 originLocation, Color highlightColor, int distance) {
+		List <Tile> highlightedTiles = TileHighlight.FindHighlight(map.Find(delegate(Tile obj) {return(obj.gridPosition==originLocation);}), distance);
+		
+		foreach (Tile t in highlightedTiles) {
+			t.transform.GetComponent<Renderer>().material.color = highlightColor;
+		}
+	}
+	
+	public void removeTileHighlights() {
+			foreach(Tile obj in map)
+				if (!obj.impassible) obj.transform.GetComponent<Renderer>().material.color = Color.white;
+			}
+
+	public void moveCurrentPlayer(Tile destTile) {
+		if (destTile.transform.GetComponent<Renderer>().material.color != Color.white && !destTile.impassible) {
+			removeTileHighlights();
+			UserPlayers.Find(delegate(Player obj){return(obj.selected);}).moving = false;
+			foreach(Tile t in TilePathFinder.FindPath(map.Find(delegate(Tile obj) {return(obj.gridPosition==UserPlayers.Find(delegate(Player obji){return(obji.selected);}).gridPosition);}),destTile)) {
+				UserPlayers.Find(delegate(Player obj){return(obj.selected);}).positionQueue.Add(map.Find(delegate(Tile obj) {return(obj.gridPosition== t.gridPosition);}).transform.position + 1.5f * Vector3.up);
+				Debug.Log("(" + UserPlayers.Find(delegate(Player obj){return(obj.selected);}).positionQueue[UserPlayers.Find(delegate(Player obj){return(obj.selected);}).positionQueue.Count - 1].x + "," + UserPlayers.Find(delegate(Player obj){return(obj.selected);}).positionQueue[UserPlayers.Find(delegate(Player obj){return(obj.selected);}).positionQueue.Count - 1].y + ")");
+			}			
+			UserPlayers.Find(delegate(Player obj){return(obj.selected);}).gridPosition = destTile.gridPosition;
+		} else {
+			Debug.Log ("destination invalid");
+		}
+	}
+
+	public void selectSecond()
+	{
+		UserPlayers.Find (delegate(Player obj) {
+			return(obj.selected);
+		}).selected = false;
+
+		UserPlayers [1].selected = true;
+	}
+
 }

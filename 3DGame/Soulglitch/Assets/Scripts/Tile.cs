@@ -6,7 +6,7 @@ public class Tile : MonoBehaviour {
 
 	public Vector2 gridPosition = Vector2.zero;
 
-	public int ACost = 1;
+	public int APCost = 1;
 	public bool impassible = false;
 	
 	public List<Tile> neighbors = new List<Tile>();
@@ -37,12 +37,24 @@ public class Tile : MonoBehaviour {
 	
 	}
 	void OnMouseEnter(){
-		transform.GetComponent<Renderer> ().material.color = Color.blue;
+	/*	transform.GetComponent<Renderer> ().material.color = Color.gray;
 		Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
+		*/
 	}
 
 	void OnMouseExit(){
-		transform.GetComponent<Renderer>().material.color = Color.white;
+	//	transform.GetComponent<Renderer>().material.color = Color.white;
+	}
+
+	void OnMouseDown() {
+		if (GameManager.instance.UserPlayers.Find(delegate(Player obj){return(obj.selected);}).moving) 
+		{
+			GameManager.instance.moveCurrentPlayer(this);
+		} else if (GameManager.instance.UserPlayers.Find(delegate(Player obj){return(obj.selected);}).attacking) {
+//			GameManager.instance.attackWithCurrentPlayer(this);
+		 
+		}
+		
 	}
 
 }
