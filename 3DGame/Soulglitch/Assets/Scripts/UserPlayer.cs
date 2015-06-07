@@ -10,7 +10,16 @@ public class UserPlayer : Player {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex] == this) {
+			transform.GetComponent<Renderer>().material.color = Color.green;
+		} else {
+			transform.GetComponent<Renderer>().material.color = Color.white;
+		}
+		
+		if (HP <= 0) {
+			transform.rotation = Quaternion.Euler(new Vector3(90,0,0));
+			transform.GetComponent<Renderer>().material.color = Color.red;
+		}
 	}
 
 	public override void TurnUpdate ()

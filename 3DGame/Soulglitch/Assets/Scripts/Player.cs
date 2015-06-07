@@ -7,6 +7,8 @@ public class Player : MonoBehaviour {
 	public Vector3 moveDestination;
 	public float moveSpeed = 10.0f;
 
+	public int HP = 25;
+
 	void Awake () {
 		moveDestination = transform.position;
 	}

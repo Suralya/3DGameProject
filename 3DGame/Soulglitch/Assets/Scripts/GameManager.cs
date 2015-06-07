@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
 
 	public bool _userturn =true;
 
-	int currentPlayerIndex = 0;
+	public int currentPlayerIndex = 0;
 
 	void Awake() {
 		instance = this;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
 			map[i].getNeighbors();
 		}
 
-		findUserPlayers ();
+		//findUserPlayers ();
 		findAIPlayers ();
 
 		UserPlayers [0].selected = true;
