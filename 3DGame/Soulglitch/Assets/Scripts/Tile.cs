@@ -15,6 +15,9 @@ public class Tile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (impassible) {
+			transform.GetComponent<Renderer> ().material.color = Color.magenta;
+		}
 		gridPosition.x = this.transform.position.x;
 		gridPosition.y = this.transform.position.z;
 
@@ -37,24 +40,20 @@ public class Tile : MonoBehaviour {
 	
 	}
 	void OnMouseEnter(){
-	/*	transform.GetComponent<Renderer> ().material.color = Color.gray;
+		transform.GetComponent<Renderer> ().material.color = Color.blue;
 		Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
-		*/
 	}
 
 	void OnMouseExit(){
-	//	transform.GetComponent<Renderer>().material.color = Color.white;
+		if (!impassible) {
+			transform.GetComponent<Renderer> ().material.color = Color.white;
+		} else {
+			transform.GetComponent<Renderer> ().material.color = Color.magenta;
+		}
 	}
 
 	void OnMouseDown() {
-		if (GameManager.instance.UserPlayers.Find(delegate(Player obj){return(obj.selected);}).moving) 
-		{
-			GameManager.instance.moveCurrentPlayer(this);
-		} else if (GameManager.instance.UserPlayers.Find(delegate(Player obj){return(obj.selected);}).attacking) {
-//			GameManager.instance.attackWithCurrentPlayer(this);
-		 
-		}
-		
+		GameManager.instance.moveCurrentPlayer(this);
 	}
 
 }

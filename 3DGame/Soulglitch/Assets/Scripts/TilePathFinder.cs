@@ -37,5 +37,5 @@ public class TilePathFinder : MonoBehaviour {
 			}
 		}
 		return null;
-	}
+}
 }
