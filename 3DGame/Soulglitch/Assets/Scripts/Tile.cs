@@ -6,7 +6,7 @@ public class Tile : MonoBehaviour {
 
 	public Vector2 gridPosition = Vector2.zero;
 
-	public int ACost = 1;
+	public int APCost = 1;
 	public bool impassible = false;
 	
 	public List<Tile> neighbors = new List<Tile>();
@@ -15,6 +15,9 @@ public class Tile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (impassible) {
+			transform.GetComponent<Renderer> ().material.color = Color.magenta;
+		}
 		gridPosition.x = this.transform.position.x;
 		gridPosition.y = this.transform.position.z;
 
@@ -42,7 +45,15 @@ public class Tile : MonoBehaviour {
 	}
 
 	void OnMouseExit(){
-		transform.GetComponent<Renderer>().material.color = Color.white;
+		if (!impassible) {
+			transform.GetComponent<Renderer> ().material.color = Color.white;
+		} else {
+			transform.GetComponent<Renderer> ().material.color = Color.magenta;
+		}
+	}
+
+	void OnMouseDown() {
+		GameManager.instance.moveCurrentPlayer(this);
 	}
 
 }
