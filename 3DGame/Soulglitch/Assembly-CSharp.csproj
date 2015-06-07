@@ -50,9 +50,6 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
-     <Compile Include="Assets\Scripts\TileHighlight.cs" />
-     <Compile Include="Assets\Scripts\TilePath.cs" />
-     <Compile Include="Assets\Scripts\TilePathFinder.cs" />
      <Compile Include="Assets\Scripts\UserPlayer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programme/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
