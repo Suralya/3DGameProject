@@ -10,6 +10,9 @@ public class UserPlayer : Player {
 	
 	// Update is called once per frame
 	void Update () {
+		gridPosition.x = this.transform.position.x;
+		gridPosition.y = this.transform.position.z;
+
 		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex] == this) {
 			transform.GetComponent<Renderer>().material.color = Color.green;
 		} else {

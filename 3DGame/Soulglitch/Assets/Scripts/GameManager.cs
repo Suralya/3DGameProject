@@ -47,11 +47,30 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void moveCurrentPlayer(Tile destTile) {
-		if (_userturn&& UserPlayers[currentPlayerIndex].moving) {
-			UserPlayers [currentPlayerIndex].moveDestination = destTile.transform.position + 1.5f * Vector3.up;
-			movePlayer();
+		if (_userturn && UserPlayers [currentPlayerIndex].moving) {
+			if (_userturn) {
+				if (destTile.transform.GetComponent<Renderer>().material.color != Color.white && !destTile.impassible) {
+					removeTileHighlights ();
+		
+					foreach (Tile t in TilePathFinder.FindPath(map.Find(delegate(Tile obj) {return obj.gridPosition == UserPlayers[currentPlayerIndex].gridPosition;}),destTile)) {
+						UserPlayers [currentPlayerIndex].positionQueue.Add (map.Find (delegate(Tile obj) {
+							return obj.gridPosition == t.gridPosition;
+						}).transform.position + 1.5f * Vector3.up);
+						Debug.Log ("(" + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].x + "," + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].y + ")");
+					}			
+					UserPlayers [currentPlayerIndex].gridPosition = destTile.gridPosition;
+
+					movePlayer();
+					
+				} else {
+					Debug.Log ("destination invalid");
+				}
+
+
+			}
 		}
 	}
+
 	public void movePlayer(){
 		if (_userturn) {
 			
@@ -170,4 +189,24 @@ public class GameManager : MonoBehaviour {
 			AIPlayers.Add (tempplayer);
 		}
 	}
+
+
+	public void highlightTilesAt(Vector2 originLocation, Color highlightColor, int distance) {
+		List <Tile> highlightedTiles = TileHighlight.FindHighlight(map.Find(delegate(Tile obj) {return obj.gridPosition==originLocation;}), distance);
+		
+		foreach (Tile t in highlightedTiles) {
+			t.transform.GetComponent<Renderer>().material.color = highlightColor;
+		}
+	}
+
+	public void removeTileHighlights() {
+		
+		foreach (Tile t in map) {
+			if(!t.impassible){
+				t.transform.GetComponent<Renderer>().material.color = Color.white;
+			}
+		}
+	}
+
+
 }

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
+	public Vector2 gridPosition = Vector2.zero;
+
 	public bool selected = false;
 	public Vector3 moveDestination;
 	public float moveSpeed = 10.0f;
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 	
 	}
 
