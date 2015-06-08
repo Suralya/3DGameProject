@@ -47,15 +47,13 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void moveCurrentPlayer(Tile destTile) {
-		if (_userturn && UserPlayers [currentPlayerIndex].moving) {
-			if (_userturn) {
+		if (_userturn) {
+
 				if (destTile.transform.GetComponent<Renderer>().material.color != Color.white && !destTile.impassible) {
 					removeTileHighlights ();
 		
 					foreach (Tile t in TilePathFinder.FindPath(map.Find(delegate(Tile obj) {return obj.gridPosition == UserPlayers[currentPlayerIndex].gridPosition;}),destTile)) {
-						UserPlayers [currentPlayerIndex].positionQueue.Add (map.Find (delegate(Tile obj) {
-							return obj.gridPosition == t.gridPosition;
-						}).transform.position + 1.5f * Vector3.up);
+					UserPlayers [currentPlayerIndex].positionQueue.Add (map.Find (delegate(Tile obj) {return obj.gridPosition == t.gridPosition;}).transform.position + 1.5f * Vector3.up);
 						Debug.Log ("(" + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].x + "," + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].y + ")");
 					}			
 					UserPlayers [currentPlayerIndex].gridPosition = destTile.gridPosition;
@@ -67,24 +65,32 @@ public class GameManager : MonoBehaviour {
 				}
 
 
-			}
+
 		}
 	}
 
 	public void movePlayer(){
 		if (_userturn) {
-			
+
+
 			if(!UserPlayers[currentPlayerIndex].moving)
 			{
+				UserPlayers[currentPlayerIndex].gridPosition.x=UserPlayers[currentPlayerIndex].transform.position.x;
+				UserPlayers[currentPlayerIndex].gridPosition.y=UserPlayers[currentPlayerIndex].transform.position.z;
+
+
 				Debug.Log("get movin'");
+				removeTileHighlights ();
 				UserPlayers[currentPlayerIndex].moving=true;
 				UserPlayers[currentPlayerIndex].attacking=false;
+				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].movementPerActionPoint);
 
 				
 			}else{
 				Debug.Log("no movin' today ");
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].attacking=false;
+				removeTileHighlights ();
 			}
 			
 		}
@@ -95,6 +101,7 @@ public class GameManager : MonoBehaviour {
 			
 			if(!UserPlayers[currentPlayerIndex].attacking)
 			{
+				removeTileHighlights ();
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
 				UserPlayers[currentPlayerIndex].moving=false;
@@ -105,6 +112,7 @@ public class GameManager : MonoBehaviour {
 				Debug.Log("no attack");
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].moving=false;
+				removeTileHighlights ();
 			}
 			
 		}

@@ -39,6 +39,7 @@ public class Tile : MonoBehaviour {
 	void Update () {
 	
 	}
+	/*
 	void OnMouseEnter(){
 		transform.GetComponent<Renderer> ().material.color = Color.blue;
 		Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
@@ -51,7 +52,7 @@ public class Tile : MonoBehaviour {
 			transform.GetComponent<Renderer> ().material.color = Color.magenta;
 		}
 	}
-
+*/
 	void OnMouseDown() {
 		if (GM.UserPlayers [GM.currentPlayerIndex].moving) {
 			GM.moveCurrentPlayer (this);

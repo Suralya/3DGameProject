@@ -5,14 +5,12 @@ public class UserPlayer : Player {
 
 	// Use this for initialization
 	void Start () {
-	
+		gridPosition.x = this.transform.position.x;
+		gridPosition.y = this.transform.position.z;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		gridPosition.x = this.transform.position.x;
-		gridPosition.y = this.transform.position.z;
-
 		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex] == this) {
 			transform.GetComponent<Renderer>().material.color = Color.green;
 		} else {
@@ -27,15 +25,21 @@ public class UserPlayer : Player {
 
 	public override void TurnUpdate ()
 	{
-		if (Vector3.Distance(moveDestination, transform.position) > 0.1f) {
-			transform.position += (moveDestination - transform.position).normalized * moveSpeed * Time.deltaTime;
+
+		if (positionQueue.Count > 0) {
+			transform.position += (positionQueue[0] - transform.position).normalized * moveSpeed * Time.deltaTime;
 			
-			if (Vector3.Distance(moveDestination, transform.position) <= 0.1f) {
-				transform.position = moveDestination;
-				//GameManager.instance.nextTurn();
+			if (Vector3.Distance(positionQueue[0], transform.position) <= 0.1f) {
+				transform.position = positionQueue[0];
+				positionQueue.RemoveAt(0);
+				if (positionQueue.Count == 0) {
+					actionPoints--;
+				}
 			}
+			
 		}
 		
 		base.TurnUpdate ();
-	}
+}
+
 }
