@@ -130,6 +130,11 @@ public class GameManager : MonoBehaviour {
 			currentPlayerIndex = 0;
 			UserPlayers [currentPlayerIndex].selected =true;
 		} else {
+			removeTileHighlights ();
+			foreach(Player User in UserPlayers)
+			{
+				User.actionPoints=2;
+			}
 			//AIturn
 			_userturn =false;
 			Debug.Log("It's the enemys turn");

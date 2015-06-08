@@ -16,7 +16,7 @@ public class Tile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (impassible) {
-			transform.GetComponent<Renderer> ().material.color = Color.magenta;
+	//		transform.GetComponent<Renderer> ().material.color = Color.magenta;
 		}
 		gridPosition.x = this.transform.position.x;
 		gridPosition.y = this.transform.position.z;
