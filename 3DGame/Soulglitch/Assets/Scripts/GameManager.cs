@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour {
 			movePlayer();
 		}
 	}
-
 	public void movePlayer(){
 		if (_userturn) {
 			
@@ -60,11 +59,32 @@ public class GameManager : MonoBehaviour {
 			{
 				Debug.Log("get movin'");
 				UserPlayers[currentPlayerIndex].moving=true;
-
+				UserPlayers[currentPlayerIndex].attacking=false;
 
 				
 			}else{
 				Debug.Log("no movin' today ");
+				UserPlayers[currentPlayerIndex].moving=false;
+				UserPlayers[currentPlayerIndex].attacking=false;
+			}
+			
+		}
+	}
+
+	public void attackPlayer(){
+		if (_userturn) {
+			
+			if(!UserPlayers[currentPlayerIndex].attacking)
+			{
+				Debug.Log("start attack'");
+				UserPlayers[currentPlayerIndex].attacking=true;
+				UserPlayers[currentPlayerIndex].moving=false;
+				
+				
+				
+			}else{
+				Debug.Log("no attack");
+				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].moving=false;
 			}
 			

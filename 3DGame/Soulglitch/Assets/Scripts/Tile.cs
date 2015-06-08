@@ -53,7 +53,13 @@ public class Tile : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		GameManager.instance.moveCurrentPlayer(this);
+		if (GM.UserPlayers [GM.currentPlayerIndex].moving) {
+			GM.moveCurrentPlayer (this);
+			Debug.Log ("Wurde übergebn"+this.transform.position.x+","+this.transform.position.z);
+		} else if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking) {
+		//	GameManager.instance.attackWithCurrentPlayer(this);
+			Debug.Log ("Angriff auf"+this.transform.position.x+","+this.transform.position.z);
 	}
+}
 
 }

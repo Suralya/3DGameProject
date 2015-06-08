@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
@@ -8,9 +9,19 @@ public class Player : MonoBehaviour {
 	public float moveSpeed = 10.0f;
 
 	public bool moving=false;
+	public bool attacking =false;
 
+	public int movementPerActionPoint = 5;
+	public int attackRange = 1;
+
+	public string playerName = "Robin";
 	public int HP = 25;
 
+	public int actionPoints = 2;
+
+
+	public List<Vector3> positionQueue = new List<Vector3>();	
+	
 	void Awake () {
 		moveDestination = transform.position;
 	}
@@ -26,6 +37,10 @@ public class Player : MonoBehaviour {
 	}
 
 	public virtual void TurnUpdate () {
-		
+		if (actionPoints <= 0) {
+			moving = false;
+			attacking = false;
+			
 	}
+}
 }
