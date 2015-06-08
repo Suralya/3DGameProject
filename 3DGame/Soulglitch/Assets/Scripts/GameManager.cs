@@ -47,10 +47,30 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void moveCurrentPlayer(Tile destTile) {
-		if (_userturn) {
+		if (_userturn&& UserPlayers[currentPlayerIndex].moving) {
 			UserPlayers [currentPlayerIndex].moveDestination = destTile.transform.position + 1.5f * Vector3.up;
+			movePlayer();
 		}
 	}
+
+	public void movePlayer(){
+		if (_userturn) {
+			
+			if(!UserPlayers[currentPlayerIndex].moving)
+			{
+				Debug.Log("get movin'");
+				UserPlayers[currentPlayerIndex].moving=true;
+
+
+				
+			}else{
+				Debug.Log("no movin' today ");
+				UserPlayers[currentPlayerIndex].moving=false;
+			}
+			
+		}
+	}
+
 
 
 	public void nextTurn()
