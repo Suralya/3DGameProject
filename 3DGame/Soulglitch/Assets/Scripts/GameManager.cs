@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour {
 	public List<Player> UserPlayers =new List<Player>();
 	public List<Player> AIPlayers = new List<Player>();
 
-	Tile temptile=new Tile();
-	Player tempplayer=new Player();
+	Tile temptile;
+	Player tempplayer;
 
 	public bool _userturn =true;
 
