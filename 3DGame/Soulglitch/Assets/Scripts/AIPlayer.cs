@@ -5,7 +5,8 @@ public class AIPlayer : Player {
 
 	// Use this for initialization
 	void Start () {
-	
+		gridPosition.x = this.transform.position.x;
+		gridPosition.y = this.transform.position.z;
 	}
 	
 	// Update is called once per frame

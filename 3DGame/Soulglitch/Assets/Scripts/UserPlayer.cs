@@ -33,7 +33,7 @@ public class UserPlayer : Player {
 				transform.position = positionQueue[0];
 				positionQueue.RemoveAt(0);
 				if (positionQueue.Count == 0) {
-					actionPoints--;
+				//	actionPoints--;
 				}
 			}
 			

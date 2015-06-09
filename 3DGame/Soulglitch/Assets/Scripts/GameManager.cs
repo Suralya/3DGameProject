@@ -49,14 +49,17 @@ public class GameManager : MonoBehaviour {
 	public void moveCurrentPlayer(Tile destTile) {
 		if (_userturn) {
 
-				if (destTile.transform.GetComponent<Renderer>().material.color != Color.white && !destTile.impassible) {
+				if (destTile.transform.GetComponent<Renderer>().material.color == Color.magenta && !destTile.impassible && !destTile.occupied) {
 					removeTileHighlights ();
-		
-					foreach (Tile t in TilePathFinder.FindPath(map.Find(delegate(Tile obj) {return obj.gridPosition == UserPlayers[currentPlayerIndex].gridPosition;}),destTile)) {
+
+				UserPlayers[currentPlayerIndex].actionPoints -= TilePathFinder.FindPath(map.Find(t => t.gridPosition==UserPlayers[currentPlayerIndex].gridPosition),destTile).Count;
+				
+				foreach (Tile t in TilePathFinder.FindPath(map.Find(t => t.gridPosition==UserPlayers[currentPlayerIndex].gridPosition),destTile)) {
 					UserPlayers [currentPlayerIndex].positionQueue.Add (map.Find (delegate(Tile obj) {return obj.gridPosition == t.gridPosition;}).transform.position + 1.5f * Vector3.up);
 						Debug.Log ("(" + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].x + "," + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].y + ")");
 					}			
 					UserPlayers [currentPlayerIndex].gridPosition = destTile.gridPosition;
+				   
 
 					movePlayer();
 					
@@ -83,7 +86,7 @@ public class GameManager : MonoBehaviour {
 				removeTileHighlights ();
 				UserPlayers[currentPlayerIndex].moving=true;
 				UserPlayers[currentPlayerIndex].attacking=false;
-				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].movementPerActionPoint);
+				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].actionPoints);
 
 				
 			}else{
@@ -133,7 +136,7 @@ public class GameManager : MonoBehaviour {
 			removeTileHighlights ();
 			foreach(Player User in UserPlayers)
 			{
-				User.actionPoints=2;
+				User.actionPoints=20;
 			}
 			//AIturn
 			_userturn =false;
@@ -215,7 +218,7 @@ public class GameManager : MonoBehaviour {
 	public void removeTileHighlights() {
 		
 		foreach (Tile t in map) {
-			if(!t.impassible){
+			if(!t.impassible||!t.occupied){
 				t.transform.GetComponent<Renderer>().material.color = Color.white;
 			}
 		}

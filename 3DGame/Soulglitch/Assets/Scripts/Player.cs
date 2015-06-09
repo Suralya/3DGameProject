@@ -13,13 +13,11 @@ public class Player : MonoBehaviour {
 	public bool moving=false;
 	public bool attacking =false;
 
-	public int movementPerActionPoint = 5;
-	public int attackRange = 1;
 
 	public string playerName = "Robin";
 	public int HP = 25;
 
-	public int actionPoints = 2;
+	public int actionPoints = 20;
 
 
 	public List<Vector3> positionQueue = new List<Vector3>();	

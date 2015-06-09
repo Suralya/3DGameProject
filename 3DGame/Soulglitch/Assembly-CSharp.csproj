@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\TilePath.cs" />
      <Compile Include="Assets\Scripts\TilePathFinder.cs" />
      <Compile Include="Assets\Scripts\UserPlayer.cs" />
+     <Compile Include="Assets\Scripts\Waffe.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
