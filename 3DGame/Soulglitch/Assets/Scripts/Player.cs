@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
+	public Waffe Weapon = new Waffe();
+
 	public Vector2 gridPosition = Vector2.zero;
 
 	public bool selected = false;

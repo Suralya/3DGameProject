@@ -54,8 +54,10 @@ public class Tile : MonoBehaviour {
 	void OnMouseEnter(){
 		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible && !occupied) {
 			transform.GetComponent<Renderer> ().material.color = Color.blue;
-		} else if(transform.GetComponent<Renderer> ().material.color == Color.cyan){
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.cyan) {
 			transform.GetComponent<Renderer> ().material.color = Color.magenta;
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
+			transform.GetComponent<Renderer> ().material.color = Color.cyan;
 		}
 		//Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
 	}
@@ -66,6 +68,8 @@ public class Tile : MonoBehaviour {
 		} else if(transform.GetComponent<Renderer> ().material.color == Color.magenta)
 		{
 			transform.GetComponent<Renderer> ().material.color = Color.cyan;
+		}else if(transform.GetComponent<Renderer> ().material.color == Color.cyan){
+			transform.GetComponent<Renderer> ().material.color = Color.red;
 		}
 	}
 
@@ -74,7 +78,7 @@ public class Tile : MonoBehaviour {
 			GM.moveCurrentPlayer (this);
 			Debug.Log ("Wurde übergebn"+this.transform.position.x+","+this.transform.position.z);
 		} else if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking) {
-		//	GameManager.instance.attackWithCurrentPlayer(this);
+			GameManager.instance.attackWithCurrentPlayer(this);
 			Debug.Log ("Angriff auf"+this.transform.position.x+","+this.transform.position.z);
 	}
 }

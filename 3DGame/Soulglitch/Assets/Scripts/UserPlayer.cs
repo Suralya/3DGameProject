@@ -3,6 +3,7 @@ using System.Collections;
 
 public class UserPlayer : Player {
 
+
 	// Use this for initialization
 	void Start () {
 		gridPosition.x = this.transform.position.x;

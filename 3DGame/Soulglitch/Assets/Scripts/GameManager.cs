@@ -72,6 +72,55 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void attackWithCurrentPlayer(Tile destTile) {
+
+
+			if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white && !destTile.impassible) {
+			
+				Player target = null;
+				foreach (Player p in AIPlayers) {
+					if (p.gridPosition == destTile.gridPosition) {
+						target = p;
+					}
+				}
+			
+				if (target != null&&target.HP>0) {
+				
+					//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
+					if (UserPlayers [currentPlayerIndex].gridPosition.x >= target.gridPosition.x - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.x <= target.gridPosition.x + UserPlayers [currentPlayerIndex].Weapon.Attackrange &&
+						UserPlayers [currentPlayerIndex].gridPosition.y >= target.gridPosition.y - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.y <= target.gridPosition.y + UserPlayers [currentPlayerIndex].Weapon.Attackrange) {
+						UserPlayers [currentPlayerIndex].actionPoints -= UserPlayers [currentPlayerIndex].Weapon.APCost;
+					
+						removeTileHighlights ();
+						UserPlayers [currentPlayerIndex].moving = false;			
+					
+						//attack logic
+						//roll to hit
+						bool hit = Random.Range (0.0f, 1.0f) <= UserPlayers [currentPlayerIndex].Weapon.Hitchance;
+					
+						if (hit) {
+							//damage logic
+							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
+						
+							target.HP -= amountOfDamage;
+						
+							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
+						} else {
+							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " missed " + target.playerName + "!");
+						}
+						attackPlayer ();
+					} else {
+						Debug.Log ("Target is not adjacent!");
+					}
+				
+				} else {
+					Debug.Log ("destination invalid");
+				}
+			}
+			
+		
+	}
+
 	public void movePlayer(){
 		if (_userturn) {
 
@@ -104,12 +153,18 @@ public class GameManager : MonoBehaviour {
 			
 			if(!UserPlayers[currentPlayerIndex].attacking)
 			{
+			if (UserPlayers [currentPlayerIndex].actionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)
+				
+			{
 				removeTileHighlights ();
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
 				UserPlayers[currentPlayerIndex].moving=false;
+				GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.red, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
 				
-				
+				} else {
+					Debug.Log ("nicht genug AP");
+				}
 				
 			}else{
 				Debug.Log("no attack");
@@ -206,6 +261,13 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void highlightAtackTilesAt(Vector2 originLocation, Color highlightColor, int distance) {
+		List <Tile> highlightedTiles = TileHighlight.FindAtackHighlight(map.Find(delegate(Tile obj) {return obj.gridPosition==originLocation;}), distance);
+		
+		foreach (Tile t in highlightedTiles) {
+			t.transform.GetComponent<Renderer>().material.color = highlightColor;
+		}
+	}
 
 	public void highlightTilesAt(Vector2 originLocation, Color highlightColor, int distance) {
 		List <Tile> highlightedTiles = TileHighlight.FindHighlight(map.Find(delegate(Tile obj) {return obj.gridPosition==originLocation;}), distance);
