@@ -41,6 +41,7 @@ public class TileHighlight {
 		return closed;
 	}
 
+	//Über Raycast Hilighten und schießen???
 	public static List<Tile> FindAtackHighlight(Tile originTile, int movementPoints) {
 		List<Tile> closed = new List<Tile>();
 		List<TilePath> open = new List<TilePath>();

@@ -13,8 +13,8 @@ public class AIPlayer : Player {
 	void Update () {
 
 		if (HP <= 0) {
-			transform.rotation = Quaternion.Euler(new Vector3(90,0,0));
-			transform.GetComponent<Renderer>().material.color = Color.red;
+			gridPosition=default(Vector2);
+			Destroy(gameObject);
 		}
 	}
 
