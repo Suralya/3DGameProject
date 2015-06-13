@@ -85,6 +85,12 @@ public class GameManager : MonoBehaviour {
 				}
 			
 				if (target != null&&target.HP>0) {
+
+				Vector3 targetpos=destTile.transform.position;
+				targetpos.y=1.5f;
+				targetpos.x-=1f;
+				targetpos.z-=1f;
+
 				
 					//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
 					if (UserPlayers [currentPlayerIndex].gridPosition.x >= target.gridPosition.x - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.x <= target.gridPosition.x + UserPlayers [currentPlayerIndex].Weapon.Attackrange &&
@@ -98,7 +104,8 @@ public class GameManager : MonoBehaviour {
 						//roll to hit
 						bool hit = Random.Range (0.0f, 1.0f) <= UserPlayers [currentPlayerIndex].Weapon.Hitchance;
 					
-						if (hit) {
+					if (hit&&!Physics.Linecast(UserPlayers[currentPlayerIndex].transform.position,targetpos)) {
+
 							//damage logic
 							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
 						
@@ -117,8 +124,53 @@ public class GameManager : MonoBehaviour {
 					Debug.Log ("destination invalid");
 				}
 			}
+
+	}
+
+	public void aimWithCurrentPlayer(Tile destTile){
+
+		if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white && !destTile.impassible) {
 			
-		
+			Player target = null;
+			foreach (Player p in AIPlayers) {
+				if (p.gridPosition == destTile.gridPosition) {
+					target = p;
+				}
+			}
+			
+			if (target != null&&target.HP>0) {
+				
+				Vector3 targetpos=destTile.transform.position;
+				targetpos.y=1.5f;
+				targetpos.x-=1f;
+				targetpos.z-=1f;
+				
+				
+				//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
+				if (UserPlayers [currentPlayerIndex].gridPosition.x >= target.gridPosition.x - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.x <= target.gridPosition.x + UserPlayers [currentPlayerIndex].Weapon.Attackrange &&
+				    UserPlayers [currentPlayerIndex].gridPosition.y >= target.gridPosition.y - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.y <= target.gridPosition.y + UserPlayers [currentPlayerIndex].Weapon.Attackrange) 
+				{
+					UserPlayers [currentPlayerIndex].actionPoints -= 1;
+					
+					removeTileHighlights ();
+					UserPlayers [currentPlayerIndex].moving = false;			
+					
+					if (!Physics.Linecast(UserPlayers[currentPlayerIndex].transform.position,targetpos)) {
+						
+						Debug.Log (UserPlayers [currentPlayerIndex].playerName + " can hit " + target.playerName+"!");
+					} else {
+						Debug.Log (UserPlayers [currentPlayerIndex].playerName + " will miss " + target.playerName + "!");
+					}
+					aimPlayer();
+				} else {
+					Debug.Log ("Target is not adjacent!");
+				}
+				
+			} else {
+				Debug.Log ("destination invalid");
+			}
+		}
+
 	}
 
 	public void movePlayer(){
@@ -135,6 +187,7 @@ public class GameManager : MonoBehaviour {
 				removeTileHighlights ();
 				UserPlayers[currentPlayerIndex].moving=true;
 				UserPlayers[currentPlayerIndex].attacking=false;
+				UserPlayers[currentPlayerIndex].aiming=false;
 				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].actionPoints);
 
 				
@@ -142,6 +195,7 @@ public class GameManager : MonoBehaviour {
 				Debug.Log("no movin' today ");
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].attacking=false;
+				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
 			}
 			
@@ -160,6 +214,7 @@ public class GameManager : MonoBehaviour {
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
 				UserPlayers[currentPlayerIndex].moving=false;
+				UserPlayers[currentPlayerIndex].aiming=false;
 				GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.red, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
 				
 				} else {
@@ -170,12 +225,44 @@ public class GameManager : MonoBehaviour {
 				Debug.Log("no attack");
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].moving=false;
+				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
 			}
 			
 		}
 	}
 
+	public void aimPlayer(){
+		if (_userturn) {
+			
+			if(!UserPlayers[currentPlayerIndex].aiming)
+			{
+				if (UserPlayers [currentPlayerIndex].actionPoints >= 1)
+					
+				{
+					removeTileHighlights ();
+					Debug.Log("Aim");
+					UserPlayers[currentPlayerIndex].attacking=false;
+					UserPlayers[currentPlayerIndex].moving=false;
+					UserPlayers[currentPlayerIndex].aiming=true;
+					GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.grey, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
+					
+				} else {
+					Debug.Log ("nicht genug AP");
+				}
+				
+			}else{
+				Debug.Log("not aiming");
+				UserPlayers[currentPlayerIndex].attacking=false;
+				UserPlayers[currentPlayerIndex].moving=false;
+				UserPlayers[currentPlayerIndex].aiming=false;
+				removeTileHighlights ();
+			}
+			
+		}
+
+	
+	}
 
 
 	public void nextTurn()

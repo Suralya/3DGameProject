@@ -59,6 +59,9 @@ public class Tile : MonoBehaviour {
 		} else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
 			transform.GetComponent<Renderer> ().material.color = Color.cyan;
 		}
+		else if (transform.GetComponent<Renderer> ().material.color == Color.gray) {
+			transform.GetComponent<Renderer> ().material.color = Color.red;
+		}
 		//Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
 	}
 
@@ -70,6 +73,8 @@ public class Tile : MonoBehaviour {
 			transform.GetComponent<Renderer> ().material.color = Color.cyan;
 		}else if(transform.GetComponent<Renderer> ().material.color == Color.cyan){
 			transform.GetComponent<Renderer> ().material.color = Color.red;
+		}else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
+			transform.GetComponent<Renderer> ().material.color = Color.grey;
 		}
 	}
 
@@ -81,6 +86,10 @@ public class Tile : MonoBehaviour {
 			GameManager.instance.attackWithCurrentPlayer(this);
 			Debug.Log ("Angriff auf"+this.transform.position.x+","+this.transform.position.z);
 	}
+		else if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming) {
+			GameManager.instance.aimWithCurrentPlayer(this);
+			Debug.Log ("Aiming"+this.transform.position.x+","+this.transform.position.z);
+		}
 }
 
 }

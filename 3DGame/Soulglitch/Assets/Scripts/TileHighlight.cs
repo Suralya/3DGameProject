@@ -40,8 +40,7 @@ public class TileHighlight {
 		closed.Remove(originTile);
 		return closed;
 	}
-
-	//Über Raycast Hilighten und schießen???
+	
 	public static List<Tile> FindAtackHighlight(Tile originTile, int movementPoints) {
 		List<Tile> closed = new List<Tile>();
 		List<TilePath> open = new List<TilePath>();
@@ -65,7 +64,7 @@ public class TileHighlight {
 			closed.Add(current.lastTile);
 			
 			foreach (Tile t in current.lastTile.neighbors) {	
-				if (t.impassible) continue;
+				//if (t.impassible) continue;
 				TilePath newTilePath = new TilePath(current);
 				newTilePath.addTile(t);
 				open.Add(newTilePath);
