@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour {
 	public List<Player> UserPlayers =new List<Player>();
 	public List<Player> AIPlayers = new List<Player>();
 
+	public Canvas Tooltipcanvas;
+	public bool Tooltipshown =true;
+
 	Tile temptile;
 	Player tempplayer;
 
@@ -45,6 +48,17 @@ public class GameManager : MonoBehaviour {
 			AIPlayers [currentPlayerIndex].TurnUpdate ();
 		}
 	}
+
+	public void showhideTooltip(){
+		if (Tooltipshown) {
+			Tooltipshown=false;
+			Tooltipcanvas.enabled=false;
+		} else {Tooltipshown=true;
+			Tooltipcanvas.enabled=true;
+		}
+	
+	}
+
 
 	public void moveCurrentPlayer(Tile destTile) {
 		if (_userturn) {
