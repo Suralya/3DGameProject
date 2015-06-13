@@ -52,7 +52,7 @@ public class Tile : MonoBehaviour {
 	}
 
 	void OnMouseEnter(){
-		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible && !occupied) {
+		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible) {
 			transform.GetComponent<Renderer> ().material.color = Color.blue;
 		} else if (transform.GetComponent<Renderer> ().material.color == Color.cyan) {
 			transform.GetComponent<Renderer> ().material.color = Color.magenta;
@@ -66,7 +66,7 @@ public class Tile : MonoBehaviour {
 	}
 
 	void OnMouseExit(){
-		if (transform.GetComponent<Renderer> ().material.color == Color.blue && !impassible && !occupied) {
+		if (transform.GetComponent<Renderer> ().material.color == Color.blue && !impassible) {
 			transform.GetComponent<Renderer> ().material.color = Color.white;
 		} else if(transform.GetComponent<Renderer> ().material.color == Color.magenta)
 		{
@@ -89,6 +89,14 @@ public class Tile : MonoBehaviour {
 		else if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming) {
 			GameManager.instance.aimWithCurrentPlayer(this);
 			Debug.Log ("Aiming"+this.transform.position.x+","+this.transform.position.z);
+		}else if(!GM.UserPlayers[GM.currentPlayerIndex].moving
+		         &&!GM.UserPlayers[GM.currentPlayerIndex].attacking
+		         &&!GM.UserPlayers[GM.currentPlayerIndex].aiming
+		         &&GM.UserPlayers.Any(t=>t.gridPosition==this.gridPosition)){
+			GM.UserPlayers[GM.currentPlayerIndex].selected=false;
+			GM.currentPlayerIndex=GM.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition);
+			GM.UserPlayers[GM.currentPlayerIndex].selected=true;
+
 		}
 }
 
