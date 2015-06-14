@@ -1,0 +1,2 @@
+Du kannst dich nun zu einem Feld innerhalb der Markierung bewegen. 
+Kosten: 1 Ap pro Feld

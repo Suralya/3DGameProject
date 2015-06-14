@@ -55,6 +55,10 @@
      <Compile Include="Assets\Scripts\TilePathFinder.cs" />
      <Compile Include="Assets\Scripts\UserPlayer.cs" />
      <Compile Include="Assets\Scripts\Waffe.cs" />
+     <None Include="Assets\Texts\Tooltip_aim_de.txt" />
+     <None Include="Assets\Texts\Tooltip_weaponchange_de.txt" />
+     <None Include="Assets\Texts\Tooltip_attack_de.txt" />
+     <None Include="Assets\Texts\Tooltip_move_de.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

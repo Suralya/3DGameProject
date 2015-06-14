@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour {
 
 	public Canvas Tooltipcanvas;
 	public bool Tooltipshown =true;
+	Text Tooltiptext;
 
 	Tile temptile;
 	Player tempplayer;
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+
 		findTiles ();
 		for (int i=map.Count-1; i>=0; i--) {
 			map[i].getNeighbors();
@@ -37,18 +40,24 @@ public class GameManager : MonoBehaviour {
 		findAIPlayers ();
 
 		UserPlayers [0].selected = true;
+
+		var temp = GameObject.FindGameObjectWithTag ("Tooltip");
+		Tooltiptext = temp.GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (_userturn) {
 			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
-			UserPlayers [currentPlayerIndex].TurnUpdate ();
 		} else {
 			AIPlayers [currentPlayerIndex].TurnUpdate ();
 		}
-	}
 
+		foreach(Player p in UserPlayers)
+		{p.TurnUpdate ();}
+		
+	}
+	
 	public void showhideTooltip(){
 		if (Tooltipshown) {
 			Tooltipshown=false;
@@ -204,6 +213,8 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].aiming=false;
 				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].actionPoints);
 
+				Tooltiptext.text=System.IO.File.ReadAllText("Assets/Texts/Tooltip_move_de.txt");
+
 				
 			}else{
 				Debug.Log("no movin' today ");
@@ -211,6 +222,8 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
+
+				Tooltiptext.text=" ";
 			}
 			
 		}
@@ -230,9 +243,11 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
 				GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.red, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
+					Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost;
 				
 				} else {
 					Debug.Log ("nicht genug AP");
+					Tooltiptext.text="Du hast nicht genug AP um einen Angriff zu machen";
 				}
 				
 			}else{
@@ -241,6 +256,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
+				Tooltiptext.text=" ";
 			}
 			
 		}
@@ -260,9 +276,12 @@ public class GameManager : MonoBehaviour {
 					UserPlayers[currentPlayerIndex].moving=false;
 					UserPlayers[currentPlayerIndex].aiming=true;
 					GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.grey, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
+
+					Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_aim_de.txt");
 					
 				} else {
 					Debug.Log ("nicht genug AP");
+					Tooltiptext.text="Du hast nicht genug AP";
 				}
 				
 			}else{
@@ -271,6 +290,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
+				Tooltiptext.text=" ";
 			}
 			
 		}
@@ -298,6 +318,8 @@ public class GameManager : MonoBehaviour {
 			_userturn =false;
 			Debug.Log("It's the enemys turn");
 			currentPlayerIndex = 0;
+			Tooltiptext.text=" ";
+
 		}
 	}
 
