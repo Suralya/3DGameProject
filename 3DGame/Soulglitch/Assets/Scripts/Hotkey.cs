@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Hotkey : MonoBehaviour {
 
@@ -11,6 +13,12 @@ public class Hotkey : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Tab)){
+			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking=false;
+			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving=false;
+			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming=false;
+			GameManager.instance.removeTileHighlights ();
+			GameManager.instance.Tooltiptext.text=" ";
+
 			NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
 		}
 		if (Input.GetKeyDown (KeyCode.A)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>=GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost) {GameManager.instance.attackPlayer();}
@@ -21,6 +29,7 @@ public class Hotkey : MonoBehaviour {
 	}
 
 	public void NextPlayerasCurrent(int current){
+
 		GameManager.instance.UserPlayers[current].selected=false;
 		if (current<3){
 			GameManager.instance.UserPlayers[current+1].selected=true;

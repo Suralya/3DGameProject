@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 
 	public Canvas Tooltipcanvas;
 	public bool Tooltipshown =true;
-	Text Tooltiptext;
+	public Text Tooltiptext;
 
 	Tile temptile;
 	Player tempplayer;
@@ -325,6 +325,11 @@ public class GameManager : MonoBehaviour {
 
 	public void selectFirst (){
 	if (_userturn) {
+			UserPlayers[currentPlayerIndex].attacking=false;
+			UserPlayers[currentPlayerIndex].moving=false;
+			UserPlayers[currentPlayerIndex].aiming=false;
+			removeTileHighlights ();
+			Tooltiptext.text=" ";
 		
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [0].selected =true;
@@ -333,6 +338,11 @@ public class GameManager : MonoBehaviour {
 	}
 	public void selectSecond (){
 		if (_userturn) {
+			UserPlayers[currentPlayerIndex].attacking=false;
+			UserPlayers[currentPlayerIndex].moving=false;
+			UserPlayers[currentPlayerIndex].aiming=false;
+			removeTileHighlights ();
+			Tooltiptext.text=" ";
 			
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [1].selected =true;
@@ -341,6 +351,11 @@ public class GameManager : MonoBehaviour {
 	}
 	public void selectThird (){
 		if (_userturn) {
+			UserPlayers[currentPlayerIndex].attacking=false;
+			UserPlayers[currentPlayerIndex].moving=false;
+			UserPlayers[currentPlayerIndex].aiming=false;
+			removeTileHighlights ();
+			Tooltiptext.text=" ";
 			
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [2].selected =true;
@@ -349,6 +364,11 @@ public class GameManager : MonoBehaviour {
 	}
 	public void selectFourth (){
 		if (_userturn) {
+			UserPlayers[currentPlayerIndex].attacking=false;
+			UserPlayers[currentPlayerIndex].moving=false;
+			UserPlayers[currentPlayerIndex].aiming=false;
+			removeTileHighlights ();
+			Tooltiptext.text=" ";
 			
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [3].selected =true;
