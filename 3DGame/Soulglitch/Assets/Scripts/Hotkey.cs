@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Charactertab : MonoBehaviour {
+public class Hotkey : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +13,11 @@ public class Charactertab : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Tab)){
 			NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
 		}
+		if (Input.GetKeyDown (KeyCode.A)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>=GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost) {GameManager.instance.attackPlayer();}
+		if (Input.GetKeyDown (KeyCode.M)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.movePlayer();}
+		if (Input.GetKeyDown (KeyCode.S)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.aimPlayer();}
+		if (Input.GetKeyDown (KeyCode.T)) {GameManager.instance.showhideTooltip();}
+
 	}
 
 	public void NextPlayerasCurrent(int current){
@@ -25,8 +30,7 @@ public class Charactertab : MonoBehaviour {
 			GameManager.instance.currentPlayerIndex=0;
 		}
 		Debug.Log (" Player"+ (GameManager.instance.currentPlayerIndex+1) +" is selected");
-
+		
 	}
-
 
 }

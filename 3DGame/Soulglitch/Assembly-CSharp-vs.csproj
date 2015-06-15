@@ -47,9 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AIPlayer.cs" />
-     <Compile Include="Assets\Scripts\Charactertab.cs" />
+     <Compile Include="Assets\Scripts\Buttonbehave.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Hotkey.cs" />
      <Compile Include="Assets\Scripts\MainMenue.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />

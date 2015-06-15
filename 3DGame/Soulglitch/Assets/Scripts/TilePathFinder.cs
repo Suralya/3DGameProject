@@ -18,7 +18,7 @@ public class TilePathFinder : MonoBehaviour {
 			//open = open.OrderBy(x => x.costOfPath).ToList();
 			TilePath current = open[0];
 			open.Remove(open[0]);
-			
+
 			if (closed.Contains(current.lastTile)) {
 				continue;
 			} 
