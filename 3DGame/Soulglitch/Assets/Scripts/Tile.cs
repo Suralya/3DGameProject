@@ -78,7 +78,7 @@ public class Tile : MonoBehaviour {
 		}
 	}
 
-	void OnMouseDown() {
+	void OnMouseUp() {
 		if (GM.UserPlayers [GM.currentPlayerIndex].moving) {
 			GM.moveCurrentPlayer (this);
 			Debug.Log ("Wurde übergebn"+this.transform.position.x+","+this.transform.position.z);

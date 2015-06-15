@@ -14,10 +14,14 @@ public class MainMenue : MonoBehaviour {
 	}
 
 	public void LoadLvl(){
-		Application.LoadLevel (1);
+		Application.LoadLevel (2);
 	}
 
 	public void quit(){
 		Application.Quit();
+	}
+
+	public void Credits(){
+		Application.LoadLevel (1);
 	}
 }
