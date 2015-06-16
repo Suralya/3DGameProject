@@ -4,7 +4,11 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Hotkey : MonoBehaviour {
+	public static Hotkey hotk;
 
+	void Awake() {
+		hotk = this;
+	}
 	// Use this for initialization
 	void Start () {
 	
@@ -39,6 +43,8 @@ public class Hotkey : MonoBehaviour {
 			GameManager.instance.currentPlayerIndex=0;
 		}
 		Debug.Log (" Player"+ (GameManager.instance.currentPlayerIndex+1) +" is selected");
+
+
 		
 	}
 

@@ -61,6 +61,7 @@ public class Player : MonoBehaviour {
 		}else if(!GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
 		   &&!GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
 		   &&!GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+		   &&GameManager.instance.UserPlayers[GameManager.instance.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition)].HP>0
 		   &&GameManager.instance.UserPlayers.Any(t=>t.gridPosition==this.gridPosition)){
 			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].selected=false;
 			GameManager.instance.currentPlayerIndex=GameManager.instance.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition);

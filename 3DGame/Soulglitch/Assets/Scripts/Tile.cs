@@ -40,7 +40,7 @@ public class Tile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GM.UserPlayers.Any (delegate(Player obj) {return obj.gridPosition == gridPosition;}) 
+		if (GM.UserPlayers.Any (delegate(Player obj) {return obj.gridPosition == gridPosition;})&&GameManager.instance.UserPlayers[GameManager.instance.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition)].HP>0 
 		   || GM.AIPlayers.Any (delegate(Player obj) {return obj.gridPosition == gridPosition;})) 
 		{
 			occupied = true;
@@ -92,7 +92,8 @@ public class Tile : MonoBehaviour {
 		}else if(!GM.UserPlayers[GM.currentPlayerIndex].moving
 		         &&!GM.UserPlayers[GM.currentPlayerIndex].attacking
 		         &&!GM.UserPlayers[GM.currentPlayerIndex].aiming
-		         &&GM.UserPlayers.Any(t=>t.gridPosition==this.gridPosition)){
+		         &&GM.UserPlayers.Any(t=>t.gridPosition==this.gridPosition)
+		         &&GM.UserPlayers[GM.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition)].HP>0){
 			GM.UserPlayers[GM.currentPlayerIndex].selected=false;
 			GM.currentPlayerIndex=GM.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition);
 			GM.UserPlayers[GM.currentPlayerIndex].selected=true;

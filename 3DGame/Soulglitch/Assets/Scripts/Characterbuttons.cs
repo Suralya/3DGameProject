@@ -17,7 +17,7 @@ public class Characterbuttons : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//DisableDeadChar ();
+		DisableDeadChar ();
 	}
 
 	void SetCharacterNames(){
@@ -28,10 +28,10 @@ public class Characterbuttons : MonoBehaviour {
 	}
 
 	void DisableDeadChar(){
-		if (GameManager.instance.UserPlayers [0]==null) {CharacterButtonOne.interactable = false;}
-		if (GameManager.instance.UserPlayers [1]==null) {CharacterButtonTwo.interactable = false;}
-		if (GameManager.instance.UserPlayers [2]==null) {CharacterButtonThree.interactable = false;}
-		if (GameManager.instance.UserPlayers [3]==null) {CharacterButtonFour.interactable = false;}
+		if (GameManager.instance.UserPlayers [0].HP<=0) {CharacterButtonOne.interactable = false;}
+		if (GameManager.instance.UserPlayers [1].HP<=0) {CharacterButtonTwo.interactable = false;}
+		if (GameManager.instance.UserPlayers [2].HP<=0) {CharacterButtonThree.interactable = false;}
+		if (GameManager.instance.UserPlayers [3].HP<=0) {CharacterButtonFour.interactable = false;}
 	}
 	void HighlightSelected(){
 

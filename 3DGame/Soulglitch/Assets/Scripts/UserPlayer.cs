@@ -19,8 +19,16 @@ public class UserPlayer : Player {
 		}
 		
 		if (HP <= 0) {
+			Vector3 temp;
+			temp = this.transform.position;
+			temp.y=1;
 			transform.rotation = Quaternion.Euler(new Vector3(90,0,0));
+			transform.position=temp;
 			transform.GetComponent<Renderer>().material.color = Color.red;
+
+			if (selected&&GameManager.instance.UserPlayers.Exists(t=> t.HP>0))
+			{Hotkey.hotk.NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);}
+			else{Debug.Log("GameOver");}
 		}
 	}
 
