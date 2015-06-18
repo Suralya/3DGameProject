@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Hotkey.cs" />
+     <Compile Include="Assets\Scripts\Hoverbutton.cs" />
      <Compile Include="Assets\Scripts\MainMenue.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
@@ -64,6 +65,7 @@
      <None Include="Assets\Texts\Tooltip_weaponchange_de.txt" />
      <None Include="Assets\Texts\Tooltip_attack_de.txt" />
      <None Include="Assets\Texts\Tooltip_move_de.txt" />
+     <None Include="Assets\Texts\Tooltip_nextturn_de.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
