@@ -333,7 +333,8 @@ public class GameManager : MonoBehaviour {
 		
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [0].selected =true;
-		
+			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
+
 		}
 	}
 	public void selectSecond (){
@@ -346,8 +347,10 @@ public class GameManager : MonoBehaviour {
 			
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [1].selected =true;
-			
+			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
+
 		}
+
 	}
 	public void selectThird (){
 		if (_userturn) {
@@ -359,7 +362,7 @@ public class GameManager : MonoBehaviour {
 			
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [2].selected =true;
-			
+			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
 		}
 	}
 	public void selectFourth (){
@@ -372,7 +375,7 @@ public class GameManager : MonoBehaviour {
 			
 			UserPlayers [currentPlayerIndex].selected =false;
 			UserPlayers [3].selected =true;
-			
+			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
 		}
 	}
 

@@ -66,6 +66,7 @@ public class Player : MonoBehaviour {
 			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].selected=false;
 			GameManager.instance.currentPlayerIndex=GameManager.instance.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition);
 			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].selected=true;
+			Camermovement.instance.ChangeCamPosition();
 			
 		}
 	}

@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AIPlayer.cs" />
      <Compile Include="Assets\Scripts\Buttonbehave.cs" />
+     <Compile Include="Assets\Scripts\Camermovement.cs" />
      <Compile Include="Assets\Scripts\Characterbuttons.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />

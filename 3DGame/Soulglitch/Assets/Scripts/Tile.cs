@@ -97,6 +97,7 @@ public class Tile : MonoBehaviour {
 			GM.UserPlayers[GM.currentPlayerIndex].selected=false;
 			GM.currentPlayerIndex=GM.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition);
 			GM.UserPlayers[GM.currentPlayerIndex].selected=true;
+			Camermovement.instance.ChangeCamPosition();
 
 		}
 }
