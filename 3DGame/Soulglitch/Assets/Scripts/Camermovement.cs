@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class Camermovement : MonoBehaviour {
 	public static Camermovement instance;
@@ -7,6 +8,7 @@ public class Camermovement : MonoBehaviour {
 	public bool Rotating=false;
 	public int RotationSpeed=70;
 	public Vector3 FormerCharPosition;
+	public float timescale=1;
 	int i;
 	// Use this for initialization
 
@@ -42,6 +44,7 @@ public class Camermovement : MonoBehaviour {
 	}
 
 	public void ChangeCamPosition(){
+		if(!GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving){
 		Vector3 temp = transform.position;
 		Rotating = false;
 
@@ -51,13 +54,13 @@ public class Camermovement : MonoBehaviour {
 		temp.x += GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform.position.x;
 		temp.y = 7.32f;
 		temp.z += GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform.position.z;
-		transform.position = temp;
+		transform.DOMove(temp,timescale);
 
 
 		this.transform.SetParent(GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform);
 		//transform.rotation = new Quaternion (-0.1436848f, 0.1962f, -0.005494709f,-0.969964f);
 		FormerCharPosition = GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform.position;
-
+		}
 	}
 
 	public void RotateCam(int j){
