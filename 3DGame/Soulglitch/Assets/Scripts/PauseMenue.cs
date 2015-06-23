@@ -19,9 +19,11 @@ public class PauseMenue : MonoBehaviour {
 	if (Input.GetKeyDown(KeyCode.P) && !GameisPaused) {
 			Time.timeScale = 0.0f;
 			GameisPaused = true;
-		} else {
+			Debug.Log("GameisPaused");
+		} else if (Input.GetKeyDown(KeyCode.P) && GameisPaused){
 			Time.timeScale = 1.0f;
 			GameisPaused = false;
+			Debug.Log("GameResumed");
 		}
 	}
 

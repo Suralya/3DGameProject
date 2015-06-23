@@ -22,7 +22,7 @@ public class Camermovement : MonoBehaviour {
 		Vector3 temp = FormerCharPosition + new Vector3 (5.96f, 0f, -15.05f);
 		temp.y = 7.32f;
 		transform.position = temp;
-		this.transform.SetParent(GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform);
+		//this.transform.SetParent(GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform);
 	}
 	
 	// Update is called once per frame
@@ -45,21 +45,22 @@ public class Camermovement : MonoBehaviour {
 
 	public void ChangeCamPosition(){
 		if(!GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving){
+            Rotating = false;
 		Vector3 temp = transform.position;
-		Rotating = false;
-
-		temp -= FormerCharPosition;
+        Debug.Log(temp+"Derzeitige Camerapos");
+			//FormerCharPosition=GameManager.instance.UserPlayers[GameManager.instance.formerPlayerIndex].transform.position;
+			temp -= GameManager.instance.UserPlayers[GameManager.instance.formerPlayerIndex].transform.position;
 
 
 		temp.x += GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform.position.x;
 		temp.y = 7.32f;
 		temp.z += GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform.position.z;
+       // this.transform.SetParent(GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].transform);
 		transform.DOMove(temp,timescale);
+        Debug.Log(temp+"hoffentlich richtige pos");
 
-
-		this.transform.SetParent(GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform);
-		//transform.rotation = new Quaternion (-0.1436848f, 0.1962f, -0.005494709f,-0.969964f);
-		FormerCharPosition = GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform.position;
+		
+		//FormerCharPosition = GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].transform.position;
 		}
 	}
 
@@ -67,4 +68,8 @@ public class Camermovement : MonoBehaviour {
 		if(Rotating)
 		transform.RotateAround (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].transform.position,new Vector3(0.0f,1.0f,0.0f),RotationSpeed*j * Time.deltaTime);
 	}
+
+	//IEnumerator WaitTillStoped(){
+
+	//}
 }

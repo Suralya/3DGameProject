@@ -26,10 +26,14 @@ public class UserPlayer : Player {
 			transform.position=temp;
 			transform.GetComponent<Renderer>().material.color = Color.red;
 
-			if (selected&&GameManager.instance.UserPlayers.Exists(t=> t.HP>0))
-			{Hotkey.hotk.NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);}
+		    if (selected && GameManager.instance.UserPlayers.Exists(t => t.HP > 0))
+		    {
+		        Hotkey.hotk.NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
+				Camermovement.instance.ChangeCamPosition();
+		    }
 			else{Debug.Log("GameOver");}
 		}
+
 	}
 
 	public override void TurnUpdate ()

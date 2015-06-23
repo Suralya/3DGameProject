@@ -94,6 +94,7 @@ public class Tile : MonoBehaviour {
 		         &&!GM.UserPlayers[GM.currentPlayerIndex].aiming
 		         &&GM.UserPlayers.Any(t=>t.gridPosition==this.gridPosition)
 		         &&GM.UserPlayers[GM.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition)].HP>0){
+			GameManager.instance.formerPlayerIndex=GameManager.instance.currentPlayerIndex;
 			GM.UserPlayers[GM.currentPlayerIndex].selected=false;
 			GM.currentPlayerIndex=GM.UserPlayers.FindIndex(t=>t.gridPosition==this.gridPosition);
 			GM.UserPlayers[GM.currentPlayerIndex].selected=true;
