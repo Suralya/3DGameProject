@@ -37,9 +37,11 @@ public class Hotkey : MonoBehaviour {
 
 		GameManager.instance.UserPlayers[current].selected=false;
 		if (current<3){
+			GameManager.instance.formerPlayerIndex=GameManager.instance.currentPlayerIndex;
 			GameManager.instance.UserPlayers[current+1].selected=true;
 			GameManager.instance.currentPlayerIndex=current+1;
 		}else{
+			GameManager.instance.formerPlayerIndex=GameManager.instance.currentPlayerIndex;
 			GameManager.instance.UserPlayers[0].selected=true;
 			GameManager.instance.currentPlayerIndex=0;
 		}

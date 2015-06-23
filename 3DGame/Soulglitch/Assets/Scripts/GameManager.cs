@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 
 	public bool _userturn =true;
 
+	public int formerPlayerIndex=0;
 	public int currentPlayerIndex = 0;
 
 	void Awake() {
@@ -325,6 +326,7 @@ public class GameManager : MonoBehaviour {
 
 	public void selectFirst (){
 	if (_userturn) {
+			formerPlayerIndex=currentPlayerIndex;
 			UserPlayers[currentPlayerIndex].attacking=false;
 			UserPlayers[currentPlayerIndex].moving=false;
 			UserPlayers[currentPlayerIndex].aiming=false;
@@ -339,6 +341,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void selectSecond (){
 		if (_userturn) {
+			formerPlayerIndex=currentPlayerIndex;
 			UserPlayers[currentPlayerIndex].attacking=false;
 			UserPlayers[currentPlayerIndex].moving=false;
 			UserPlayers[currentPlayerIndex].aiming=false;
@@ -354,6 +357,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void selectThird (){
 		if (_userturn) {
+			formerPlayerIndex=currentPlayerIndex;
 			UserPlayers[currentPlayerIndex].attacking=false;
 			UserPlayers[currentPlayerIndex].moving=false;
 			UserPlayers[currentPlayerIndex].aiming=false;
@@ -367,6 +371,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void selectFourth (){
 		if (_userturn) {
+			formerPlayerIndex=currentPlayerIndex;
 			UserPlayers[currentPlayerIndex].attacking=false;
 			UserPlayers[currentPlayerIndex].moving=false;
 			UserPlayers[currentPlayerIndex].aiming=false;
