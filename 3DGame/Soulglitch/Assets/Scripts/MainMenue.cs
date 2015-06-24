@@ -13,14 +13,16 @@ public class MainMenue : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Loads the lvl.
+	/// </summary>
 	public void LoadLvl(){
 		Application.LoadLevel (2);
 	}
 
-	public void quit(){
-		Application.Quit();
-	}
-
+	/// <summary>
+	/// Loads Credits.
+	/// </summary>
 	public void Credits(){
 		Application.LoadLevel (1);
 	}

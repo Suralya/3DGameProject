@@ -36,6 +36,9 @@ public class UserPlayer : Player {
 
 	}
 
+	/// <summary>
+	/// Enables Movement of UserPlayers.
+	/// </summary>
 	public override void TurnUpdate ()
 	{
 

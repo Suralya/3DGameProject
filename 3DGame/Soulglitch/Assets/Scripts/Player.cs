@@ -48,7 +48,9 @@ public class Player : MonoBehaviour {
 			
 	}
 }
-
+	/// <summary>
+	/// Manages events on mouse on down.
+	/// </summary>
 	void OnMouseDown(){
 
 		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking) {

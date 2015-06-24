@@ -5,6 +5,12 @@ using System.Linq;
 
 public class TilePathFinder : MonoBehaviour {
 
+	/// <summary>
+	/// Finds the path.
+	/// </summary>
+	/// <returns>The path.</returns>
+	/// <param name="originTile">Players Position Tile.</param>
+	/// <param name="destinationTile">Destination tile.</param>
 	public static List<Tile> FindPath(Tile originTile, Tile destinationTile) {
 		List<Tile> closed = new List<Tile>();
 		List<TilePath> open = new List<TilePath>();

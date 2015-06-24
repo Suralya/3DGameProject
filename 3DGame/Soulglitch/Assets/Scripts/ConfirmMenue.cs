@@ -15,16 +15,25 @@ public class ConfirmMenue : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Shows the confirm menue.
+	/// </summary>
 	public void ShowConfirmMenue(){
 
 		Confirmcanvas.enabled = true;
 	}
 
+	/// <summary>
+	/// Hides the confirm menue.
+	/// </summary>
 	public void HideConfirmMenue(){
 		
 		Confirmcanvas.enabled = false;
 	}
 
+	/// <summary>
+	/// Quits the game.
+	/// </summary>
 	public void QuitGame(){
 
 		Application.Quit();

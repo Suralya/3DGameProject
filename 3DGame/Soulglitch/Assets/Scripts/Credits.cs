@@ -13,6 +13,10 @@ public class Credits : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Loads MainMenue.
+	/// </summary>
+
 	public void BacktoMenue()
 	{
 		Application.LoadLevel (0);

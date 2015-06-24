@@ -18,7 +18,11 @@ public class TilePath {
 		costOfPath = tp.costOfPath;
 		lastTile = tp.lastTile;
 	}
-	
+
+	/// <summary>
+	/// Adds the tile to list of Tiles and as lastTile.
+	/// </summary>
+	/// <param name="t">T.</param>
 	public void addTile(Tile t) {
 		costOfPath += t.APCost;
 		listOfTiles.Add(t);

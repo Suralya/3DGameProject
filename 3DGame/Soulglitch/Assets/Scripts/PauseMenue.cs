@@ -27,21 +27,19 @@ public class PauseMenue : MonoBehaviour {
 			Debug.Log("GameResumed");
 		}
 	}
+	/// <summary>
+	/// Shows the pause menue.
+	/// </summary>
 
 	public void ShowPauseMenue(){
 		if (GameisPaused) {
 			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking=false;
 			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming=false;
 			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving=false;
-
 			GameManager.instance.removeTileHighlights ();
-
 			Time.timeScale=0;
 			Menuecanvas.enabled = true;
 			Hotkey.hotk.enabled = false;
-
-
-
 		} else {
 			Time.timeScale=1;
 			Menuecanvas.enabled = false;
@@ -49,11 +47,17 @@ public class PauseMenue : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Resumes the Game.
+	/// </summary>
 	public void ResumeGame(){
 		GameisPaused = false;
 		Debug.Log("GameResumed");
 	}
 
+	/// <summary>
+	/// Opens Main Menue.
+	/// </summary>
 	public void BacktoMenue(){
 		Application.LoadLevel (0);
 	}

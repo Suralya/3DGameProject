@@ -34,6 +34,10 @@ public class Hotkey : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Sets the next Player in List as Current.
+	/// </summary>
+	/// <param name="current">Current.</param>
 	public void NextPlayerasCurrent(int current){
 
 		GameManager.instance.UserPlayers[current].selected=false;

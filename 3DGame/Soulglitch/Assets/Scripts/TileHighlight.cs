@@ -7,7 +7,13 @@ public class TileHighlight {
 	public TileHighlight () {
 		
 	}
-	
+
+	/// <summary>
+	/// Finds the Tiles to highlight.
+	/// </summary>
+	/// <returns>The highlight.</returns>
+	/// <param name="originTile">Origin.</param>
+	/// <param name="movementPoints">Range.</param>
 	public static List<Tile> FindHighlight(Tile originTile, int movementPoints) {
 		List<Tile> closed = new List<Tile>();
 		List<TilePath> open = new List<TilePath>();
@@ -40,7 +46,13 @@ public class TileHighlight {
 		closed.Remove(originTile);
 		return closed;
 	}
-	
+
+	/// <summary>
+	/// Finds Tiles to Highlight for attack.
+	/// </summary>
+	/// <returns>The atack highlight.</returns>
+	/// <param name="originTile">Player position.</param>
+	/// <param name="movementPoints">Range.</param>
 	public static List<Tile> FindAtackHighlight(Tile originTile, int movementPoints) {
 		List<Tile> closed = new List<Tile>();
 		List<TilePath> open = new List<TilePath>();
