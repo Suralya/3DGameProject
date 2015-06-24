@@ -17,6 +17,7 @@ public class Player : MonoBehaviour {
 	public bool attacking =false;
 	public bool aiming=false;
 
+	public Sprite Avatar;
 
 	public string playerName = "Robin";
 	public int HP = 25;

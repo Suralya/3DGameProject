@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour {
 	public bool Tooltipshown =true;
 	public Text Tooltiptext;
 
+	public Canvas Questlogcanvas;
+	public bool Questlogshown =false;
+	public Text Questlogtext;
+
 	Tile temptile;
 	Player tempplayer;
 
@@ -31,6 +35,7 @@ public class GameManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		Questlogcanvas.enabled=false;
 
 		findTiles ();
 		for (int i=map.Count-1; i>=0; i--) {
@@ -44,6 +49,8 @@ public class GameManager : MonoBehaviour {
 
 		var temp = GameObject.FindGameObjectWithTag ("Tooltip");
 		Tooltiptext = temp.GetComponent<Text>();
+
+		Comments.instance.MakeComment ("Assets/Texts/Comment_Leader_01_de.txt"); //wird nur Gezeigt wenn in Szene Gestartet wird
 	}
 	
 	// Update is called once per frame
@@ -65,11 +72,24 @@ public class GameManager : MonoBehaviour {
 	/// </summary>
 	public void showhideTooltip(){
 		if (Tooltipshown) {
-			Tooltipshown=false;
-			Tooltipcanvas.enabled=false;
-		} else {Tooltipshown=true;
-			Tooltipcanvas.enabled=true;
+			Tooltipshown = false;
+			Tooltipcanvas.enabled = false;
+		} else {
+			Tooltipshown = true;
+			Tooltipcanvas.enabled = true;
 		}
+	}
+		/// <summary>
+		/// Shows or hides the Questlog.
+		/// </summary>
+
+		public void showhideQuestlog(){
+		if (Questlogshown) {
+			Questlogshown=false;
+			Questlogcanvas.enabled=false;
+		} else {Questlogshown=true;
+			Questlogcanvas.enabled=true;
+			}
 	
 	}
 
@@ -266,12 +286,11 @@ public class GameManager : MonoBehaviour {
 
 	public void attackPlayer(){
 		if (_userturn) {
-			
 			if(!UserPlayers[currentPlayerIndex].attacking)
 			{
-			if (UserPlayers [currentPlayerIndex].actionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)
-				
+			if (UserPlayers [currentPlayerIndex].actionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)	
 			{
+				Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
 				removeTileHighlights ();
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
