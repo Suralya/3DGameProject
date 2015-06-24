@@ -26,9 +26,10 @@ public class Hotkey : MonoBehaviour {
 			NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
 			Camermovement.instance.ChangeCamPosition();
 		}
-		if (Input.GetKeyDown (KeyCode.A)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>=GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost) {GameManager.instance.attackPlayer();}
-		if (Input.GetKeyDown (KeyCode.M)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.movePlayer();}
-		if (Input.GetKeyDown (KeyCode.S)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.aimPlayer();}
+		if (Input.GetKeyDown (KeyCode.Alpha2)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>=GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost) {GameManager.instance.attackPlayer();}
+		if (Input.GetKeyDown (KeyCode.Alpha4)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.movePlayer();}
+		if (Input.GetKeyDown (KeyCode.Alpha1)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.aimPlayer();}
+		if (Input.GetKeyDown (KeyCode.Alpha3)){GameManager.instance.weaponchange();}
 		if (Input.GetKeyDown (KeyCode.T)) {GameManager.instance.showhideTooltip();}
 
 	}

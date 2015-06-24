@@ -18,6 +18,7 @@ public class PauseMenue : MonoBehaviour {
 	void Update () {
 		ShowPauseMenue ();
 
+
 	if (Input.GetKeyDown(KeyCode.P) && !GameisPaused) {
 			GameisPaused = true;
 			Debug.Log("GameisPaused");
@@ -29,9 +30,22 @@ public class PauseMenue : MonoBehaviour {
 
 	public void ShowPauseMenue(){
 		if (GameisPaused) {
+			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking=false;
+			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming=false;
+			GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving=false;
+
+			GameManager.instance.removeTileHighlights ();
+
+			Time.timeScale=0;
 			Menuecanvas.enabled = true;
+			Hotkey.hotk.enabled = false;
+
+
+
 		} else {
+			Time.timeScale=1;
 			Menuecanvas.enabled = false;
+			Hotkey.hotk.enabled = true;
 		}
 	}
 
@@ -44,7 +58,5 @@ public class PauseMenue : MonoBehaviour {
 		Application.LoadLevel (0);
 	}
 	
-	public void quit(){
-		Application.Quit();
-	}
+
 }

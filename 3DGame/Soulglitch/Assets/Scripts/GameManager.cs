@@ -230,6 +230,11 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void weaponchange()
+	{
+		Debug.Log("weapon changed ");
+	}
+
 	public void attackPlayer(){
 		if (_userturn) {
 			

@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Buttonbehave.cs" />
      <Compile Include="Assets\Scripts\Camermovement.cs" />
      <Compile Include="Assets\Scripts\Characterbuttons.cs" />
+     <Compile Include="Assets\Scripts\ConfirmMenue.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Hotkey.cs" />
@@ -75,7 +76,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
