@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PauseMenue : MonoBehaviour {
 
 	private bool GameisPaused =false;
-	public List<Button> InterfaceButtons= new List<Button>();
+	public Canvas Menuecanvas;
 
 
 	// Use this for initialization
@@ -16,22 +16,35 @@ public class PauseMenue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		ShowPauseMenue ();
+
 	if (Input.GetKeyDown(KeyCode.P) && !GameisPaused) {
-			Time.timeScale = 0.0f;
 			GameisPaused = true;
 			Debug.Log("GameisPaused");
 		} else if (Input.GetKeyDown(KeyCode.P) && GameisPaused){
-			Time.timeScale = 1.0f;
 			GameisPaused = false;
 			Debug.Log("GameResumed");
 		}
 	}
 
 	public void ShowPauseMenue(){
-
+		if (GameisPaused) {
+			Menuecanvas.enabled = true;
+		} else {
+			Menuecanvas.enabled = false;
+		}
 	}
 
-	public void disableInterface(){
+	public void ResumeGame(){
+		GameisPaused = false;
+		Debug.Log("GameResumed");
+	}
 
+	public void BacktoMenue(){
+		Application.LoadLevel (0);
+	}
+	
+	public void quit(){
+		Application.Quit();
 	}
 }
