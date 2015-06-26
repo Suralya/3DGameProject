@@ -18,6 +18,9 @@ public class AIPlayer : Player {
 		}
 	}
 
+	/// <summary>
+	/// enables Movement of the current Player (atm skips the AI turn)
+	/// </summary>
 	public override void TurnUpdate ()
 	{
 		if (Vector3.Distance(moveDestination, transform.position) > 0.1f) {

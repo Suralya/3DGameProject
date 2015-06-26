@@ -52,6 +52,8 @@
      <Compile Include="Assets\Scripts\Buttonbehave.cs" />
      <Compile Include="Assets\Scripts\Camermovement.cs" />
      <Compile Include="Assets\Scripts\Characterbuttons.cs" />
+     <Compile Include="Assets\Scripts\Comments.cs" />
+     <Compile Include="Assets\Scripts\ConfirmMenue.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Hotkey.cs" />
@@ -68,8 +70,11 @@
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\Texts\Tooltip_aim_de.txt" />
      <None Include="Assets\Texts\Tooltip_weaponchange_de.txt" />
+     <None Include="Assets\Texts\Comment_Leader_01_de.txt" />
      <None Include="Assets\Texts\Tooltip_attack_de.txt" />
      <None Include="Assets\Texts\Tooltip_move_de.txt" />
+     <None Include="Assets\Texts\Comment_Robin_01_de.txt" />
+     <None Include="Assets\Texts\Comment_All_attack_de.txt" />
      <None Include="Assets\Texts\Tooltip_nextturn_de.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -25,7 +25,10 @@ public class Tile : MonoBehaviour {
 		gridPosition.y = this.transform.position.z;
 
 	}
-	
+
+	/// <summary>
+	/// Gets the neighbors.
+	/// </summary>
 	public void getNeighbors(){
 		neighbors=(GM.map.FindAll(
 			delegate(Tile obj) {
@@ -51,6 +54,9 @@ public class Tile : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Manages color while hovering over tile.
+	/// </summary>
 	void OnMouseEnter(){
 		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible) {
 			transform.GetComponent<Renderer> ().material.color = Color.blue;
@@ -65,6 +71,9 @@ public class Tile : MonoBehaviour {
 		//Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
 	}
 
+	/// <summary>
+	/// Manages color exit hovering over tile.
+	/// </summary>
 	void OnMouseExit(){
 		if (transform.GetComponent<Renderer> ().material.color == Color.blue && !impassible) {
 			transform.GetComponent<Renderer> ().material.color = Color.white;
@@ -78,6 +87,9 @@ public class Tile : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Manages events on mouse on up.
+	/// </summary>
 	void OnMouseUp() {
 		if (GM.UserPlayers [GM.currentPlayerIndex].moving) {
 			GM.moveCurrentPlayer (this);

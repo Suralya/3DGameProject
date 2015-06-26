@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour {
 	public bool Tooltipshown =true;
 	public Text Tooltiptext;
 
+	public Canvas Questlogcanvas;
+	public bool Questlogshown =false;
+	public Text Questlogtext;
+
 	Tile temptile;
 	Player tempplayer;
 
@@ -31,19 +35,22 @@ public class GameManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		Questlogcanvas.enabled=false;
 
 		findTiles ();
 		for (int i=map.Count-1; i>=0; i--) {
 			map[i].getNeighbors();
 		}
 
-		//findUserPlayers ();
+		//findUserPlayers ();  -set by scene
 		findAIPlayers ();
 
 		UserPlayers [0].selected = true;
 
 		var temp = GameObject.FindGameObjectWithTag ("Tooltip");
 		Tooltiptext = temp.GetComponent<Text>();
+
+		Comments.instance.MakeComment ("Assets/Texts/Comment_Leader_01_de.txt"); //wird nur Gezeigt wenn in Szene Gestartet wird
 	}
 	
 	// Update is called once per frame
@@ -58,18 +65,38 @@ public class GameManager : MonoBehaviour {
 		{p.TurnUpdate ();}
 		
 	}
-	
+
+
+	/// <summary>
+	/// Shows or hides the tooltip.
+	/// </summary>
 	public void showhideTooltip(){
 		if (Tooltipshown) {
-			Tooltipshown=false;
-			Tooltipcanvas.enabled=false;
-		} else {Tooltipshown=true;
-			Tooltipcanvas.enabled=true;
+			Tooltipshown = false;
+			Tooltipcanvas.enabled = false;
+		} else {
+			Tooltipshown = true;
+			Tooltipcanvas.enabled = true;
 		}
+	}
+		/// <summary>
+		/// Shows or hides the Questlog.
+		/// </summary>
+
+		public void showhideQuestlog(){
+		if (Questlogshown) {
+			Questlogshown=false;
+			Questlogcanvas.enabled=false;
+		} else {Questlogshown=true;
+			Questlogcanvas.enabled=true;
+			}
 	
 	}
 
-
+	/// <summary>
+	/// Moves the current player.
+	/// </summary>
+	/// <param name="destTile">Selected tile.</param>
 	public void moveCurrentPlayer(Tile destTile) {
 		if (_userturn) {
 
@@ -95,6 +122,11 @@ public class GameManager : MonoBehaviour {
 
 		}
 	}
+
+	/// <summary>
+	/// Attacks the with current player.
+	/// </summary>
+	/// <param name="destTile">Selected tile.</param>
 
 	public void attackWithCurrentPlayer(Tile destTile) {
 
@@ -151,6 +183,11 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Aims the with current player.
+	/// </summary>
+	/// <param name="destTile">Selected tile.</param>
+
 	public void aimWithCurrentPlayer(Tile destTile){
 
 		if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white && !destTile.impassible) {
@@ -197,6 +234,10 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Enables Movement and showes Tiles to move to(cyan)//disables if already enabled.
+	/// </summary>
+
 	public void movePlayer(){
 		if (_userturn) {
 
@@ -230,14 +271,26 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Weaponchange this instance.
+	/// </summary>
+
+	public void weaponchange()
+	{
+		Debug.Log("weapon changed ");
+	}
+
+	/// <summary>
+	/// Enables Attacking Enemys and shows Tiles in range(red)// Disables if already enabled.
+	/// </summary>
+
 	public void attackPlayer(){
 		if (_userturn) {
-			
 			if(!UserPlayers[currentPlayerIndex].attacking)
 			{
-			if (UserPlayers [currentPlayerIndex].actionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)
-				
+			if (UserPlayers [currentPlayerIndex].actionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)	
 			{
+				Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
 				removeTileHighlights ();
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
@@ -263,6 +316,9 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Enables aiming Enemys and shows Tiles in range(red)// Disables if already enabled.
+	/// </summary>
 	public void aimPlayer(){
 		if (_userturn) {
 			
@@ -299,7 +355,9 @@ public class GameManager : MonoBehaviour {
 	
 	}
 
-
+	/// <summary>
+	/// Ends current Turn (Userturn or AIPlayerturn) and starts the others. 
+	/// </summary>
 	public void nextTurn()
 	{
 		if (!_userturn) {
@@ -324,6 +382,9 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Selects the first Player of Userplayers.
+	/// </summary>
 	public void selectFirst (){
 	if (_userturn) {
 			formerPlayerIndex=currentPlayerIndex;
@@ -339,6 +400,10 @@ public class GameManager : MonoBehaviour {
 
 		}
 	}
+
+	/// <summary>
+	/// Selects the second Player of Userplayers.
+	/// </summary>
 	public void selectSecond (){
 		if (_userturn) {
 			formerPlayerIndex=currentPlayerIndex;
@@ -355,6 +420,10 @@ public class GameManager : MonoBehaviour {
 		}
 
 	}
+
+	/// <summary>
+	/// Selects the third Player of Userplayers.
+	/// </summary>
 	public void selectThird (){
 		if (_userturn) {
 			formerPlayerIndex=currentPlayerIndex;
@@ -369,6 +438,10 @@ public class GameManager : MonoBehaviour {
 			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
 		}
 	}
+
+	/// <summary>
+	/// Selects the fourth Player of Userplayers.
+	/// </summary>
 	public void selectFourth (){
 		if (_userturn) {
 			formerPlayerIndex=currentPlayerIndex;
@@ -384,7 +457,9 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-
+	/// <summary>
+	/// Finds all tiles in Scene.
+	/// </summary>
 	public void findTiles(){
 		var temp = GameObject.FindGameObjectsWithTag ("Tile");
 		for (int i= temp.Length-1; i>=0; i--) {
@@ -394,6 +469,9 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Finds the user players.
+	/// </summary>
 	public void findUserPlayers(){
 		var temp = GameObject.FindGameObjectsWithTag ("UserPlayer");
 		for (int i= temp.Length-1; i>=0; i--) {
@@ -403,6 +481,9 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Finds the AI players.
+	/// </summary>
 	public void findAIPlayers(){
 		var temp = GameObject.FindGameObjectsWithTag ("AIPlayer");
 		for (int i= temp.Length-1; i>=0; i--) {
@@ -412,6 +493,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Highlights the atack tiles at originLocation, in highlightColor and distance.
+	/// </summary>
+	/// <param name="originLocation">Location of selected Player.</param>
+	/// <param name="highlightColor">Highlight color.</param>
+	/// <param name="distance">Range in which attack is possible.</param>
 	public void highlightAtackTilesAt(Vector2 originLocation, Color highlightColor, int distance) {
 		List <Tile> highlightedTiles = TileHighlight.FindAtackHighlight(map.Find(delegate(Tile obj) {return obj.gridPosition==originLocation;}), distance);
 		
@@ -420,6 +507,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Highlights the tiles at originLocation, in highlightColor and distance.
+	/// </summary>
+	/// <param name="originLocation">Origin location.</param>
+	/// <param name="highlightColor">Highlight color.</param>
+	/// <param name="distance">Possible Range to move</param>
 	public void highlightTilesAt(Vector2 originLocation, Color highlightColor, int distance) {
 		List <Tile> highlightedTiles = TileHighlight.FindHighlight(map.Find(delegate(Tile obj) {return obj.gridPosition==originLocation;}), distance);
 		
@@ -428,6 +521,9 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Removes the tile highlights.
+	/// </summary>
 	public void removeTileHighlights() {
 		
 		foreach (Tile t in map) {

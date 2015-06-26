@@ -20,6 +20,9 @@ public class Characterbuttons : MonoBehaviour {
 		DisableDeadChar ();
 	}
 
+	/// <summary>
+	/// Sets the character names inside assigned buttons.
+	/// </summary>
 	void SetCharacterNames(){
 		CharOne.text = GameManager.instance.UserPlayers[0].playerName;
 		CharTwo.text = GameManager.instance.UserPlayers[1].playerName;
@@ -27,14 +30,18 @@ public class Characterbuttons : MonoBehaviour {
 		CharFour.text = GameManager.instance.UserPlayers[3].playerName;
 	}
 
+	/// <summary>
+	/// Disables dead Userchar.
+	/// </summary>
 	void DisableDeadChar(){
 		if (GameManager.instance.UserPlayers [0].HP<=0) {CharacterButtonOne.interactable = false;}
 		if (GameManager.instance.UserPlayers [1].HP<=0) {CharacterButtonTwo.interactable = false;}
 		if (GameManager.instance.UserPlayers [2].HP<=0) {CharacterButtonThree.interactable = false;}
 		if (GameManager.instance.UserPlayers [3].HP<=0) {CharacterButtonFour.interactable = false;}
 	}
-	void HighlightSelected(){
 
+	void HighlightSelected(){
+		//--- Hilight selected character
 	}
 
 }

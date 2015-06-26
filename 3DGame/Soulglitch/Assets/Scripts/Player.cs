@@ -17,6 +17,7 @@ public class Player : MonoBehaviour {
 	public bool attacking =false;
 	public bool aiming=false;
 
+	public Sprite Avatar;
 
 	public string playerName = "Robin";
 	public int HP = 25;
@@ -48,7 +49,9 @@ public class Player : MonoBehaviour {
 			
 	}
 }
-
+	/// <summary>
+	/// Manages events on mouse on down.
+	/// </summary>
 	void OnMouseDown(){
 
 		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking) {

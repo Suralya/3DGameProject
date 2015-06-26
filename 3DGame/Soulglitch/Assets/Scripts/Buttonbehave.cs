@@ -18,6 +18,9 @@ public class Buttonbehave : MonoBehaviour {
 		Buttoninteraction ();
 	}
 
+	/// <summary>
+	/// Sets Buttens as enabled or disabled at certian conditions.
+	/// </summary>
 	public void Buttoninteraction(){
 
 		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints<GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost){
