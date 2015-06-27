@@ -20,5 +20,4 @@ public class MovementPatterns : MonoBehaviour {
 	public virtual void EnemyMove(){
 		Debug.Log ("Enemy movement");
 	}
-	
 }
