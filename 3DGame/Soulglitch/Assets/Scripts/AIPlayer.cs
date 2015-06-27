@@ -3,6 +3,8 @@ using System.Collections;
 
 public class AIPlayer : Player {
 
+	public bool civilian=true;
+
 	// Use this for initialization
 	void Start () {
 		gridPosition.x = this.transform.position.x;
@@ -37,5 +39,13 @@ public class AIPlayer : Player {
 		}
 		
 		base.TurnUpdate ();
+	}
+
+	public override void AIMove(){
+		if (civilian) {
+			GameManager.instance.SceneMovePatern.CivilianMove();
+		} else {
+			GameManager.instance.SceneMovePatern.EnemyMove();
+		}
 	}
 }

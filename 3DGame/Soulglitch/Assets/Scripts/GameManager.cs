@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
 
+	public MovementPatterns SceneMovePatern;
+
 	public int mapSizeX = 28;
 	public int mapSizeY = 27;
 
@@ -57,12 +59,17 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		if (_userturn) {
 			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
-		} else {
-			AIPlayers [currentPlayerIndex].TurnUpdate ();
+		} else if (!_userturn){
+
+			//AIPlayers [currentPlayerIndex].TurnUpdate ();
+			
+			foreach(Player p in AIPlayers)
+			{p.TurnUpdate ();}
 		}
 
 		foreach(Player p in UserPlayers)
 		{p.TurnUpdate ();}
+
 		
 	}
 
@@ -376,10 +383,29 @@ public class GameManager : MonoBehaviour {
 			//AIturn
 			_userturn =false;
 			Debug.Log("It's the enemys turn");
+
 			currentPlayerIndex = 0;
 			Tooltiptext.text=" ";
 
+			StartCoroutine(Waitforseconds());
+			nextTurn();
+			
 		}
+	}
+	// THOMAS FRAGEN FÜRS WARTEN!!!!!
+	public IEnumerator Waitforseconds(){
+
+		for (int i=AIPlayers.Count-1;i>=0;i--){
+			if (AIPlayers[i]==null)
+			{
+			}else{
+				yield return new WaitForSeconds(1f);
+				AIPlayers[i].AIMove();
+			}
+		}
+
+
+
 	}
 
 	/// <summary>
