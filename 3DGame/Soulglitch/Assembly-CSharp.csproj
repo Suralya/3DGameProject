@@ -56,11 +56,14 @@
      <Compile Include="Assets\Scripts\ConfirmMenue.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Healthbar.cs" />
      <Compile Include="Assets\Scripts\Hotkey.cs" />
      <Compile Include="Assets\Scripts\Hoverbutton.cs" />
      <Compile Include="Assets\Scripts\MainMenue.cs" />
+     <Compile Include="Assets\Scripts\MovementPatterns.cs" />
      <Compile Include="Assets\Scripts\PauseMenue.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Scene1MovementPatterns.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\TileHighlight.cs" />
      <Compile Include="Assets\Scripts\TilePath.cs" />

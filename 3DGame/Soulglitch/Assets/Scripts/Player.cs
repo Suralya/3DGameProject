@@ -20,7 +20,8 @@ public class Player : MonoBehaviour {
 	public Sprite Avatar;
 
 	public string playerName = "Robin";
-	public int HP = 25;
+	public float HP = 25f;
+	public float MaxHP=25f;
 
 	public int actionPoints = 20;
 
@@ -74,4 +75,6 @@ public class Player : MonoBehaviour {
 			
 		}
 	}
+
+	public virtual void AIMove(){}
 }
