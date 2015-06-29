@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -26,9 +26,9 @@ public class Hotkey : MonoBehaviour {
 			NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
 			Camermovement.instance.ChangeCamPosition();
 		}
-		if (Input.GetKeyDown (KeyCode.Alpha2)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>=GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost) {GameManager.instance.attackPlayer();}
-		if (Input.GetKeyDown (KeyCode.Alpha4)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.movePlayer();}
-		if (Input.GetKeyDown (KeyCode.Alpha1)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints>0) {GameManager.instance.aimPlayer();}
+		if (Input.GetKeyDown (KeyCode.Alpha2)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints>=GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost) {GameManager.instance.attackPlayer();}
+		if (Input.GetKeyDown (KeyCode.Alpha4)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints>0) {GameManager.instance.movePlayer();}
+		if (Input.GetKeyDown (KeyCode.Alpha1)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints>0) {GameManager.instance.aimPlayer();}
 		if (Input.GetKeyDown (KeyCode.Alpha3)){GameManager.instance.weaponchange();}
 		if (Input.GetKeyDown (KeyCode.T)) {GameManager.instance.showhideTooltip();}
 

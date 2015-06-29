@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour {
 
-	public Image HealthbarCharOne;
-	public Image HealthbarCharTwo;
-	public Image HealthbarCharThree;
-	public Image HealthbarCharFour;
+	public Image HealthCharOne;
+	public Image HealthCharTwo;
+	public Image HealthCharThree;
+	public Image HealthCharFour;
 
 	public float Testing;
 
@@ -20,10 +20,10 @@ public class Healthbar : MonoBehaviour {
 	void Update () {
 		Testing=(GameManager.instance.UserPlayers [0].HP / GameManager.instance.UserPlayers [0].MaxHP);
 
-		HealthbarCharOne.fillAmount = (GameManager.instance.UserPlayers [0].HP / GameManager.instance.UserPlayers [0].MaxHP);
-		HealthbarCharTwo.fillAmount = (GameManager.instance.UserPlayers [1].HP / GameManager.instance.UserPlayers [1].MaxHP);
-		HealthbarCharThree.fillAmount = (GameManager.instance.UserPlayers [2].HP / GameManager.instance.UserPlayers [2].MaxHP);
-		HealthbarCharFour.fillAmount = (GameManager.instance.UserPlayers [3].HP / GameManager.instance.UserPlayers [3].MaxHP) ;
+		HealthCharOne.fillAmount = (GameManager.instance.UserPlayers [0].HP / GameManager.instance.UserPlayers [0].MaxHP);
+		HealthCharTwo.fillAmount = (GameManager.instance.UserPlayers [1].HP / GameManager.instance.UserPlayers [1].MaxHP);
+		HealthCharThree.fillAmount = (GameManager.instance.UserPlayers [2].HP / GameManager.instance.UserPlayers [2].MaxHP);
+		HealthCharFour.fillAmount = (GameManager.instance.UserPlayers [3].HP / GameManager.instance.UserPlayers [3].MaxHP) ;
 	
 	}
 }

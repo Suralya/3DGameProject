@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -23,11 +23,11 @@ public class Buttonbehave : MonoBehaviour {
 	/// </summary>
 	public void Buttoninteraction(){
 
-		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints<GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost){
+		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints<GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost){
 			Attack.interactable=false;
 		}else{Attack.interactable=true;}
 
-		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].actionPoints<=0){
+		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints<=0){
 			Move.interactable=false;
 			Aim.interactable=false;
 		}else{			

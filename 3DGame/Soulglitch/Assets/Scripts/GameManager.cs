@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour {
 				if (destTile.transform.GetComponent<Renderer>().material.color == Color.magenta && !destTile.impassible && !destTile.occupied) {
 					removeTileHighlights ();
 
-				UserPlayers[currentPlayerIndex].actionPoints -= TilePathFinder.FindPath(map.Find(t => t.gridPosition==UserPlayers[currentPlayerIndex].gridPosition),destTile).Count;
+				UserPlayers[currentPlayerIndex].ActionPoints -= TilePathFinder.FindPath(map.Find(t => t.gridPosition==UserPlayers[currentPlayerIndex].gridPosition),destTile).Count;
 				
 				foreach (Tile t in TilePathFinder.FindPath(map.Find(t => t.gridPosition==UserPlayers[currentPlayerIndex].gridPosition),destTile)) {
 					UserPlayers [currentPlayerIndex].positionQueue.Add (map.Find (delegate(Tile obj) {return obj.gridPosition == t.gridPosition;}).transform.position + 1.5f * Vector3.up);
@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour {
 					//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
 					if (UserPlayers [currentPlayerIndex].gridPosition.x >= target.gridPosition.x - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.x <= target.gridPosition.x + UserPlayers [currentPlayerIndex].Weapon.Attackrange &&
 						UserPlayers [currentPlayerIndex].gridPosition.y >= target.gridPosition.y - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.y <= target.gridPosition.y + UserPlayers [currentPlayerIndex].Weapon.Attackrange) {
-						UserPlayers [currentPlayerIndex].actionPoints -= UserPlayers [currentPlayerIndex].Weapon.APCost;
+						UserPlayers [currentPlayerIndex].ActionPoints -= UserPlayers [currentPlayerIndex].Weapon.APCost;
 					
 						removeTileHighlights ();
 						UserPlayers [currentPlayerIndex].moving = false;			
@@ -218,7 +218,7 @@ public class GameManager : MonoBehaviour {
 				if (UserPlayers [currentPlayerIndex].gridPosition.x >= target.gridPosition.x - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.x <= target.gridPosition.x + UserPlayers [currentPlayerIndex].Weapon.Attackrange &&
 				    UserPlayers [currentPlayerIndex].gridPosition.y >= target.gridPosition.y - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.y <= target.gridPosition.y + UserPlayers [currentPlayerIndex].Weapon.Attackrange) 
 				{
-					UserPlayers [currentPlayerIndex].actionPoints -= 1;
+					UserPlayers [currentPlayerIndex].ActionPoints -= 1;
 					
 					removeTileHighlights ();
 					UserPlayers [currentPlayerIndex].moving = false;			
@@ -260,7 +260,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].moving=true;
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
-				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].actionPoints);
+				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].ActionPoints);
 
 				Tooltiptext.text=System.IO.File.ReadAllText("Assets/Texts/Tooltip_move_de.txt");
 
@@ -295,7 +295,7 @@ public class GameManager : MonoBehaviour {
 		if (_userturn) {
 			if(!UserPlayers[currentPlayerIndex].attacking)
 			{
-			if (UserPlayers [currentPlayerIndex].actionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)	
+			if (UserPlayers [currentPlayerIndex].ActionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)	
 			{
 				Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
 				removeTileHighlights ();
@@ -331,7 +331,7 @@ public class GameManager : MonoBehaviour {
 			
 			if(!UserPlayers[currentPlayerIndex].aiming)
 			{
-				if (UserPlayers [currentPlayerIndex].actionPoints >= 1)
+				if (UserPlayers [currentPlayerIndex].ActionPoints >= 1)
 					
 				{
 					removeTileHighlights ();
@@ -378,7 +378,7 @@ public class GameManager : MonoBehaviour {
 			removeTileHighlights ();
 			foreach(Player User in UserPlayers)
 			{
-				User.actionPoints=20;
+				User.ActionPoints=20;
 			}
 			//AIturn
 			_userturn =false;

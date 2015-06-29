@@ -23,7 +23,8 @@ public class Player : MonoBehaviour {
 	public float HP = 25f;
 	public float MaxHP=25f;
 
-	public int actionPoints = 20;
+	public int ActionPoints = 20;
+	public float MaxAP=20;
 
 
 	public List<Vector3> positionQueue = new List<Vector3>();	
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour {
 	}
 
 	public virtual void TurnUpdate () {
-		if (actionPoints <= 0) {
+		if (ActionPoints <= 0) {
 			moving = false;
 			attacking = false;
 			
