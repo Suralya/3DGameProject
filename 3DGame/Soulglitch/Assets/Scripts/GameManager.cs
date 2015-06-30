@@ -149,10 +149,6 @@ public class GameManager : MonoBehaviour {
 			
 				if (target != null&&target.HP>0) {
 
-				Vector3 targetpos=destTile.transform.position;
-				targetpos.y=1.5f;
-				targetpos.x-=1f;
-				targetpos.z-=1f;
 
 				
 					//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
@@ -166,8 +162,15 @@ public class GameManager : MonoBehaviour {
 						//attack logic
 						//roll to hit
 						bool hit = Random.Range (0.0f, 1.0f) <= UserPlayers [currentPlayerIndex].Weapon.Hitchance;
-					
-					if (hit&&!Physics.Linecast(UserPlayers[currentPlayerIndex].transform.position,targetpos)) {
+
+					Vector3 targetpos=target.transform.position;
+					targetpos-=UserPlayers[currentPlayerIndex].transform.position;
+					RaycastHit hittarget;
+
+					Physics.Raycast(UserPlayers[currentPlayerIndex].transform.position,targetpos,out hittarget);
+
+
+					if (hit&&hittarget.collider.gameObject.GetComponent<Player>().Equals(target)) {
 
 							//damage logic
 							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
@@ -207,11 +210,7 @@ public class GameManager : MonoBehaviour {
 			}
 			
 			if (target != null&&target.HP>0) {
-				
-				Vector3 targetpos=destTile.transform.position;
-				targetpos.y=1.5f;
-				targetpos.x-=1f;
-				targetpos.z-=1f;
+
 				
 				
 				//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
@@ -223,7 +222,14 @@ public class GameManager : MonoBehaviour {
 					removeTileHighlights ();
 					UserPlayers [currentPlayerIndex].moving = false;			
 					
-					if (!Physics.Linecast(UserPlayers[currentPlayerIndex].transform.position,targetpos)) {
+					Vector3 targetpos=target.transform.position;
+					targetpos-=UserPlayers[currentPlayerIndex].transform.position;
+					RaycastHit hittarget;
+					
+					Physics.Raycast(UserPlayers[currentPlayerIndex].transform.position,targetpos,out hittarget);
+					
+					
+					if (hittarget.collider.gameObject.GetComponent<Player>().Equals(target)) {
 						
 						Debug.Log (UserPlayers [currentPlayerIndex].playerName + " can hit " + target.playerName+"!");
 					} else {
