@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Waffe.cs" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\Texts\Tooltip_aim_de.txt" />
+     <None Include="Assets\3D Models\README.txt" />
      <None Include="Assets\Texts\Tooltip_weaponchange_de.txt" />
      <None Include="Assets\Texts\Comment_Leader_01_de.txt" />
      <None Include="Assets\Texts\Tooltip_attack_de.txt" />
