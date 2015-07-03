@@ -5,15 +5,19 @@ using UnityEngine.UI;
 public class CameraMovement : MonoBehaviour
 {
 
-    private float _speedfactor = 0.5f;
-    public float StartSpeed = 0.1f;
+    private float _speedfactor = 25f;
+    public float StartSpeed = 25f;
     public int Borderwidth = 20;
+	public float Boost=2f;
 
     // Use this for initialization
     void Start()
     {
 
     }
+
+	//KAMERABEGRENZUNG SCHREIBEN!!!!!!!!!!!!
+
 
     // Update is called once per frame
     void Update()
@@ -38,26 +42,26 @@ public class CameraMovement : MonoBehaviour
 
             if (Input.mousePosition.x > Screen.width - Borderwidth)
             {
-                MoveLeft(); _speedfactor += 0.04f;
+                MoveLeft(); _speedfactor += Boost;
             }
             else if (Input.mousePosition.x < 0 + Borderwidth)
             {
-                MoveRight(); _speedfactor += 0.04f;
+				MoveRight(); _speedfactor += Boost;
             }
             else if (Input.mousePosition.y > Screen.height - Borderwidth)
             {
-                MoveUp(); _speedfactor += 0.04f;
+				MoveUp(); _speedfactor += Boost;
             }
             else if (Input.mousePosition.y < 0 + Borderwidth)
             {
-                MoveDown(); _speedfactor += 0.04f;
+				MoveDown(); _speedfactor += Boost;
             }
             else
             {
                 _speedfactor = StartSpeed;
             }
         }
-        else { _speedfactor += 0.04f; }
+		else { _speedfactor += Boost; }
 
 
 
@@ -66,30 +70,40 @@ public class CameraMovement : MonoBehaviour
 
     private void MoveUp()
     {
-        Vector3 temp = this.transform.position;
+      /*  Vector3 temp = this.transform.position;
         temp.z += 1 * _speedfactor;
 
-        this.transform.position = temp;
+        this.transform.position = temp;*/
+
+		this.transform.Translate (Vector3.forward * Time.deltaTime*_speedfactor);
     }
     private void MoveDown()
     {
-        Vector3 temp = this.transform.position;
+  /*      Vector3 temp = this.transform.position;
         temp.z -= 1 * _speedfactor;
 
         this.transform.position = temp;
+        */
+
+		this.transform.Translate (Vector3.back * Time.deltaTime*_speedfactor);
     }
     private void MoveRight()
     {
-        Vector3 temp = this.transform.position;
+      /*  Vector3 temp = this.transform.position;
         temp.x -= 1 * _speedfactor;
 
         this.transform.position = temp;
+
+	*/
+		this.transform.Translate (Vector3.left * Time.deltaTime*_speedfactor);
     }
     private void MoveLeft()
     {
-        Vector3 temp = this.transform.position;
+      /*  Vector3 temp = this.transform.position;
         temp.x += 1 * _speedfactor;
 
         this.transform.position = temp;
+        */
+		this.transform.Translate (Vector3.right * Time.deltaTime*_speedfactor);
     }
 }

@@ -24,7 +24,7 @@ public class Hotkey : MonoBehaviour {
 			GameManager.instance.Tooltiptext.text=" ";
 
 			NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
-			Camermovement.instance.ChangeCamPosition();
+			CameraCenteronCurrent.instance.CamonCurent();
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha2)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints>=GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost) {GameManager.instance.attackPlayer();}
 		if (Input.GetKeyDown (KeyCode.Alpha4)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints>0) {GameManager.instance.movePlayer();}
