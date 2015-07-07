@@ -4,8 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Player : MonoBehaviour {
+	public bool CurrentWeaponisOne = true;
+	public Waffe Weapon=new Waffe("Knife");
+	public enum Weapons
+	{
+		None,
+		Rifle,
+		Gun,
+		Knife
+	};
 
-	public Waffe Weapon = new Waffe();
+	public Weapons WeaponOne=Weapons.None;
+	public Weapons WeaponTwo=Weapons.None;
+
+	public Waffe[] OwnedWeapons= new Waffe[2];
 
 	public Vector2 gridPosition = Vector2.zero;
 
@@ -20,11 +32,11 @@ public class Player : MonoBehaviour {
 	public Sprite Avatar;
 
 	public string playerName = "Robin";
-	public float HP = 25f;
-	public float MaxHP=25f;
+	public float HP = 10f;
+	public float MaxHP=10f;
 
-	public int ActionPoints = 20;
-	public float MaxAP=20;
+	public int ActionPoints = 12;
+	public float MaxAP=12;
 
 
 	public List<Vector3> positionQueue = new List<Vector3>();	
@@ -34,10 +46,14 @@ public class Player : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
-	
+	public void Ini () {
+		SetWeapons ();
+		Weapon = OwnedWeapons[0];
+		Debug.Log ("waffe ausgewählt");
+
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 
@@ -78,4 +94,38 @@ public class Player : MonoBehaviour {
 	}
 
 	public virtual void AIMove(){}
+
+	public void SetWeapons(){
+
+		switch (WeaponOne) {
+		case Weapons.None:
+		{OwnedWeapons[0]=new Waffe("None");
+				break;}
+		case Weapons.Rifle:
+		{OwnedWeapons[0]=new Waffe("Rifle");
+			break;}
+		case Weapons.Gun:
+		{OwnedWeapons[0]=new Waffe("Gun");
+			break;}
+		case Weapons.Knife:
+		{OwnedWeapons[0]=new Waffe("Knife");
+			break;}
+		}
+
+		switch (WeaponTwo) {
+		case Weapons.None:
+		{OwnedWeapons[1]=new Waffe("None");
+			break;}
+		case Weapons.Rifle:
+		{OwnedWeapons[1]=new Waffe("Rifle");
+			break;}
+		case Weapons.Gun:
+		{OwnedWeapons[1]=new Waffe("Gun");
+			break;}
+		case Weapons.Knife:
+		{OwnedWeapons[1]=new Waffe("Knife");
+			break;}
+		}
+
+	}
 }

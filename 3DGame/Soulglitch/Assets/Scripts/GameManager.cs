@@ -290,6 +290,13 @@ public class GameManager : MonoBehaviour {
 
 	public void weaponchange()
 	{
+		if (UserPlayers [currentPlayerIndex].CurrentWeaponisOne) {
+			UserPlayers [currentPlayerIndex].Weapon = UserPlayers [currentPlayerIndex].OwnedWeapons [1];
+			UserPlayers [currentPlayerIndex].CurrentWeaponisOne = false;
+		} else {			
+			UserPlayers [currentPlayerIndex].Weapon = UserPlayers [currentPlayerIndex].OwnedWeapons [0];
+			UserPlayers [currentPlayerIndex].CurrentWeaponisOne = true;
+		}
 		Debug.Log("weapon changed ");
 	}
 

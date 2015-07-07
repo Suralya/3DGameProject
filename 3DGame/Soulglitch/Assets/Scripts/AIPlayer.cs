@@ -9,6 +9,7 @@ public class AIPlayer : Player {
 	void Start () {
 		gridPosition.x = this.transform.position.x;
 		gridPosition.y = this.transform.position.z;
+		base.Ini ();
 	}
 	
 	// Update is called once per frame
