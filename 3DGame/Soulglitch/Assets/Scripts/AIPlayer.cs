@@ -5,11 +5,18 @@ public class AIPlayer : Player {
 
 	public bool civilian=true;
 
+	private Animator animator;
+	private AIBehave AISmb;
+
 	// Use this for initialization
 	void Start () {
 		gridPosition.x = this.transform.position.x;
 		gridPosition.y = this.transform.position.z;
 		base.Ini ();
+
+		AISmb = animator.GetBehaviour <AIBehave> ();
+		AISmb.AIMb = this;
+
 	}
 	
 	// Update is called once per frame

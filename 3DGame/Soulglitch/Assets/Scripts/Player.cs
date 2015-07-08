@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Player : MonoBehaviour {
+
 	public bool CurrentWeaponisOne = true;
 	public Waffe Weapon=new Waffe("Knife");
 	public enum Weapons
@@ -16,8 +17,8 @@ public class Player : MonoBehaviour {
 
 	public Weapons WeaponOne=Weapons.None;
 	public Weapons WeaponTwo=Weapons.None;
-
 	public Waffe[] OwnedWeapons= new Waffe[2];
+
 
 	public Vector2 gridPosition = Vector2.zero;
 
@@ -34,7 +35,6 @@ public class Player : MonoBehaviour {
 	public string playerName = "Robin";
 	public float HP = 10f;
 	public float MaxHP=10f;
-
 	public int ActionPoints = 12;
 	public float MaxAP=12;
 
