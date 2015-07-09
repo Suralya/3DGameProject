@@ -297,6 +297,13 @@ public class GameManager : MonoBehaviour {
 			UserPlayers [currentPlayerIndex].Weapon = UserPlayers [currentPlayerIndex].OwnedWeapons [0];
 			UserPlayers [currentPlayerIndex].CurrentWeaponisOne = true;
 		}
+
+		UserPlayers[currentPlayerIndex].attacking=false;
+		UserPlayers[currentPlayerIndex].moving=false;
+		UserPlayers[currentPlayerIndex].aiming=false;
+		removeTileHighlights ();
+		Tooltiptext.text=" ";
+
 		Debug.Log("weapon changed ");
 	}
 
