@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
@@ -176,6 +177,7 @@ public class GameManager : MonoBehaviour {
 							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
 						
 							target.HP -= amountOfDamage;
+						hittarget.collider.gameObject.transform.DOShakeRotation(0.5f,45f,50,90);
 						
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
 						} else {
