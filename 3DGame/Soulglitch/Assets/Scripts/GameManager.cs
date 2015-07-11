@@ -397,7 +397,7 @@ public class GameManager : MonoBehaviour {
 			currentPlayerIndex = 0;
 			UserPlayers [currentPlayerIndex].selected =true;
 		} else {
-			removeTileHighlights ();
+		/*	removeTileHighlights ();
 			foreach(Player User in UserPlayers)
 			{
 				User.ActionPoints=20;
@@ -409,26 +409,39 @@ public class GameManager : MonoBehaviour {
 			currentPlayerIndex = 0;
 			Tooltiptext.text=" ";
 
-			StartCoroutine(Waitforseconds());
-			nextTurn();
+			foreach (Player p in AIPlayers){				
+				yield return new WaitForSeconds(1f);
+				p.AIMove();}*/
+
+			StartCoroutine(AITurn());
+
+
 			
 		}
 	}
 	// THOMAS FRAGEN FÜRS WARTEN!!!!!
-	public IEnumerator Waitforseconds(){
+	public IEnumerator AITurn(){
 
-		for (int i=AIPlayers.Count-1;i>=0;i--){
-			if (AIPlayers[i]==null)
-			{
-			}else{
-				yield return new WaitForSeconds(1f);
-				AIPlayers[i].AIMove();
-			}
+		removeTileHighlights ();
+		foreach(Player User in UserPlayers)
+		{
+			User.ActionPoints=20;
+		}
+		//AIturn
+		_userturn =false;
+		Debug.Log("It's the enemys turn");
+		
+		currentPlayerIndex = 0;
+		Tooltiptext.text=" ";
+		
+		foreach (Player p in AIPlayers){				
+			yield return new WaitForSeconds(1f);
+			p.AIMove();}
+			
+			nextTurn();
 		}
 
-
-
-	}
+	
 
 	/// <summary>
 	/// Selects the first Player of Userplayers.
