@@ -195,6 +195,9 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+
+
+
 	/// <summary>
 	/// Aims the with current player.
 	/// </summary>

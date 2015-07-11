@@ -57,9 +57,9 @@ public class AIPlayer : Player {
 
 	public override void AIMove(){
 		if (civilian) {
-			GameManager.instance.SceneMovePatern.CivilianMove();
+			GameManager.instance.SceneMovePatern.CivilianMove(this);
 		} else {
-			GameManager.instance.SceneMovePatern.EnemyMove();
+			GameManager.instance.SceneMovePatern.EnemyMove(this);
 		}
 	}
 }

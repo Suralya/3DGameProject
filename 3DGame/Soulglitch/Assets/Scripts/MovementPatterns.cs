@@ -13,11 +13,11 @@ public class MovementPatterns : MonoBehaviour {
 	
 	}
 
-	public virtual void CivilianMove(){
+	public virtual void CivilianMove(AIPlayer p){
 		Debug.Log ("Civilian  movement");
 	}
 	
-	public virtual void EnemyMove(){
+	public virtual void EnemyMove(AIPlayer p){
 		Debug.Log ("Enemy movement");
 	}
 }
