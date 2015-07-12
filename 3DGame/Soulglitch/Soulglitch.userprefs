@@ -1,15 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Scene1MovementPatterns.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UserPlayer.cs" Line="55" Column="5" />
-      <File FileName="Assets\Scripts\Scene1MovementPatterns.cs" Line="74" Column="6" />
-      <File FileName="Assets\Scripts\Hotkey.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="27" Column="33" />
+      <File FileName="Assets\Scripts\UserPlayer.cs" Line="38" Column="3" />
+      <File FileName="Assets\Scripts\Scene1MovementPatterns.cs" Line="48" Column="207" />
+      <File FileName="Assets\Scripts\Hotkey.cs" Line="27" Column="49" />
       <File FileName="Assets\Scripts\PauseMenue.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="199" Column="1" />
       <File FileName="Assets\Scripts\AIPlayer.cs" Line="55" Column="22" />
-      <File FileName="Assets\Scripts\MovementPatterns.cs" Line="17" Column="36" />
+      <File FileName="Assets\Scripts\MovementPatterns.cs" Line="27" Column="1" />
+      <File FileName="Assets\Scripts\AIBehave.cs" Line="51" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -5,6 +5,9 @@ using System.Linq;
 
 public class Scene1MovementPatterns : MovementPatterns {
 
+	public List<Tile> Temp=new List<Tile>();
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,14 +19,56 @@ public class Scene1MovementPatterns : MovementPatterns {
 	}
 
 	public override void CivilianMove(AIPlayer p){
-		Debug.Log ("Civilian  movement");
+		bool TurnOn=true;
+		while (!GameManager.instance._userturn&&TurnOn) {
+
+			Debug.Log ("Civilian  movement");
+			TurnOn=false;
+		}
+
+		p.ActionPoints = (int)p.MaxAP;
 
 	}
 
 	public override void EnemyMove(AIPlayer p){
+		bool TurnOn=true;
+		//while (!GameManager.instance._userturn&&TurnOn) {
+
 
 		Debug.Log ("Enemy  movement");
-	/*	//priority queue
+
+			List<Tile> attacktilesInRange = TileHighlight.FindAtackHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.Weapon.Attackrange);
+			List<Tile> movementToAttackTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),p.ActionPoints- p.Weapon.APCost+  p.Weapon.Attackrange);
+			List<Tile> movementTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.ActionPoints);
+
+			if (attacktilesInRange.Where(x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count() > 0).Count () > 0)
+			//if(attacktilesInRange.Count>0)
+			{
+				Debug.Log("Someone is in Range");
+			var opponentsInRange = attacktilesInRange.Select(x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0 ? GameManager.instance.UserPlayers.Where(y => y.HP > 0 && y.gridPosition == x.gridPosition).First() : null).ToList();
+				Player opponent = opponentsInRange.OrderBy (x => x != null ? -x.HP : 1000).First ();
+
+				Debug.Log("The Player in Range is"+opponent.name);
+
+				AIBehave.instance.AIAttack(opponent,p);
+			}
+
+
+			TurnOn=false;
+		//}
+
+		p.ActionPoints = (int)p.MaxAP;
+
+	}
+	
+}
+
+
+
+
+
+
+/*	//priority queue
 		List<Tile> attacktilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.Weapon.Attackrange);
 		List<Tile> movementToAttackTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),p.ActionPoints- p.Weapon.APCost+  p.Weapon.Attackrange);
 		List<Tile> movementTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.ActionPoints + 1000);
@@ -74,6 +119,3 @@ public class Scene1MovementPatterns : MovementPatterns {
 		}*/
 
 
-	}
-	
-}

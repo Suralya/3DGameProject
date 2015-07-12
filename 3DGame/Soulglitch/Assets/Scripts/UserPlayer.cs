@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class UserPlayer : Player {
 
@@ -27,12 +28,12 @@ public class UserPlayer : Player {
 			transform.position=temp;
 			transform.GetComponent<Renderer>().material.color = Color.red;
 
-		    if (selected && GameManager.instance.UserPlayers.Exists(t => t.HP > 0))
+		    if (selected && GameManager.instance.UserPlayers.Any(t => t.HP > 0))
 		    {
 		        Hotkey.hotk.NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
-				Camermovement.instance.ChangeCamPosition();
+				CameraCenteronCurrent.instance.CamonCurent();
 		    }
-			else{Debug.Log("GameOver");}
+			else if(!selected && !GameManager.instance.UserPlayers.Any(t => t.HP > 0)){Debug.Log("GameOver");}
 		}
 
 	}

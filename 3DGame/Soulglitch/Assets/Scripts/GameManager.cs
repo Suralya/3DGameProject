@@ -428,7 +428,7 @@ public class GameManager : MonoBehaviour {
 		removeTileHighlights ();
 		foreach(Player User in UserPlayers)
 		{
-			User.ActionPoints=20;
+			User.ActionPoints=(int)User.MaxAP;
 		}
 		//AIturn
 		_userturn =false;
@@ -437,9 +437,12 @@ public class GameManager : MonoBehaviour {
 		currentPlayerIndex = 0;
 		Tooltiptext.text=" ";
 		
-		foreach (Player p in AIPlayers){				
-			yield return new WaitForSeconds(1f);
-			p.AIMove();}
+		foreach (Player p in AIPlayers) {		
+			if (p.HP > 0) {
+				yield return new WaitForSeconds (1f);
+				p.AIMove ();
+			}
+		}
 			
 			nextTurn();
 		}
