@@ -23,21 +23,8 @@ public class AIBehave : MonoBehaviour {
 
 	public void AIAttack(Player target,Player ai) {
 
-			
-
-				
-				
-				
-				//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
-		/*		if (ai.gridPosition.x >= target.gridPosition.x - ai.Weapon.Attackrange && ai.gridPosition.x <= target.gridPosition.x + ai.Weapon.Attackrange &&
-				    ai.gridPosition.y >= target.gridPosition.y - ai.Weapon.Attackrange && ai.gridPosition.y <= target.gridPosition.y + ai.Weapon.Attackrange) {
-*/
 					ai.ActionPoints -= ai.Weapon.APCost;
 					
-					//removeTileHighlights ();
-					
-					//attack logic
-					//roll to hit
 					bool hit = Random.Range (0.0f, 1.0f) <= ai.Weapon.Hitchance;
 					
 					Vector3 targetpos=target.transform.position;
@@ -60,12 +47,34 @@ public class AIBehave : MonoBehaviour {
 						Debug.Log (ai.playerName + " missed " + target.playerName + "!");
 					}
 
-			/*	} else {
-					Debug.Log ("Target is not adjacent!");
-				}
-				*/
 		}
+
+
+	public void AIMove(Tile destTile,Player ai){
+
+	
 		
+		if (/*destTile.transform.GetComponent<Renderer> ().material.color == Color.magenta && */!destTile.impassible && !destTile.occupied) {
+			//removeTileHighlights ();
+		
+			ai.ActionPoints -= TilePathFinder.FindPath (GameManager.instance.map.Find (t => t.gridPosition == ai.gridPosition), destTile).Count;
+		
+			foreach (Tile t in TilePathFinder.FindPath(GameManager.instance.map.Find(t => t.gridPosition==ai.gridPosition),destTile)) {
+				ai.positionQueue.Add (GameManager.instance.map.Find (delegate(Tile obj) {
+					return obj.gridPosition == t.gridPosition;
+				}).transform.position + Vector3.up);
+				Debug.Log ("(" + ai.positionQueue [ai.positionQueue.Count - 1].x + "," + ai.positionQueue [ai.positionQueue.Count - 1].y + ")");
+			}			
+			ai.gridPosition = destTile.gridPosition;
+		
+		} else {
+			Debug.Log ("destination invalid");
+		}
+
+	}
+
+
+
 	}
 
 

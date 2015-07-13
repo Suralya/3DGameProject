@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 
 public class Scene1MovementPatterns : MovementPatterns {
 
@@ -41,17 +42,36 @@ public class Scene1MovementPatterns : MovementPatterns {
 			List<Tile> movementToAttackTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),p.ActionPoints- p.Weapon.APCost+  p.Weapon.Attackrange);
 			List<Tile> movementTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.ActionPoints);
 
-			if (attacktilesInRange.Where(x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count() > 0).Count () > 0)
+			if (attacktilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
 			//if(attacktilesInRange.Count>0)
-			{
-				Debug.Log("Someone is in Range");
-			var opponentsInRange = attacktilesInRange.Select(x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0 ? GameManager.instance.UserPlayers.Where(y => y.HP > 0 && y.gridPosition == x.gridPosition).First() : null).ToList();
-				Player opponent = opponentsInRange.OrderBy (x => x != null ? -x.HP : 1000).First ();
+			Debug.Log ("Someone is in Range");
+			var opponentsInRange = attacktilesInRange.Select (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0 ? GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).First () : null).ToList ();
+			Player opponent = opponentsInRange.OrderBy (x => x != null ? -x.HP : 1000).First ();
 
-				Debug.Log("The Player in Range is"+opponent.name);
+			Debug.Log ("The Player in Range is" + opponent.name);
 
-				AIBehave.instance.AIAttack(opponent,p);
-			}
+			AIBehave.instance.AIAttack (opponent, p);
+
+
+		} /*else if (movementTilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y != this && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
+
+
+
+			var opponentsInRange = movementTilesInRange.Select(x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y != this && y.gridPosition == x.gridPosition).Count () > 0 ? GameManager.instance.UserPlayers.Where(y => y.HP > 0 && y.gridPosition == x.gridPosition).First() : null).ToList();
+			Player opponent = opponentsInRange.OrderBy (x => x != null ? -x.HP : 1000).ThenBy (x => x != null ? TilePathFinder.FindPath(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition)).Count() : 1000).First ();
+			
+		//	GameManager.instance.removeTileHighlights();
+		//	GameManager.instance.highlightTilesAt(p.gridPosition, Color.blue, p.ActionPoints);
+			Debug.Log("ich will zu"+opponent.name);
+			List<Tile> path = TilePathFinder.FindPath (GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),GameManager.instance.map.Find(i=>i.gridPosition==opponent.gridPosition)/*, GameManager.instance.UserPlayers.Where(x => x.gridPosition != p.gridPosition && x.gridPosition != opponent.gridPosition).Select(x => x.gridPosition).ToArray());
+			//TODO GameManager.instance.moveCurrentPlayer(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), movementPerActionPoint - 1)]);
+
+			AIBehave.instance.AIMove(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), p.ActionPoints - 1)],p);
+			Debug.Log("EnemyMove");
+
+			//p.transform.DOMove(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), p.ActionPoints - 1)].transform.position,1);
+
+		}*/
 
 
 			TurnOn=false;
