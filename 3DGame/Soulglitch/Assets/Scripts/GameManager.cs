@@ -171,7 +171,8 @@ public class GameManager : MonoBehaviour {
 					Physics.Raycast(UserPlayers[currentPlayerIndex].transform.position,targetpos,out hittarget);
 
 
-					if (hit&&hittarget.collider.gameObject.GetComponent<Player>().Equals(target)) {
+                    if (hittarget.collider.gameObject.GetComponent<Player>() != null && hit && hittarget.collider.gameObject.GetComponent<Player>().Equals(target))
+                    {
 
 							//damage logic
 							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
@@ -232,9 +233,10 @@ public class GameManager : MonoBehaviour {
 					RaycastHit hittarget;
 					
 					Physics.Raycast(UserPlayers[currentPlayerIndex].transform.position,targetpos,out hittarget);
-					
-					
-					if (hittarget.collider.gameObject.GetComponent<Player>().Equals(target)) {
+
+
+                    if (hittarget.collider.gameObject.GetComponent<Player>() != null && hittarget.collider.gameObject.GetComponent<Player>().Equals(target))
+                    {
 						
 						Debug.Log (UserPlayers [currentPlayerIndex].playerName + " can hit " + target.playerName+"!");
 					} else {

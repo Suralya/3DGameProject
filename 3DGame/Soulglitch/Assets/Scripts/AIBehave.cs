@@ -32,9 +32,10 @@ public class AIBehave : MonoBehaviour {
 					RaycastHit hittarget;
 					
 					Physics.Raycast(ai.transform.position,targetpos,out hittarget);
-					
-					
-					if (hit&&hittarget.collider.gameObject.GetComponent<Player>().Equals(target)) {
+
+
+                    if (hittarget.collider.gameObject.GetComponent<Player>() != null && hit && hittarget.collider.gameObject.GetComponent<Player>().Equals(target))
+                    {
 						
 						//damage logic
 						int amountOfDamage = (int)Mathf.Floor (ai.Weapon.Damage);
