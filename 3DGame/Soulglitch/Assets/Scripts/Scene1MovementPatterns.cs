@@ -40,7 +40,7 @@ public class Scene1MovementPatterns : MovementPatterns {
 
 			List<Tile> attacktilesInRange = TileHighlight.FindAtackHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.Weapon.Attackrange);
 			List<Tile> movementToAttackTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),p.ActionPoints- p.Weapon.APCost+  p.Weapon.Attackrange);
-			List<Tile> movementTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.ActionPoints);
+			List<Tile> movementTilesInRange = TileHighlight.FindAIMoveHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.ActionPoints+1000);
 
 			if (attacktilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
 			//if(attacktilesInRange.Count>0)
@@ -50,10 +50,11 @@ public class Scene1MovementPatterns : MovementPatterns {
 
 			Debug.Log ("The Player in Range is" + opponent.name);
 
+			while(p.ActionPoints>p.Weapon.APCost&&opponent.HP>0)
 			AIBehave.instance.AIAttack (opponent, p);
 
 
-		} /*else if (movementTilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y != this && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
+		} else if (movementTilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y != this && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
 
 
 
@@ -62,16 +63,30 @@ public class Scene1MovementPatterns : MovementPatterns {
 			
 		//	GameManager.instance.removeTileHighlights();
 		//	GameManager.instance.highlightTilesAt(p.gridPosition, Color.blue, p.ActionPoints);
-			Debug.Log("ich will zu"+opponent.name);
-			List<Tile> path = TilePathFinder.FindPath (GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),GameManager.instance.map.Find(i=>i.gridPosition==opponent.gridPosition)/*, GameManager.instance.UserPlayers.Where(x => x.gridPosition != p.gridPosition && x.gridPosition != opponent.gridPosition).Select(x => x.gridPosition).ToArray());
+			Debug.Log(p.playerName+" will zu "+opponent.name);
+			List<Tile> path = TilePathFinder.FindAIPath (GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),GameManager.instance.map.Find(i=>i.gridPosition==opponent.gridPosition)/*, GameManager.instance.UserPlayers.Where(x => x.gridPosition != p.gridPosition && x.gridPosition != opponent.gridPosition).Select(x => x.gridPosition).ToArray()*/);
 			//TODO GameManager.instance.moveCurrentPlayer(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), movementPerActionPoint - 1)]);
 
-			AIBehave.instance.AIMove(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), p.ActionPoints - 1)],p);
-			Debug.Log("EnemyMove");
+			if(path.Count!=null)
+			{
+			int indexer=(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), p.ActionPoints - 1);
+
+			while(path[indexer].occupied)
+			{indexer--;
+					if(indexer<=0){indexer=0;break;}
+			}
+
+			AIBehave.instance.AIMove(path[indexer],p);
+			Debug.Log("ran");
+
+			if(p.ActionPoints>p.Weapon.APCost&&opponent.HP>0)
+				AIBehave.instance.AIAttack (opponent, p);
+			}
+			else{Debug.Log("Can't move");}
 
 			//p.transform.DOMove(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), p.ActionPoints - 1)].transform.position,1);
 
-		}*/
+		}
 
 
 			TurnOn=false;
