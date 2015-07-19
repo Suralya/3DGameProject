@@ -12,7 +12,8 @@ public class Player : MonoBehaviour {
 		None,
 		Rifle,
 		Gun,
-		Knife
+		Knife,
+		Medicgun
 	};
 
 	public Weapons WeaponOne=Weapons.None;
@@ -110,6 +111,9 @@ public class Player : MonoBehaviour {
 		case Weapons.Knife:
 		{OwnedWeapons[0]=new Waffe("Knife");
 			break;}
+		case Weapons.Medicgun:
+		{OwnedWeapons[0]=new Waffe("Medicgun");
+			break;}
 		}
 
 		switch (WeaponTwo) {
@@ -124,6 +128,9 @@ public class Player : MonoBehaviour {
 			break;}
 		case Weapons.Knife:
 		{OwnedWeapons[1]=new Waffe("Knife");
+			break;}
+		case Weapons.Medicgun:
+		{OwnedWeapons[1]=new Waffe("Medicgun");
 			break;}
 		}
 

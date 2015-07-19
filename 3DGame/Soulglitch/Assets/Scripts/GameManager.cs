@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour {
 	/// <param name="destTile">Selected tile.</param>
 
 	public void attackWithCurrentPlayer(Tile destTile) {
-
+		if (!UserPlayers [currentPlayerIndex].Weapon.healing) {
 
 			if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white && !destTile.impassible) {
 			
@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour {
 					}
 				}
 			
-				if (target != null&&target.HP>0) {
+				if (target != null && target.HP > 0) {
 
 
 				
@@ -164,21 +164,20 @@ public class GameManager : MonoBehaviour {
 						//roll to hit
 						bool hit = Random.Range (0.0f, 1.0f) <= UserPlayers [currentPlayerIndex].Weapon.Hitchance;
 
-					Vector3 targetpos=target.transform.position;
-					targetpos-=UserPlayers[currentPlayerIndex].transform.position;
-					RaycastHit hittarget;
+						Vector3 targetpos = target.transform.position;
+						targetpos -= UserPlayers [currentPlayerIndex].transform.position;
+						RaycastHit hittarget;
 
-					Physics.Raycast(UserPlayers[currentPlayerIndex].transform.position,targetpos,out hittarget);
+						Physics.Raycast (UserPlayers [currentPlayerIndex].transform.position, targetpos, out hittarget);
 
 
-                    if (hittarget.collider.gameObject.GetComponent<Player>() != null && hit && hittarget.collider.gameObject.GetComponent<Player>().Equals(target))
-                    {
+						if (hittarget.collider.gameObject.GetComponent<Player> () != null && hit && hittarget.collider.gameObject.GetComponent<Player> ().Equals (target)) {
 
 							//damage logic
 							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
 						
 							target.HP -= amountOfDamage;
-						hittarget.collider.gameObject.transform.DOShakeRotation(0.5f,45f,50,90);
+							hittarget.collider.gameObject.transform.DOShakeRotation (0.5f, 45f, 50, 90);
 						
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
 						} else {
@@ -193,7 +192,66 @@ public class GameManager : MonoBehaviour {
 					Debug.Log ("destination invalid");
 				}
 			}
+		} else {
+			
+			if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white && !destTile.impassible) {
+				
+				Player target = null;
+				foreach (Player p in UserPlayers) {
+					if (p.gridPosition == destTile.gridPosition) {
+						target = p;
+					}
+				}
+				
+				if (target != null && target.HP > 0) {
+					
+					
+					
+					//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
+					if (UserPlayers [currentPlayerIndex].gridPosition.x >= target.gridPosition.x - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.x <= target.gridPosition.x + UserPlayers [currentPlayerIndex].Weapon.Attackrange &&
+					    UserPlayers [currentPlayerIndex].gridPosition.y >= target.gridPosition.y - UserPlayers [currentPlayerIndex].Weapon.Attackrange && UserPlayers [currentPlayerIndex].gridPosition.y <= target.gridPosition.y + UserPlayers [currentPlayerIndex].Weapon.Attackrange) {
+						UserPlayers [currentPlayerIndex].ActionPoints -= UserPlayers [currentPlayerIndex].Weapon.APCost;
+						
+						removeTileHighlights ();
+						UserPlayers [currentPlayerIndex].moving = false;			
+						
+						//attack logic
+						//roll to hit
+						bool hit = Random.Range (0.0f, 1.0f) <= UserPlayers [currentPlayerIndex].Weapon.Hitchance;
+						
+						Vector3 targetpos = target.transform.position;
+						targetpos -= UserPlayers [currentPlayerIndex].transform.position;
+						RaycastHit hittarget;
+						
+						Physics.Raycast (UserPlayers [currentPlayerIndex].transform.position, targetpos, out hittarget);
+						
+						
+						if (hittarget.collider.gameObject.GetComponent<Player> () != null && hit && hittarget.collider.gameObject.GetComponent<Player> ().Equals (target)) {
+							
+							//damage logic
+							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
 
+							if(target.HP-amountOfDamage>target.MaxHP)
+								target.HP=target.MaxHP;
+							else{target.HP -= amountOfDamage;}
+
+							hittarget.collider.gameObject.transform.DOJump(target.transform.position,2f,2,0.5f);
+							
+							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly healed " + target.playerName + " " + amountOfDamage*(-1) + " HP!");
+						} else {
+							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " wasn't able to heal " + target.playerName + "!");
+						}
+						attackPlayer ();
+					} else {
+						Debug.Log ("Target is not adjacent!");
+					}
+					
+				} else {
+					Debug.Log ("destination invalid");
+				}
+
+			}
+		}
 	}
 
 
@@ -330,9 +388,13 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].attacking=true;
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
-				GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.red, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
+					if(!UserPlayers[currentPlayerIndex].Weapon.healing)
+					{GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.red, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
 					Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost;
-				
+					}else{
+						GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.yellow, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
+						Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost;
+					}
 				} else {
 					Debug.Log ("nicht genug AP");
 					Tooltiptext.text="Du hast nicht genug AP um einen Angriff zu machen";

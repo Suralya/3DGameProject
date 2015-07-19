@@ -64,10 +64,10 @@ public class Tile : MonoBehaviour {
 			transform.GetComponent<Renderer> ().material.color = Color.magenta;
 		} else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
 			transform.GetComponent<Renderer> ().material.color = Color.cyan;
-		}
-		else if (transform.GetComponent<Renderer> ().material.color == Color.gray) {
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.gray) {
 			transform.GetComponent<Renderer> ().material.color = Color.red;
-		}
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.yellow) {
+			transform.GetComponent<Renderer> ().material.color = Color.green;}
 		//Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
 	}
 
@@ -77,13 +77,14 @@ public class Tile : MonoBehaviour {
 	void OnMouseExit(){
 		if (transform.GetComponent<Renderer> ().material.color == Color.blue && !impassible) {
 			transform.GetComponent<Renderer> ().material.color = Color.white;
-		} else if(transform.GetComponent<Renderer> ().material.color == Color.magenta)
-		{
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.magenta) {
 			transform.GetComponent<Renderer> ().material.color = Color.cyan;
-		}else if(transform.GetComponent<Renderer> ().material.color == Color.cyan){
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.cyan) {
 			transform.GetComponent<Renderer> ().material.color = Color.red;
-		}else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
 			transform.GetComponent<Renderer> ().material.color = Color.grey;
+		} else if (transform.GetComponent<Renderer> ().material.color == Color.green) {
+			transform.GetComponent<Renderer> ().material.color = Color.yellow;
 		}
 	}
 
