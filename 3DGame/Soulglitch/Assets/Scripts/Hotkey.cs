@@ -30,6 +30,7 @@ public class Hotkey : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Alpha4)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints>0) {GameManager.instance.movePlayer();}
 		if (Input.GetKeyDown (KeyCode.Alpha1)&&GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].ActionPoints>0) {GameManager.instance.aimPlayer();}
 		if (Input.GetKeyDown (KeyCode.Alpha3)){GameManager.instance.weaponchange();}
+		if (Input.GetKeyDown (KeyCode.Backspace)){GameManager.instance.nextTurn();}
 		if (Input.GetKeyDown (KeyCode.T)) {GameManager.instance.showhideTooltip();}
 
 	}
