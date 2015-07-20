@@ -5,19 +5,20 @@ using UnityEngine.UI;
 
 public class Characterbuttons : MonoBehaviour {
 
-	public Text CharOne,CharTwo,CharThree,CharFour;
+	public Text CharOne,CharTwo,CharThree,CharFour,WeaponOne,WeaponTwo,WeaponThree,WeaponFour;
 	public Button CharacterButtonOne,CharacterButtonTwo,CharacterButtonThree,CharacterButtonFour;
 
 
 	// Use this for initialization
 	void Start () {
 		SetCharacterNames ();
-	
+	    
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		DisableDeadChar ();
+        SetWeaponNames();
 	}
 
 	/// <summary>
@@ -29,6 +30,15 @@ public class Characterbuttons : MonoBehaviour {
 		CharThree.text = GameManager.instance.UserPlayers[2].playerName;
 		CharFour.text = GameManager.instance.UserPlayers[3].playerName;
 	}
+
+
+    void SetWeaponNames()
+    {
+        WeaponOne.text = GameManager.instance.UserPlayers[0].Weapon.Weaponname;
+        WeaponTwo.text = GameManager.instance.UserPlayers[1].Weapon.Weaponname;
+        WeaponThree.text = GameManager.instance.UserPlayers[2].Weapon.Weaponname;
+        WeaponFour.text = GameManager.instance.UserPlayers[3].Weapon.Weaponname;
+    }
 
 	/// <summary>
 	/// Disables dead Userchar.

@@ -121,7 +121,8 @@ public class GameManager : MonoBehaviour {
 				   
 
 					movePlayer();
-					
+				    //StartCoroutine(Waittillmoved());
+
 				} else {
 					Debug.Log ("destination invalid");
 				}
@@ -131,7 +132,13 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	/// <summary>
+    public IEnumerator Waittillmoved()
+    {
+        yield return new WaitForSeconds(0.5f);
+        movePlayer();
+    }
+
+    /// <summary>
 	/// Attacks the with current player.
 	/// </summary>
 	/// <param name="destTile">Selected tile.</param>
@@ -203,7 +210,7 @@ public class GameManager : MonoBehaviour {
 					}
 				}
 				
-				if (target != null && target.HP > 0) {
+				if (target != null && target!=UserPlayers[currentPlayerIndex] && target.HP > 0) {
 					
 					
 					
