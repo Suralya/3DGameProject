@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Tile : MonoBehaviour {
+public class Tile : MonoBehaviour
+{
+
+    public int AptoCurrPlayer=0;
 
 	public Vector2 gridPosition = Vector2.zero;
 
@@ -51,13 +54,21 @@ public class Tile : MonoBehaviour {
 			occupied = false;
 		}
 
-	
+
+
 	}
 
 	/// <summary>
 	/// Manages color while hovering over tile.
 	/// </summary>
 	void OnMouseEnter(){
+        if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            AptoCurrPlayer =
+                TilePathFinder.FindPath(GameManager.instance.map.Find(x => GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].gridPosition == x.gridPosition), this).Count;
+        }
+
+
 		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible 
             && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
             && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking

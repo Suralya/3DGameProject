@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Hoverbutton.cs" />
      <Compile Include="Assets\Scripts\MainAPbar.cs" />
      <Compile Include="Assets\Scripts\MainMenue.cs" />
+     <Compile Include="Assets\Scripts\MoveAPCost.cs" />
      <Compile Include="Assets\Scripts\MovementPatterns.cs" />
      <Compile Include="Assets\Scripts\PauseMenue.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />

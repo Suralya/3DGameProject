@@ -71,7 +71,12 @@ public class GameManager : MonoBehaviour {
 		foreach(Player p in UserPlayers)
 		{p.TurnUpdate ();}
 
-		
+
+	    if (UserPlayers[currentPlayerIndex].moving)
+	    {
+            Tooltiptext.text = "Deine Bewegung kostet: "+" AP";
+	    }
+
 	}
 
 
