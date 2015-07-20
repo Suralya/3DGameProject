@@ -1,3 +1,51 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7180
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-3996
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=4 type=0 insize=1152 outsize=4362 kw=LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _NORMALMAP _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1152 outsize=10236 kw=LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _NORMALMAP _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=982 outsize=4622 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _NORMALMAP _EMISSION ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=982 outsize=11487 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _NORMALMAP _EMISSION ok=1
+Cmd: preprocess
+  insize=995 outsize=1278 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7427 outsize=3492 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7427 outsize=10082 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4236 outsize=2737 kw=POINT SHADOWS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4236 outsize=6076 kw=POINT SHADOWS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6545 outsize=3492 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6545 outsize=7400 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3489 outsize=2468 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3489 outsize=1298 kw= ok=1
+Cmd: preprocess
+  insize=995 outsize=22090 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1207 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1207 outsize=1152 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1152 outsize=4264 kw=LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_OFF _NORMALMAP ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1152 outsize=9155 kw=LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_OFF _NORMALMAP ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1152 outsize=4264 kw=LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1152 outsize=8367 kw=LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1257 outsize=1713 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1257 outsize=1623 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1034 outsize=1372 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1034 outsize=527 kw= ok=1

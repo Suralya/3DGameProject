@@ -88,6 +88,7 @@
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <None Include="Assets\Texts\Tooltip_move_de.txt" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
+     <None Include="Assets\Materials\Higlighting.shader" />
      <None Include="Assets\Texts\Comment_Robin_01_de.txt" />
      <None Include="Assets\Texts\Comment_All_attack_de.txt" />
      <None Include="Assets\Texts\Tooltip_nextturn_de.txt" />
