@@ -58,16 +58,89 @@ public class Tile : MonoBehaviour {
 	/// Manages color while hovering over tile.
 	/// </summary>
 	void OnMouseEnter(){
-		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible) {
-			transform.GetComponent<Renderer> ().material.color = Color.blue;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.cyan) {
-			transform.GetComponent<Renderer> ().material.color = Color.magenta;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
+		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible 
+            && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+            && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+            && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
 			transform.GetComponent<Renderer> ().material.color = Color.cyan;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.gray) {
-			transform.GetComponent<Renderer> ().material.color = Color.red;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.yellow) {
-			transform.GetComponent<Renderer> ().material.color = Color.green;}
+		}
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.blue && !impassible
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                 && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.cyan;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.white && !impassible
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+        && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.black;
+        }
+
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.red && !impassible
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                 && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+                 &&!GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.cyan;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.white && !impassible
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+        && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.black;
+        }
+
+
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.yellow && !impassible
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.cyan;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.white && !impassible
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.black;
+        } 
+
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.magenta && !impassible
+                 && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.cyan;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.white && !impassible
+              && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+              && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+              && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.black;
+        } 
 		//Debug.Log ("my position is (" + gridPosition.x +","+gridPosition.y+")");
 	}
 
@@ -75,17 +148,89 @@ public class Tile : MonoBehaviour {
 	/// Manages color exit hovering over tile.
 	/// </summary>
 	void OnMouseExit(){
-		if (transform.GetComponent<Renderer> ().material.color == Color.blue && !impassible) {
-			transform.GetComponent<Renderer> ().material.color = Color.white;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.magenta) {
-			transform.GetComponent<Renderer> ().material.color = Color.cyan;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.cyan) {
-			transform.GetComponent<Renderer> ().material.color = Color.red;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.red) {
-			transform.GetComponent<Renderer> ().material.color = Color.grey;
-		} else if (transform.GetComponent<Renderer> ().material.color == Color.green) {
-			transform.GetComponent<Renderer> ().material.color = Color.yellow;
-		}
+        if (transform.GetComponent<Renderer>().material.color == Color.cyan && !impassible
+            && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+            && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+            && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.white;
+        }
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.cyan && !impassible
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                 && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.blue;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.black && !impassible
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+        && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.white;
+        }
+
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.cyan && !impassible
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                 && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.red;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.black && !impassible
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+        && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+        && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.white;
+        }
+
+
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.cyan && !impassible
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.yellow;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.black && !impassible
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
+                && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.white;
+        }
+
+
+
+
+        else if (transform.GetComponent<Renderer>().material.color == Color.cyan && !impassible
+                 && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+                 && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.magenta;
+        }
+        else if (transform.GetComponent<Renderer>().material.color == Color.black && !impassible
+              && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
+              && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
+              && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.white;
+        } 
 	}
 
 	/// <summary>

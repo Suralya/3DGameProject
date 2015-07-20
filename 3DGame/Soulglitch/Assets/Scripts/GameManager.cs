@@ -338,7 +338,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].moving=true;
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
-				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.cyan, UserPlayers[currentPlayerIndex].ActionPoints);
+				highlightTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.blue, UserPlayers[currentPlayerIndex].ActionPoints);
 
 				Tooltiptext.text=System.IO.File.ReadAllText("Assets/Texts/Tooltip_move_de.txt");
 
@@ -435,7 +435,7 @@ public class GameManager : MonoBehaviour {
 					UserPlayers[currentPlayerIndex].attacking=false;
 					UserPlayers[currentPlayerIndex].moving=false;
 					UserPlayers[currentPlayerIndex].aiming=true;
-					GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.grey, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
+					GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.magenta, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
 
 					Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_aim_de.txt");
 					
