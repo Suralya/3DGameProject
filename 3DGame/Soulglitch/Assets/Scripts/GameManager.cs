@@ -201,6 +201,13 @@ public class GameManager : MonoBehaviour {
 							hittarget.collider.gameObject.transform.DOShakeRotation (0.5f, 45f, 50, 90);
 						
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
+
+							if(target.HP<=0&&target.GetComponent<AIPlayer>().civilian){
+								Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar,"Assets/Texts/Comment_Kill_Civil_ALL_de.txt");
+							}
+
+
+
 						} else {
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " missed " + target.playerName + "!");
 						}
