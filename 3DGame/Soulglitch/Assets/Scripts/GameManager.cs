@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour {
 		Tooltiptext = temp.GetComponent<Text>();
 
 		Comments.instance.MakeComment ("Assets/Texts/Comment_Leader_01_de.txt"); //wird nur Gezeigt wenn in Szene Gestartet wird
+		StartCoroutine(TurnPic());
 	}
 	
 	// Update is called once per frame
@@ -121,7 +122,7 @@ public class GameManager : MonoBehaviour {
 	public void moveCurrentPlayer(Tile destTile) {
 		if (_userturn) {
 
-				if (destTile.transform.GetComponent<Renderer>().material.color == Color.magenta && !destTile.impassible && !destTile.occupied) {
+				if (destTile.transform.GetComponent<Renderer>().material.color == Color.cyan && !destTile.impassible && !destTile.occupied) {
 					removeTileHighlights ();
 
 				UserPlayers[currentPlayerIndex].ActionPoints -= TilePathFinder.FindPath(map.Find(t => t.gridPosition==UserPlayers[currentPlayerIndex].gridPosition),destTile).Count;
@@ -476,6 +477,8 @@ public class GameManager : MonoBehaviour {
 	/// </summary>
 	public void nextTurn()
 	{
+		StartCoroutine(TurnPic());
+
 		if (!_userturn) {
 			//userturn
 			_userturn =true;
@@ -530,6 +533,14 @@ public class GameManager : MonoBehaviour {
 			
 			nextTurn();
 		}
+
+
+	public IEnumerator TurnPic(){
+		TurnImage.instance.TurnOn ();
+		TurnImage.instance.Img.enabled = true;
+		yield return new WaitForSeconds (1f);
+		TurnImage.instance.Img.enabled = false;
+	}
 
 	
 
