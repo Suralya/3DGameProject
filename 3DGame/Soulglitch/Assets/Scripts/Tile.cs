@@ -62,11 +62,12 @@ public class Tile : MonoBehaviour
 	/// Manages color while hovering over tile.
 	/// </summary>
 	void OnMouseEnter(){
-        if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving)
-        {
-            AptoCurrPlayer =
-                TilePathFinder.FindPath(GameManager.instance.map.Find(x => GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].gridPosition == x.gridPosition), this).Count;
-        }
+        if (GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].moving&&!this.impassible&&!this.occupied) {
+		//	Debug.Log(GameManager.instance.map.Find (x => GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].gridPosition == x.gridPosition).name+" , "+this.name);
+			AptoCurrPlayer = TilePathFinder.FindPath (GameManager.instance.map.Find (x => GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].gridPosition == x.gridPosition), this).Count;
+		} else {
+			AptoCurrPlayer = 0;
+		}
 
 
 		if (transform.GetComponent<Renderer> ().material.color == Color.white && !impassible 
@@ -159,6 +160,11 @@ public class Tile : MonoBehaviour
 	/// Manages color exit hovering over tile.
 	/// </summary>
 	void OnMouseExit(){
+		if (GameManager.instance.UserPlayers [GameManager.instance.currentPlayerIndex].moving) {
+			AptoCurrPlayer = 0;
+		}
+
+
         if (transform.GetComponent<Renderer>().material.color == Color.cyan && !impassible
             && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
             && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking

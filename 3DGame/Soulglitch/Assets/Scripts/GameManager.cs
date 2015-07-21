@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Linq;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
@@ -74,7 +75,14 @@ public class GameManager : MonoBehaviour {
 
 	    if (UserPlayers[currentPlayerIndex].moving)
 	    {
-            Tooltiptext.text = "Deine Bewegung kostet: "+" AP";
+			int APtoUse=0;
+
+			if(map.Any(t=>t.AptoCurrPlayer>0))
+			APtoUse=map.Find(t=>t.AptoCurrPlayer>0).AptoCurrPlayer;
+			if(APtoUse<=UserPlayers[currentPlayerIndex].ActionPoints)
+           		 Tooltiptext.text = "Deine Bewegung kostet: "+APtoUse+" AP";
+			else
+				Tooltiptext.text = "Dieser Weg ist zu Weit, die Kosten wären: "+APtoUse+" AP";
 	    }
 
 	}
