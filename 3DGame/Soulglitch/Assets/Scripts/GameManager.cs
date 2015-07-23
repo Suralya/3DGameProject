@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		WinCheck ();
+
 		if (_userturn) {
 			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
 		} else if (!_userturn){
@@ -725,5 +727,17 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void WinCheck(){
+		bool win = true;
 
-}
+		foreach(AIPlayer a in AIPlayers){
+			if(!a.civilian && a.HP>0)
+				win=false;
+		}
+
+			if(win)
+			Win_Lose_Screen.instance.MissionWon();
+		}
+	}
+
+
