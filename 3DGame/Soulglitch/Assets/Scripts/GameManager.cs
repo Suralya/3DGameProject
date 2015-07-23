@@ -223,7 +223,7 @@ public class GameManager : MonoBehaviour {
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
 
 							if(target.HP<=0&&target.GetComponent<AIPlayer>().civilian){
-								Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar,"Assets/Texts/Comment_Kill_Civil_ALL_de.txt");
+								Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Assets/Texts/Comment_Kill_Civil_ALL_de.txt");
 							}
 
 
@@ -431,7 +431,7 @@ public class GameManager : MonoBehaviour {
 			{
 			if (UserPlayers [currentPlayerIndex].ActionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)	
 			{
-				Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
+					Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
 				removeTileHighlights ();
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
