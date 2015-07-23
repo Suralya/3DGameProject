@@ -82,7 +82,6 @@ public class Scene1MovementPatterns : MovementPatterns {
 			if(p.ActionPoints>p.Weapon.APCost&&opponent.HP>0)
 				AIBehave.instance.AIAttack (opponent, p);
 			}
-			else{Debug.Log("Can't move");}
 
 			//p.transform.DOMove(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), p.ActionPoints - 1)].transform.position,1);
 

@@ -33,7 +33,7 @@ public class UserPlayer : Player {
 		        Hotkey.hotk.NextPlayerasCurrent(GameManager.instance.currentPlayerIndex);
 				CameraCenteronCurrent.instance.CamonCurent();
 		    }
-			else if(!selected && !GameManager.instance.UserPlayers.Any(t => t.HP > 0)){Debug.Log("GameOver");}
+			else if(!selected && !GameManager.instance.UserPlayers.Any(t => t.HP > 0)){Win_Lose_Screen.instance.MissionLost();}
 		}
 
 	}

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 
 	public MovementPatterns SceneMovePatern;
 
+    public LineRenderer _lr;
 	public int mapSizeX = 28;
 	public int mapSizeY = 27;
 
@@ -152,6 +153,19 @@ public class GameManager : MonoBehaviour {
         movePlayer();
     }
 
+    private IEnumerator DrawShootTrail(Player origin,Player target)
+    {
+        _lr.enabled = false;
+        _lr.SetPosition(0, origin.transform.position);
+        _lr.SetPosition(1, target.transform.position);
+
+        _lr.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        _lr.enabled = false;
+    }
+
+
+
     /// <summary>
 	/// Attacks the with current player.
 	/// </summary>
@@ -190,9 +204,13 @@ public class GameManager : MonoBehaviour {
 						RaycastHit hittarget;
 
 						Physics.Raycast (UserPlayers [currentPlayerIndex].transform.position, targetpos, out hittarget);
+                        
 
 
-						if (hittarget.collider.gameObject.GetComponent<Player> () != null && hit && hittarget.collider.gameObject.GetComponent<Player> ().Equals (target)) {
+						if (hittarget.collider.gameObject.GetComponent<Player> () != null && hit && hittarget.collider.gameObject.GetComponent<Player> ().Equals (target))
+						{
+
+						    StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], target));
 
 							//damage logic
 							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
@@ -232,7 +250,8 @@ public class GameManager : MonoBehaviour {
 				}
 				
 				if (target != null && target!=UserPlayers[currentPlayerIndex] && target.HP > 0) {
-					
+
+                    StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], target));
 					
 					
 					//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);
