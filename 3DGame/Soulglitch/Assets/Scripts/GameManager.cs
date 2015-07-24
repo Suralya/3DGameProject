@@ -176,7 +176,7 @@ public class GameManager : MonoBehaviour {
 	public void attackWithCurrentPlayer(Tile destTile) {
 		if (!UserPlayers [currentPlayerIndex].Weapon.healing) {
 
-			if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white && !destTile.impassible) {
+			if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white /*&& !destTile.impassible*/) {
 			
 				Player target = null;
 				foreach (Player p in AIPlayers) {
@@ -553,7 +553,7 @@ public class GameManager : MonoBehaviour {
 		Tooltiptext.text=" ";
 		
 		foreach (Player p in AIPlayers) {		
-			if (p.HP > 0) {
+			if (p.HP > 0&&!p.GetComponent<AIPlayer>().prop) {
 				yield return new WaitForSeconds (1f);
 				p.AIMove ();
 			}
@@ -721,9 +721,9 @@ public class GameManager : MonoBehaviour {
 	public void removeTileHighlights() {
 		
 		foreach (Tile t in map) {
-			if(!t.impassible||!t.occupied){
+			//if(!t.impassible||!t.occupied)
 				t.transform.GetComponent<Renderer>().material.color = Color.white;
-			}
+
 		}
 	}
 

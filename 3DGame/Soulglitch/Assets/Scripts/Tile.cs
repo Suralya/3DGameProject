@@ -98,7 +98,7 @@ public class Tile : MonoBehaviour
 
 
 
-        else if (transform.GetComponent<Renderer>().material.color == Color.red && !impassible
+        else if (transform.GetComponent<Renderer>().material.color == Color.red //&& !impassible
                  && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
                  && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
                  && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
@@ -106,7 +106,7 @@ public class Tile : MonoBehaviour
         {
             transform.GetComponent<Renderer>().material.color = Color.cyan;
         }
-        else if (transform.GetComponent<Renderer>().material.color == Color.white && !impassible
+        else if (transform.GetComponent<Renderer>().material.color == Color.white //&& !impassible
         && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
         && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
         && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
@@ -193,7 +193,7 @@ public class Tile : MonoBehaviour
 
 
 
-        else if (transform.GetComponent<Renderer>().material.color == Color.cyan && !impassible
+        else if (transform.GetComponent<Renderer>().material.color == Color.cyan //&& !impassible
                  && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
                  && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
                  && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
@@ -201,7 +201,7 @@ public class Tile : MonoBehaviour
         {
             transform.GetComponent<Renderer>().material.color = Color.red;
         }
-        else if (transform.GetComponent<Renderer>().material.color == Color.black && !impassible
+        else if (transform.GetComponent<Renderer>().material.color == Color.black// && !impassible
         && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming
         && GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking
         && !GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving
@@ -251,9 +251,9 @@ public class Tile : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Manages events on mouse on up.
+	/// Manages events on mouse on down.
 	/// </summary>
-	void OnMouseUp() {
+	void OnMouseDown() {
 		if (GM.UserPlayers [GM.currentPlayerIndex].moving) {
 			GM.moveCurrentPlayer (this);
 			Debug.Log ("Wurde übergebn"+this.transform.position.x+","+this.transform.position.z);
