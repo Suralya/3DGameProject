@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		WinCheck ();
+
 		if (_userturn) {
 			currentPlayerIndex = UserPlayers.FindIndex(delegate(Player obj) {return obj.selected;});
 		} else if (!_userturn){
@@ -174,7 +176,7 @@ public class GameManager : MonoBehaviour {
 	public void attackWithCurrentPlayer(Tile destTile) {
 		if (!UserPlayers [currentPlayerIndex].Weapon.healing) {
 
-			if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white && !destTile.impassible) {
+			if (destTile.transform.GetComponent<Renderer> ().material.color != Color.white /*&& !destTile.impassible*/) {
 			
 				Player target = null;
 				foreach (Player p in AIPlayers) {
@@ -221,7 +223,7 @@ public class GameManager : MonoBehaviour {
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
 
 							if(target.HP<=0&&target.GetComponent<AIPlayer>().civilian){
-								Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar,"Assets/Texts/Comment_Kill_Civil_ALL_de.txt");
+								Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Assets/Texts/Comment_Kill_Civil_ALL_de.txt");
 							}
 
 
@@ -429,7 +431,7 @@ public class GameManager : MonoBehaviour {
 			{
 			if (UserPlayers [currentPlayerIndex].ActionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)	
 			{
-				Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
+					Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
 				removeTileHighlights ();
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
@@ -551,7 +553,7 @@ public class GameManager : MonoBehaviour {
 		Tooltiptext.text=" ";
 		
 		foreach (Player p in AIPlayers) {		
-			if (p.HP > 0) {
+			if (p.HP > 0&&!p.GetComponent<AIPlayer>().prop) {
 				yield return new WaitForSeconds (1f);
 				p.AIMove ();
 			}
@@ -719,11 +721,23 @@ public class GameManager : MonoBehaviour {
 	public void removeTileHighlights() {
 		
 		foreach (Tile t in map) {
-			if(!t.impassible||!t.occupied){
+			//if(!t.impassible||!t.occupied)
 				t.transform.GetComponent<Renderer>().material.color = Color.white;
-			}
+
+		}
+	}
+
+	public void WinCheck(){
+		bool win = true;
+
+		foreach(AIPlayer a in AIPlayers){
+			if(!a.civilian && a.HP>0)
+				win=false;
+		}
+
+			if(win)
+			Win_Lose_Screen.instance.MissionWon();
 		}
 	}
 
 
-}

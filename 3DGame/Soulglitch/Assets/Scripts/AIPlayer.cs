@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class AIPlayer : Player {
 
 	public bool civilian=true;
+	public bool prop=false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +20,8 @@ public class AIPlayer : Player {
 	void Update () {
 
 		if (HP <= 0) {
+			if(prop)
+			{GameManager.instance.map.Find(t=>t.gridPosition==this.gridPosition).impassible=false;}
 			gridPosition=default(Vector2);
 			Destroy(gameObject);
 		}

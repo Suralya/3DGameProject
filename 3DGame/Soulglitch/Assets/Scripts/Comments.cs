@@ -9,6 +9,7 @@ public class Comments : MonoBehaviour {
 	public Image Avatar;
 	public Sprite Leader;
 	public Text CommentsText;
+	public Text CommentName;
 
 	public int Secondsshown=15;
 	// Use this for initialization
@@ -26,10 +27,10 @@ public class Comments : MonoBehaviour {
 	
 	}
 
-	public void MakeComment(Sprite avatar, string txtID){
+	public void MakeComment(string name, Sprite avatar, string txtID){
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = avatar;
-
+		CommentName.text = name;
 		CommentsText.text=System.IO.File.ReadAllText(txtID);
 
 		StartCoroutine (WaitTillHide ());
@@ -40,6 +41,7 @@ public class Comments : MonoBehaviour {
 		Avatar.overrideSprite = Leader;
 
 		CommentsText.text=System.IO.File.ReadAllText(txtID);
+		CommentName.text="Commander";
 
 		StartCoroutine (WaitTillHide ());
 	}
@@ -48,5 +50,6 @@ public class Comments : MonoBehaviour {
 		yield return new WaitForSeconds(Secondsshown);
 		CommentsCanvas.enabled = false;
 		CommentsText.text = "";
+		CommentName.text="";
 	}
 }
