@@ -731,7 +731,7 @@ public class GameManager : MonoBehaviour {
 		bool win = true;
 
 		foreach(AIPlayer a in AIPlayers){
-			if(!a.civilian && a.HP>0)
+			if(!a.civilian && !a.prop && a.HP>0)
 				win=false;
 		}
 
