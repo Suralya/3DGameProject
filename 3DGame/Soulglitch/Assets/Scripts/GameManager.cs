@@ -135,7 +135,9 @@ public class GameManager : MonoBehaviour {
 						Debug.Log ("(" + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].x + "," + UserPlayers [currentPlayerIndex].positionQueue [UserPlayers [currentPlayerIndex].positionQueue.Count - 1].y + ")");
 					}			
 					UserPlayers [currentPlayerIndex].gridPosition = destTile.gridPosition;
-				   
+
+				if(Random.Range(1,4)<=1)
+				Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Move",1);
 
 					movePlayer();
 				    //StartCoroutine(Waittillmoved());
@@ -222,8 +224,14 @@ public class GameManager : MonoBehaviour {
 						
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
 
+							if(Random.Range(1,3)<=1)
+							Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Attack",1);
+
 							if(target.HP<=0&&target.GetComponent<AIPlayer>().civilian){
-								Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Assets/Texts/Comment_Kill_Civil_ALL_de.txt");
+								Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Kill","Civilian",1);
+							}else if(target.HP<=0&&!target.GetComponent<AIPlayer>().prop)
+							{
+								Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Kill","Enemy",1);
 							}
 
 
@@ -345,13 +353,16 @@ public class GameManager : MonoBehaviour {
                     if (hittarget.collider.gameObject.GetComponent<Player>() != null && hittarget.collider.gameObject.GetComponent<Player>().Equals(target))
                     {
 						
-						Debug.Log (UserPlayers [currentPlayerIndex].playerName + " can hit " + target.playerName+"!");
+					//	Debug.Log (UserPlayers [currentPlayerIndex].playerName + " can hit " + target.playerName+"!");
+						Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Aim","Hit",1);
 					} else {
-						Debug.Log (UserPlayers [currentPlayerIndex].playerName + " will miss " + target.playerName + "!");
+					//	Debug.Log (UserPlayers [currentPlayerIndex].playerName + " will miss " + target.playerName + "!");
+						Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Aim","Miss",1);
 					}
 					aimPlayer();
 				} else {
-					Debug.Log ("Target is not adjacent!");
+					//Debug.Log ("Target is not adjacent!");
+					Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Aim","Miss",1);
 				}
 				
 			} else {
@@ -431,7 +442,7 @@ public class GameManager : MonoBehaviour {
 			{
 			if (UserPlayers [currentPlayerIndex].ActionPoints >= UserPlayers [currentPlayerIndex].Weapon.APCost)	
 			{
-					Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
+				//	Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
 				removeTileHighlights ();
 				Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;

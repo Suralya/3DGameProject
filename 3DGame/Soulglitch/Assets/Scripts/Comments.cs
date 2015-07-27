@@ -36,6 +36,61 @@ public class Comments : MonoBehaviour {
 		StartCoroutine (WaitTillHide ());
 	}
 
+	public void MakeComment(string name, Sprite avatar, string action, int id){
+		int ID=id;
+
+		while (System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+name+"_"+ID+".txt")!=null) {
+			ID++;
+			
+			try
+			{
+				string test=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+name+"_"+ID+".txt");
+			}
+			catch { break;}
+			
+		}
+		//ID-=1;
+		//Debug.Log (ID);
+		
+		int temp= Random.Range(1,ID);
+		//Debug.Log (temp);
+
+		CommentsCanvas.enabled = true;
+		Avatar.overrideSprite = avatar;
+		CommentName.text = name;
+		CommentsText.text=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+name+"_"+temp+".txt");
+		
+		StartCoroutine (WaitTillHide ());
+	}
+
+	public void MakeComment(string name, Sprite avatar, string action,string condition, int id){
+		int ID =id;
+
+		while (System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+condition+"_"+name+"_"+ID+".txt")!=null) {
+			ID++;
+
+			try
+			{
+				string test=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+condition+"_"+name+"_"+ID+".txt");
+			}
+			catch { break;}
+
+		}
+		//ID-=1;
+		//Debug.Log (ID);
+
+		int temp= Random.Range(1,ID);
+		//Debug.Log (temp);
+		CommentsCanvas.enabled = true;
+		Avatar.overrideSprite = avatar;
+		CommentName.text = name;
+		CommentsText.text=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+condition+"_"+name+"_"+temp+".txt");
+		
+		StartCoroutine (WaitTillHide ());
+	}
+
+
+
 	public void MakeComment(string txtID){
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = Leader;

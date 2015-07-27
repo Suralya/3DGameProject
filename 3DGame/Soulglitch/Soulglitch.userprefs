@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.cs" Line="734" Column="30" />
-      <File FileName="Assets\Scripts\Comments.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Comments.cs" Line="52" Column="11" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="245" Column="7" />
       <File FileName="Assets\Scripts\TurnImage.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Waffe.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AIBehave.cs" Line="1" Column="1" />
@@ -13,6 +13,7 @@
       <File FileName="Assets\Scripts\TileHighlight.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Buttonbehave.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UserPlayer.cs" Line="20" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

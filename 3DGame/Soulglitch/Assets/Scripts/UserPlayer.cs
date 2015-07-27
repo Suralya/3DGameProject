@@ -4,6 +4,7 @@ using System.Linq;
 
 public class UserPlayer : Player {
 
+	private bool commented=false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,13 @@ public class UserPlayer : Player {
 		}
 		
 		if (HP <= 0) {
+			if (!commented)
+			{
+				Comments.instance.MakeComment(this.playerName,this.Avatar,"Death",1);
+				commented=true;
+			}
+
+
 			Vector3 temp;
 			temp = this.transform.position;
 			temp.y=1;
