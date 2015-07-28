@@ -21,22 +21,22 @@ public class Waffe {
 			Weaponname=name;
 			Attackrange=1;
 			Damage=1f;
-			Hitchance=0.5f;
+			Hitchance=0.65f;
 			APCost=5;
             healing = false;
 			break;}
 		case "Rifle":{
 			Weaponname=name;
-			Attackrange=6;
-			Damage=5f;
-			Hitchance=0.65f;
+			Attackrange=24;
+			Damage=6f;
+			Hitchance=0.75f;
 			APCost=5;
             healing = false;
 			break;}
 		case "Gun":{
 			Weaponname=name;
-			Attackrange=4;
-			Damage=6f;
+			Attackrange=12;
+			Damage=7f;
 			Hitchance=0.65f;
 			APCost=5;
             healing = false;
@@ -51,10 +51,10 @@ public class Waffe {
 			break;}
 		case "Medicgun":{
 			Weaponname=name;
-			Attackrange=4;
-			Damage=6f;
-			Hitchance=0.65f;
-			APCost=5;
+			Attackrange=5;
+			Damage=4f;
+			Hitchance=0.99f;
+			APCost=6;
 			healing = true;
 			break;}
 		}
