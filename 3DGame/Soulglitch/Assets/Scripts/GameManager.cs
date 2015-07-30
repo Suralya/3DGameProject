@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
 
 	public int formerPlayerIndex=0;
 	public int currentPlayerIndex = 0;
+	
 
 	void Awake() {
 		instance = this;
@@ -55,7 +56,8 @@ public class GameManager : MonoBehaviour {
 		var temp = GameObject.FindGameObjectWithTag ("Tooltip");
 		Tooltiptext = temp.GetComponent<Text>();
 
-		Comments.instance.MakeComment ("Assets/Texts/Comment_Leader_01_de.txt"); //wird nur Gezeigt wenn in Szene Gestartet wird
+		DialoughesSzene1.instance.TurnOne ();
+		//Comments.instance.MakeComment ("Assets/Texts/Comment_Leader_01_de.txt"); //wird nur Gezeigt wenn in Szene Gestartet wird
 		StartCoroutine(TurnPic());
 	}
 	
@@ -229,6 +231,7 @@ public class GameManager : MonoBehaviour {
 
 							if(target.HP<=0&&target.GetComponent<AIPlayer>().civilian){
 								Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Kill","Civilian",1);
+								DialoughesSzene1.instance.CivilKill ();
 							}else if(target.HP<=0&&!target.GetComponent<AIPlayer>().prop)
 							{
 								Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Kill","Enemy",1);
@@ -739,16 +742,19 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void WinCheck(){
-		bool win = true;
+		 bool win = true;
 
-		foreach(AIPlayer a in AIPlayers){
-			if(!a.civilian && !a.prop && a.HP>0)
-				win=false;
+		foreach (AIPlayer a in AIPlayers) {
+			if (!a.civilian && !a.prop && a.HP > 0)
+				win = false;
 		}
 
-			if(win)
-			Win_Lose_Screen.instance.MissionWon();
+
+		if (win) {
+			DialoughesSzene1.instance.MissionWin ();
+			//Win_Lose_Screen.instance.MissionWon();
 		}
+	}
 	}
 
 

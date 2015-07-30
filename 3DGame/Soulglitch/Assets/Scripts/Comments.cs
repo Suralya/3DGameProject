@@ -12,6 +12,8 @@ public class Comments : MonoBehaviour {
 	public Text CommentName;
 
 	public int Secondsshown=15;
+	public int Counter;
+	public bool Routine=false;
 	// Use this for initialization
 
 	void Awake() {
@@ -27,11 +29,11 @@ public class Comments : MonoBehaviour {
 	
 	}
 
-	public void MakeComment(string name, Sprite avatar, string txtID){
+	public void MakeComment(string name, Sprite avatar, string txt){
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = avatar;
 		CommentName.text = name;
-		CommentsText.text=System.IO.File.ReadAllText(txtID);
+		CommentsText.text=txt;
 
 		StartCoroutine (WaitTillHide ());
 	}
@@ -91,20 +93,35 @@ public class Comments : MonoBehaviour {
 
 
 
-	public void MakeComment(string txtID){
+	public void MakeComment(string txt){
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = Leader;
 
-		CommentsText.text=System.IO.File.ReadAllText(txtID);
+		CommentsText.text=txt;
 		CommentName.text="Commander";
 
 		StartCoroutine (WaitTillHide ());
 	}
 
 	public IEnumerator WaitTillHide(){
-		yield return new WaitForSeconds(Secondsshown);
+
+		Counter=Secondsshown;
+		if (!Routine) {
+			Routine = true;
+			while (Counter>0) {
+				yield return new WaitForSeconds (1);
+				Counter--;
+			}
+			Routine = false;
+			HideComment ();
+		}
+
+	}
+
+	public void HideComment(){
 		CommentsCanvas.enabled = false;
 		CommentsText.text = "";
 		CommentName.text="";
 	}
+
 }
