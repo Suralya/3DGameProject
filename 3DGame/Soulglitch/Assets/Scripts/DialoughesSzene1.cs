@@ -68,13 +68,33 @@ public class DialoughesSzene1 : MonoBehaviour {
 	}
 
 
+    public IEnumerator CivilKillText()
+    {
+        commenting = true;
+        Comments.instance.MakeComment("Ihr habt gerade einen Unschuldigen erwischt?");
+        yield return new WaitForSeconds(3);
+        Comments.instance.MakeComment("Davis", GameManager.instance.UserPlayers.Find(x => x.playerName == "Davis").Avatar, "Wir konnten nicht das Risiko eingehen, dass er sich doch als Feind entpuppt.");
+        yield return new WaitForSeconds(4);
+        Comments.instance.MakeComment("Ihr hab den Auftrag die Menschen zu schützen, nicht sie abzuschlachten!");
+        yield return new WaitForSeconds(4);
+        Comments.instance.MakeComment("Davis", GameManager.instance.UserPlayers.Find(x => x.playerName == "Davis").Avatar, "Wissen wir, doch dieses Risiko konnten wir gerade nicht eingehen, es gefährdete die gesamte Mission!");
+        yield return new WaitForSeconds(4);
+        Comments.instance.MakeComment("Platina", GameManager.instance.UserPlayers.Find(x => x.playerName == "Platina").Avatar, "Konzentriert euch auf den Auftrag.");
+        yield return new WaitForSeconds(4);
+        Comments.instance.MakeComment("Davis", GameManager.instance.UserPlayers.Find(x => x.playerName == "Davis").Avatar, "Du hast Recht. Wir können nicht immer warten bis sie zuerst schießen, dafür ist die Gefahr zu hoch.");
+        yield return new WaitForSeconds(3);
+        Comments.instance.MakeComment("Deera", GameManager.instance.UserPlayers.Find(x => x.playerName == "Deera").Avatar, "Ein wenig leid tut der arme Kerl mir aber schon in die Schussbahn geraten zu sein.");
+        yield return new WaitForSeconds(1);
+        commenting = false;
+    }
+
 
 	public void TurnOne(){
 		StartCoroutine (TurnOneText ());
 	}
 
 	public void CivilKill(){
-		StartCoroutine (TurnOneText ());
+		StartCoroutine (CivilKillText ());
 	}
 
 	public void MissionWin(){

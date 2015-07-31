@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour {
 
 	public int formerPlayerIndex=0;
 	public int currentPlayerIndex = 0;
+
+    private bool civilkilled=false;
 	
 
 	void Awake() {
@@ -231,7 +233,11 @@ public class GameManager : MonoBehaviour {
 
 							if(target.HP<=0&&target.GetComponent<AIPlayer>().civilian){
 								Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Kill","Civilian",1);
+                                if(!civilkilled)
 								DialoughesSzene1.instance.CivilKill ();
+
+							    civilkilled = true;
+
 							}else if(target.HP<=0&&!target.GetComponent<AIPlayer>().prop)
 							{
 								Comments.instance.MakeComment(UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar,"Kill","Enemy",1);
