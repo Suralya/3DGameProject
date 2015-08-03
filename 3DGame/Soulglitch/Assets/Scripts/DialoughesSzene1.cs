@@ -1,104 +1,157 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class DialoughesSzene1 : MonoBehaviour {
 
 	public static DialoughesSzene1 instance;
 	public bool commenting=false;
 
+	public Canvas DialogueCanvas;
+
+	public Image CharRight,CharLeft;
+	public Text CharName,DialugeText;
+
+	public Sprite Deera, Davis, Phil, Platina, Commander,SpriteToSet;
+
+	public bool Skip=false;
+
+
 	void Awake() {
 		instance = this;
 	}
 
-
-
-	public IEnumerator TurnOneText(){
-		commenting = true;
-		Comments.instance.MakeComment ("BDU E-Sheep bitte kommen! Habt ihr das Ziel erreicht?");
-		yield return new WaitForSeconds (3);
-		Comments.instance.MakeComment ("Davis",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Davis").Avatar,"Hier Davis Cohen, wir haben soeben die Lagerhalle betreten.");
-		yield return new WaitForSeconds (4);
-		Comments.instance.MakeComment ("Schaltet jeden dieser Drecksbioroiden aus, bevor auch nur einer von ihnen entkommen kann, wenn sie erst einmal in der Stadt sind wird es schwer sie ausfindig zu machen.");
-		yield return new WaitForSeconds (4);
-		Comments.instance.MakeComment ("Davis",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Davis").Avatar,"Wissen wir, nur scheint es hier recht belebt zu sein und Kisten voller Waffen sehe ich auch.");
-		yield return new WaitForSeconds (4);
-		Comments.instance.MakeComment ("Dann ist es ja gut, dass ihr diesmal Phil dabei habt. Ihr werdet ihn dann ja wohl brauchen.");
-		yield return new WaitForSeconds (4);
-		Comments.instance.MakeComment ("Phil",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Phil").Avatar,"Na ich hoffe, dass ihr nicht wirklich meine Hilfe braucht, es wäre besser wenn wir alle unverletzt blieben.");
-		yield return new WaitForSeconds (4);
-		Comments.instance.MakeComment ("Platina",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Platina").Avatar,"Keine Sorge, Anfänger wir machen das ja nicht zum ersten mal.");
-		yield return new WaitForSeconds (4);
-		Comments.instance.MakeComment ("Deera",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Deera").Avatar,"Sei nicht so fies zu ihm!");
-		yield return new WaitForSeconds (2);
-		Comments.instance.MakeComment ("Davis",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Davis").Avatar,"Ruhe! Alles klar, haltet die Augen offen und langsam vorwärts. Schießt nur, wenn ihr euch sicher seid, dass das Ziel kein Zivilist ist.");
-		yield return new WaitForSeconds (3);
-		Comments.instance.MakeComment ("Deera",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Deera").Avatar,"Verstanden, Chef!");
-		yield return new WaitForSeconds (1);
-		Comments.instance.MakeComment ("Platina",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Platina").Avatar,"Okay.");
-		yield return new WaitForSeconds (1);
-		Comments.instance.MakeComment ("Phil",GameManager.instance.UserPlayers.Find(x=>x.playerName=="Phil").Avatar,"Ich gebe euch Rückendeckung.");
-		yield return new WaitForSeconds (4);
-		commenting = false;
+	void Start(){
+		//DialogueCanvas.enabled = false;
 	}
 
-	public IEnumerator MissionWinText(){
-		if (commenting) {
-			//StopCoroutine (TurnOneText ());
-		
-		}else {
-			commenting = true;
-			Comments.instance.MakeComment ("Ihr habt gerade einen Unschuldigen erwischt?");
-			yield return new WaitForSeconds (3);
-			Comments.instance.MakeComment ("Davis", GameManager.instance.UserPlayers.Find (x => x.playerName == "Davis").Avatar, "Wir konnten nicht das Risiko eingehen, dass er sich doch als Feind entpuppt.");
-			yield return new WaitForSeconds (4);
-			Comments.instance.MakeComment ("Ihr hab den Auftrag die Menschen zu schützen, nicht sie abzuschlachten!");
-			yield return new WaitForSeconds (4);
-			Comments.instance.MakeComment ("Davis", GameManager.instance.UserPlayers.Find (x => x.playerName == "Davis").Avatar, "Wissen wir, doch dieses Risiko konnten wir gerade nicht eingehen, es gefährdete die gesamte Mission!");
-			yield return new WaitForSeconds (4);
-			Comments.instance.MakeComment ("Platina", GameManager.instance.UserPlayers.Find (x => x.playerName == "Platina").Avatar, "Konzentriert euch auf den Auftrag.");
-			yield return new WaitForSeconds (4);
-			Comments.instance.MakeComment ("Davis", GameManager.instance.UserPlayers.Find (x => x.playerName == "Davis").Avatar, "Du hast Recht. Wir können nicht immer warten bis sie zuerst schießen, dafür ist die Gefahr zu hoch.");
-			yield return new WaitForSeconds (3);
-			Comments.instance.MakeComment ("Deera", GameManager.instance.UserPlayers.Find (x => x.playerName == "Deera").Avatar, "Ein wenig leid tut der arme Kerl mir aber schon in die Schussbahn geraten zu sein.");
-			yield return new WaitForSeconds (3);
-			//commenting = false;
-
-			Win_Lose_Screen.instance.MissionWon ();
+	void Update () {
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Skip=true;
 		}
 	}
 
+	public IEnumerator ShowDialogue(int missionnumber,int setnumber){
+		CharLeft.sprite = null;
+		CharRight.sprite = null;
 
-    public IEnumerator CivilKillText()
-    {
-        commenting = true;
-        Comments.instance.MakeComment("Ihr habt gerade einen Unschuldigen erwischt?");
-        yield return new WaitForSeconds(3);
-        Comments.instance.MakeComment("Davis", GameManager.instance.UserPlayers.Find(x => x.playerName == "Davis").Avatar, "Wir konnten nicht das Risiko eingehen, dass er sich doch als Feind entpuppt.");
-        yield return new WaitForSeconds(4);
-        Comments.instance.MakeComment("Ihr hab den Auftrag die Menschen zu schützen, nicht sie abzuschlachten!");
-        yield return new WaitForSeconds(4);
-        Comments.instance.MakeComment("Davis", GameManager.instance.UserPlayers.Find(x => x.playerName == "Davis").Avatar, "Wissen wir, doch dieses Risiko konnten wir gerade nicht eingehen, es gefährdete die gesamte Mission!");
-        yield return new WaitForSeconds(4);
-        Comments.instance.MakeComment("Platina", GameManager.instance.UserPlayers.Find(x => x.playerName == "Platina").Avatar, "Konzentriert euch auf den Auftrag.");
-        yield return new WaitForSeconds(4);
-        Comments.instance.MakeComment("Davis", GameManager.instance.UserPlayers.Find(x => x.playerName == "Davis").Avatar, "Du hast Recht. Wir können nicht immer warten bis sie zuerst schießen, dafür ist die Gefahr zu hoch.");
-        yield return new WaitForSeconds(3);
-        Comments.instance.MakeComment("Deera", GameManager.instance.UserPlayers.Find(x => x.playerName == "Deera").Avatar, "Ein wenig leid tut der arme Kerl mir aber schon in die Schussbahn geraten zu sein.");
-        yield return new WaitForSeconds(1);
-        commenting = false;
-    }
+		DialogueCanvas.enabled = true;
 
+
+		GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking=false;
+		GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].aiming=false;
+		GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].moving=false;
+		GameManager.instance.removeTileHighlights ();
+		Time.timeScale=0;
+		Hotkey.hotk.enabled = false;
+
+
+		int partlength = 1;
+		while (System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part"+partlength+".txt")!=null) {
+			partlength++;
+			
+			try
+			{
+				string test=System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part"+partlength+".txt");
+			}
+			catch { break;}
+			
+		}
+
+		int partindex = 1;
+		while(partindex<partlength){
+
+			string temp=System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part"+partindex+".txt");
+			var Text = temp.Split("\n"[0]);
+
+		//	temp=Text[0];
+
+			Debug.Log(Text[0]);
+			//SpriteToSet=Davis;
+
+			int Identifier= System.Convert.ToInt32(Text[0]);
+
+			switch(Identifier)
+			{
+			case 1:{
+				SpriteToSet=Davis;
+					break;
+				}
+			case 2:{
+				SpriteToSet=Deera;
+				break;
+			}
+			case 3:{
+				SpriteToSet=Platina;
+				break;
+			}
+			case 4:{
+				SpriteToSet=Phil;
+				break;
+			}
+			case 0:{
+				SpriteToSet=Commander;
+				break;
+			}
+			}
+
+
+
+			 if(partindex%2==0)
+			{
+				CharLeft.sprite=SpriteToSet;
+			}else{
+				CharRight.sprite=SpriteToSet;
+			}
+
+			CharName.text=Text[1];
+
+			DialugeText.text="";
+			int counter=0;
+			while (counter<Text[2].Length-1&&!Skip)
+			{
+				yield return new WaitForSeconds (0.01f);
+				DialugeText.text=DialugeText.text+Text[2][counter];
+				counter++;
+
+			}
+			DialugeText.text=Text[2];
+			Skip=false;
+			partindex++;
+
+
+
+			int i=1;
+
+			while (i<40&&!Skip)
+			{
+				yield return new WaitForSeconds (0.02f);
+				i++;
+			}
+			Skip=false;
+
+
+		}
+
+		DialogueCanvas.enabled = false;
+		Time.timeScale=1;
+		Hotkey.hotk.enabled = true;
+
+		if (setnumber==3)
+			Win_Lose_Screen.instance.MissionWon ();
+	}
+	
 
 	public void TurnOne(){
-		StartCoroutine (TurnOneText ());
+		StartCoroutine (ShowDialogue(1,1));
 	}
 
 	public void CivilKill(){
-		StartCoroutine (CivilKillText ());
+		StartCoroutine (ShowDialogue(1,2));
 	}
 
 	public void MissionWin(){
-		StartCoroutine (MissionWinText ());
+		StartCoroutine (ShowDialogue(1,3));
 	}
 
 }

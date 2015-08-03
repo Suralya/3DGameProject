@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_2;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Programme/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Programme/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -83,88 +83,89 @@
      <Compile Include="Assets\Scripts\UserPlayer.cs" />
      <Compile Include="Assets\Scripts\Waffe.cs" />
      <Compile Include="Assets\Scripts\Win_Lose_Screen.cs" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Phil_1.txt" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Platina_2.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Miss_Platina_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Deera_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Hit_Deera_1.txt" />
      <None Include="Assets\Texts\Tooltip_aim_de.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Deera_1.txt" />
-     <None Include="Assets\Texts\Comment_Death_Phil_1.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Deera_2.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Davis_2.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Phil_1.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Davis_2.txt" />
-     <None Include="Assets\Texts\Comment_Move_Davis_2.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Phil_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Phil_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Hit_Platina_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Phil_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Death_Deera_1.txt" />
      <None Include="Assets\3D Models\README.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Hit_Phil_1.txt" />
-     <None Include="Assets\Texts\Comment_Death_Deera_1.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Deera_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Davis_3.txt" />
      <None Include="Assets\Texts\Tooltip_weaponchange_de.txt" />
-     <None Include="Assets\Texts\Comment_Leader_01_de.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Miss_Deera_1.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Phil_2.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Phil_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Davis_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Davis_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Miss_Phil_1.txt" />
+     <None Include="Assets\Texts\Dialogues\Missiontext_Mission_1_Dialogue_1_Part4.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Davis_2.txt" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
-     <None Include="Assets\Texts\Comment_Attack_Phil_3.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Platina_1.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Davis_1.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Miss_Davis_1.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Deera_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Phil_1.txt" />
      <None Include="Assets\Texts\Tooltip_attack_de.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civil_ALL_de.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Davis_3.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Davis_2.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Deera_3.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Platina_2.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Phil_2.txt" />
+     <None Include="Assets\Texts\Dialogues\Missiontext_Mission_1_Dialogue_1_Part3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Miss_Davis_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Platina_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Deera_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Phil_1.txt" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
-     <None Include="Assets\Texts\Comment_Move_Deera_3.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Phil_2.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Deera_2.txt" />
-     <None Include="Assets\Texts\Comment_Move_Platina_2.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Civilian_Davis_1.txt" />
-     <None Include="Assets\Texts\Comment_Move_Deera_2.txt" />
-     <None Include="Assets\Texts\Comment_Move_Platina_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Deera_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Platina_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Davis_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Death_Davis_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Platina_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Phil_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Death_Phil_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civil_ALL_de.txt" />
+     <None Include="Assets\Texts\Dialogues\Missiontext_Mission_1_Dialogue_1_Part1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Platina_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Davis_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Phil_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Deera_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Miss_Platina_1.txt" />
      <None Include="Assets\Texts\Tooltip_move_de.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Platina_1.txt" />
-     <None Include="Assets\Texts\Comment_Move_Davis_1.txt" />
-     <None Include="Assets\Texts\Comment_Move_Davis_3.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Davis_3.txt" />
-     <None Include="Assets\Texts\Comment_Move_Deera_1.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Hit_Deera_1.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Platina_1.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Hit_Platina_1.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Miss_Phil_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Davis_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Platina_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Davis_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Death_Platina_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Deera_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Platina_1.txt" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
-     <None Include="Assets\Texts\Comment_Move_Phil_2.txt" />
-     <None Include="Assets\Texts\Comment_Aim_Hit_Davis_1.txt" />
-     <None Include="Assets\Texts\Comment_Death_Platina_1.txt" />
-     <None Include="Assets\Texts\Comment_Robin_01_de.txt" />
-     <None Include="Assets\Texts\Comment_All_attack_de.txt" />
-     <None Include="Assets\Texts\Comment_Death_Davis_1.txt" />
-     <None Include="Assets\Texts\Comment_Move_Phil_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Deera_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Phil_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Phil_2.txt" />
+     <None Include="Assets\Texts\Dialogues\Missiontext_Mission_1_Dialogue_1_Part2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Miss_Deera_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Deera_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Davis_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Phil_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Deera_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Platina_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Hit_Phil_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Phil_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Davis_3.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Davis_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Deera_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Aim_Hit_Davis_1.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Move_Platina_2.txt" />
+     <None Include="Assets\Texts\Comments\Comment_Attack_Deera_2.txt" />
      <None Include="Assets\Texts\Tooltip_nextturn_de.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Platina_3.txt" />
-     <None Include="Assets\Texts\Comment_Attack_Davis_1.txt" />
-     <None Include="Assets\Texts\Comment_Kill_Enemy_Deera_1.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Programme/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/Tina Plavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ <HintPath>C:/Users/Tina Plavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ <HintPath>C:/Users/Tina Plavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ <HintPath>C:/Users/Tina Plavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>D:/Programme/Unity5/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -41,12 +41,12 @@ public class Comments : MonoBehaviour {
 	public void MakeComment(string name, Sprite avatar, string action, int id){
 		int ID=id;
 
-		while (System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+name+"_"+ID+".txt")!=null) {
+		while (System.IO.File.ReadAllText("Assets/Texts/Comments/Comment_"+action+"_"+name+"_"+ID+".txt")!=null) {
 			ID++;
 			
 			try
 			{
-				string test=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+name+"_"+ID+".txt");
+				string test=System.IO.File.ReadAllText("Assets/Texts/Comments/Comment_"+action+"_"+name+"_"+ID+".txt");
 			}
 			catch { break;}
 			
@@ -60,7 +60,7 @@ public class Comments : MonoBehaviour {
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = avatar;
 		CommentName.text = name;
-		CommentsText.text=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+name+"_"+temp+".txt");
+		CommentsText.text=System.IO.File.ReadAllText("Assets/Texts/Comments/Comment_"+action+"_"+name+"_"+temp+".txt");
 		
 		StartCoroutine (WaitTillHide ());
 	}
@@ -68,12 +68,12 @@ public class Comments : MonoBehaviour {
 	public void MakeComment(string name, Sprite avatar, string action,string condition, int id){
 		int ID =id;
 
-		while (System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+condition+"_"+name+"_"+ID+".txt")!=null) {
+		while (System.IO.File.ReadAllText("Assets/Texts/Comments/Comment_"+action+"_"+condition+"_"+name+"_"+ID+".txt")!=null) {
 			ID++;
 
 			try
 			{
-				string test=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+condition+"_"+name+"_"+ID+".txt");
+				string test=System.IO.File.ReadAllText("Assets/Texts/Comments/Comment_"+action+"_"+condition+"_"+name+"_"+ID+".txt");
 			}
 			catch { break;}
 
@@ -86,7 +86,7 @@ public class Comments : MonoBehaviour {
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = avatar;
 		CommentName.text = name;
-		CommentsText.text=System.IO.File.ReadAllText("Assets/Texts/Comment_"+action+"_"+condition+"_"+name+"_"+temp+".txt");
+		CommentsText.text=System.IO.File.ReadAllText("Assets/Texts/Comments/Comment_"+action+"_"+condition+"_"+name+"_"+temp+".txt");
 		
 		StartCoroutine (WaitTillHide ());
 	}
