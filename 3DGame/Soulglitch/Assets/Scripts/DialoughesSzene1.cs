@@ -47,12 +47,12 @@ public class DialoughesSzene1 : MonoBehaviour {
 
 
 		int partlength = 1;
-		while (System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part"+partlength+".txt")!=null) {
+		while (System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part_"+partlength+".txt")!=null) {
 			partlength++;
 			
 			try
 			{
-				string test=System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part"+partlength+".txt");
+				string test=System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part_"+partlength+".txt");
 			}
 			catch { break;}
 			
@@ -61,7 +61,7 @@ public class DialoughesSzene1 : MonoBehaviour {
 		int partindex = 1;
 		while(partindex<partlength){
 
-			string temp=System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part"+partindex+".txt");
+			string temp=System.IO.File.ReadAllText("Assets/Texts/Dialogues/Missiontext_Mission_"+missionnumber+"_Dialogue_"+setnumber+"_Part_"+partindex+".txt");
 			var Text = temp.Split("\n"[0]);
 
 		//	temp=Text[0];
