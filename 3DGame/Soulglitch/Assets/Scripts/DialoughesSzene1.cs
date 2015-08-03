@@ -32,6 +32,7 @@ public class DialoughesSzene1 : MonoBehaviour {
 	}
 
 	public IEnumerator ShowDialogue(int missionnumber,int setnumber){
+
 		CharLeft.sprite = null;
 		CharRight.sprite = null;
 
@@ -77,11 +78,11 @@ public class DialoughesSzene1 : MonoBehaviour {
 				SpriteToSet=Davis;
 					break;
 				}
-			case 2:{
+			case 3:{
 				SpriteToSet=Deera;
 				break;
 			}
-			case 3:{
+			case 2:{
 				SpriteToSet=Platina;
 				break;
 			}
@@ -151,7 +152,10 @@ public class DialoughesSzene1 : MonoBehaviour {
 	}
 
 	public void MissionWin(){
-		StartCoroutine (ShowDialogue(1,3));
+		if (!commenting) {
+			commenting = true;
+			StartCoroutine (ShowDialogue (1, 3));
+		}
 	}
 
 }
