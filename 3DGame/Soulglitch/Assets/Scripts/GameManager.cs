@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public LineRenderer _lr;
 	public int mapSizeX = 28;
 	public int mapSizeY = 27;
+	public int TurnCounter=0;
 
 	public GameObject TilePrefab;
 	public List<Tile> map = new List<Tile> ();
@@ -75,6 +76,10 @@ public class GameManager : MonoBehaviour {
 			
 			foreach(Player p in AIPlayers)
 			{p.TurnUpdate ();}
+
+			if(TurnCounter>=20)
+				Win_Lose_Screen.instance.MissionLost();
+
 		}
 
 		foreach(Player p in UserPlayers)
@@ -525,16 +530,20 @@ public class GameManager : MonoBehaviour {
 	/// </summary>
 	public void nextTurn()
 	{
+		if(TurnCounter<19)
 		StartCoroutine(TurnPic());
 
 		if (!_userturn) {
 			//userturn
 			_userturn =true;
+			
 			Debug.Log("It's your turn");
 			UserPlayers [currentPlayerIndex].selected =false;
 			currentPlayerIndex = 0;
 			UserPlayers [currentPlayerIndex].selected =true;
 		} else {
+			_userturn =false;
+				TurnCounter++;
 		/*	removeTileHighlights ();
 			foreach(Player User in UserPlayers)
 			{
@@ -550,11 +559,12 @@ public class GameManager : MonoBehaviour {
 			foreach (Player p in AIPlayers){				
 				yield return new WaitForSeconds(1f);
 				p.AIMove();}*/
-
+			if(TurnCounter<20)
+			{
 			StartCoroutine(AITurn());
 
 
-			
+			}
 		}
 	}
 	// THOMAS FRAGEN FÜRS WARTEN!!!!!
@@ -566,7 +576,7 @@ public class GameManager : MonoBehaviour {
 			User.ActionPoints=(int)User.MaxAP;
 		}
 		//AIturn
-		_userturn =false;
+
 		Debug.Log("It's the enemys turn");
 		
 		currentPlayerIndex = 0;
