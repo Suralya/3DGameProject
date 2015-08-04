@@ -12,7 +12,7 @@ public class DialoughesSzene1 : MonoBehaviour {
 	public Image CharRight,CharLeft;
 	public Text CharName,DialugeText;
 
-	public Sprite Deera, Davis, Phil, Platina, Commander,SpriteToSet;
+	public Sprite Deera, Davis, Phil, Platina, Commander,Null,SpriteToSet;
 
 	public bool Skip=false;
 
@@ -33,8 +33,8 @@ public class DialoughesSzene1 : MonoBehaviour {
 
 	public IEnumerator ShowDialogue(int missionnumber,int setnumber){
 
-		CharLeft.sprite = null;
-		CharRight.sprite = null;
+		CharLeft.sprite = Null;
+		CharRight.sprite = Null;
 
 		DialogueCanvas.enabled = true;
 
