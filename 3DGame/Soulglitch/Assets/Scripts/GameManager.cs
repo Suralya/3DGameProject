@@ -166,11 +166,11 @@ public class GameManager : MonoBehaviour {
         movePlayer();
     }
 
-    private IEnumerator DrawShootTrail(Player origin,Player target)
+    private IEnumerator DrawShootTrail(Player origin,Vector3 target)
     {
         _lr.enabled = false;
         _lr.SetPosition(0, origin.transform.position);
-        _lr.SetPosition(1, target.transform.position);
+        _lr.SetPosition(1, target);
 
         _lr.enabled = true;
         yield return new WaitForSeconds(0.1f);
@@ -223,7 +223,7 @@ public class GameManager : MonoBehaviour {
 						if (hittarget.collider.gameObject.GetComponent<Player> () != null && hit && hittarget.collider.gameObject.GetComponent<Player> ().Equals (target))
 						{
 
-						    StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], target));
+						    StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], target.transform.position));
 
 							//damage logic
 							int amountOfDamage = (int)Mathf.Floor (UserPlayers [currentPlayerIndex].Weapon.Damage/* + Random.Range(0, UserPlayers[currentPlayerIndex].damageRollSides)*/);
@@ -251,6 +251,14 @@ public class GameManager : MonoBehaviour {
 
 
 						} else {
+							if(hittarget.collider.gameObject.GetComponent<Player> () != null){
+							var targetmissed=target.transform.position;
+							targetmissed.y+=1.5f;
+							StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], targetmissed));
+							}else{
+								StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], hittarget.collider.gameObject.transform.position));
+							}
+						
 							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " missed " + target.playerName + "!");
 						}
 						attackPlayer ();
@@ -275,7 +283,7 @@ public class GameManager : MonoBehaviour {
 				
 				if (target != null && target!=UserPlayers[currentPlayerIndex] && target.HP > 0) {
 
-                    StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], target));
+                    StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], target.transform.position));
 					
 					
 					//Debug.Log ("p.x: " + players[currentPlayerIndex].gridPosition.x + ", p.y: " + players[currentPlayerIndex].gridPosition.y + " t.x: " + target.gridPosition.x + ", t.y: " + target.gridPosition.y);

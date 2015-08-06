@@ -32,14 +32,13 @@ public class Scene1MovementPatterns : MovementPatterns {
 	}
 
 	public override void EnemyMove(AIPlayer p){
-		bool TurnOn=true;
 		//while (!GameManager.instance._userturn&&TurnOn) {
 
 
 		Debug.Log ("Enemy  movement");
 
 			List<Tile> attacktilesInRange = TileHighlight.FindAtackHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.Weapon.Attackrange);
-			List<Tile> movementToAttackTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),p.ActionPoints- p.Weapon.APCost+  p.Weapon.Attackrange);
+			//List<Tile> movementToAttackTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),p.ActionPoints- p.Weapon.APCost+  p.Weapon.Attackrange);
 			List<Tile> movementTilesInRange = TileHighlight.FindAIMoveHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.ActionPoints+1000);
 
 			if (attacktilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
@@ -88,7 +87,6 @@ public class Scene1MovementPatterns : MovementPatterns {
 		}
 
 
-			TurnOn=false;
 		//}
 
 		p.ActionPoints = (int)p.MaxAP;
