@@ -136,6 +136,7 @@
      <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Platina_1.txt" />
      <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Davis_1.txt" />
      <None Include="Assets\Texts\Comments\Comment_Attack_Phil_1.txt" />
+     <None Include="Assets\Materials\TryinHard 1.shader" />
      <None Include="Assets\Texts\Comments\Comment_Move_Deera_1.txt" />
      <None Include="Assets\Texts\Comments\Comment_Aim_Miss_Platina_1.txt" />
      <None Include="Assets\Texts\Tooltip_move_de.txt" />

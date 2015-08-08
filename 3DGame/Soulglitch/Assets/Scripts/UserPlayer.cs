@@ -17,8 +17,10 @@ public class UserPlayer : Player {
 	void Update () {
 		if (GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex] == this) {
 			transform.GetComponent<Renderer>().material.color = Color.green;
+			transform.GetComponent<Renderer>().material.SetFloat("_Outline",0.08f);
 		} else {
 			transform.GetComponent<Renderer>().material.color = Color.white;
+			transform.GetComponent<Renderer>().material.SetFloat("_Outline",0);
 		}
 		
 		if (HP <= 0) {

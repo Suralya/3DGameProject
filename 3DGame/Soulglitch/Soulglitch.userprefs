@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Materials\TryinHard 1.shader">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.cs" Line="254" Column="72" />
-      <File FileName="Assets\Scripts\Scene1MovementPatterns.cs" Line="97" Column="1" />
-      <File FileName="Assets\Scripts\DialoughesSzene1.cs" Line="56" Column="1" />
-      <File FileName="Assets\Scripts\Comments.cs" Line="76" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="166" Column="22" />
+      <File FileName="Assets\Scripts\UserPlayer.cs" Line="20" Column="72" />
+      <File FileName="Assets\Materials\TryinHard 1.shader" Line="48" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
