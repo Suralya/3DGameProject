@@ -4,6 +4,7 @@ using DG.Tweening;
 
 public class AIBehave : MonoBehaviour {
 	public static AIBehave instance;
+	private LineRenderer _lr;
 	
 	void Awake() {
 		instance=this;
@@ -22,6 +23,7 @@ public class AIBehave : MonoBehaviour {
 
 
 	public void AIAttack(Player target,Player ai) {
+		_lr = GameManager.instance._lr;
 
 					ai.ActionPoints -= ai.Weapon.APCost;
 					
@@ -36,7 +38,7 @@ public class AIBehave : MonoBehaviour {
 
                     if (hittarget.collider.gameObject.GetComponent<Player>() != null && hit && hittarget.collider.gameObject.GetComponent<Player>().Equals(target))
                     {
-						
+					StartCoroutine(DrawShootTrail(ai, target.transform.position));
 						//damage logic
 						int amountOfDamage = (int)Mathf.Floor (ai.Weapon.Damage);
 						
@@ -45,6 +47,15 @@ public class AIBehave : MonoBehaviour {
 						
 						Debug.Log (ai.playerName + " successfuly hit " + target.playerName + " for " + amountOfDamage + " damage!");
 					} else {
+			if(hittarget.collider.gameObject.GetComponent<Player> () != null){
+				var targetmissed=target.transform.position;
+				targetmissed.y+=1.5f;
+				StartCoroutine(DrawShootTrail(ai, targetmissed));
+			}else{
+				StartCoroutine(DrawShootTrail(ai, hittarget.collider.gameObject.transform.position));
+			}
+
+
 						Debug.Log (ai.playerName + " missed " + target.playerName + "!");
 					}
 
@@ -74,7 +85,16 @@ public class AIBehave : MonoBehaviour {
 
 	}
 
-
+	private IEnumerator DrawShootTrail(Player origin,Vector3 target)
+	{
+		_lr.enabled = false;
+		_lr.SetPosition(0, origin.transform.position);
+		_lr.SetPosition(1, target);
+		
+		_lr.enabled = true;
+		yield return new WaitForSeconds(0.1f);
+		_lr.enabled = false;
+	}
 
 	}
 
