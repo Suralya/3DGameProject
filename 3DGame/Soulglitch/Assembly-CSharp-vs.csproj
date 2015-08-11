@@ -178,16 +178,16 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>D:/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>D:/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>D:/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ <HintPath>C:/Users/tiplavius/Desktop/3DGameProject/3DGame/Soulglitch/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

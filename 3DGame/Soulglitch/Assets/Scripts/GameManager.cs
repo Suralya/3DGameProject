@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 	public int mapSizeX = 28;
 	public int mapSizeY = 27;
 	public int TurnCounter=0;
+	public int MaxTurn = 20;
 
 	public GameObject TilePrefab;
 	public List<Tile> map = new List<Tile> ();
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour {
 	public int currentPlayerIndex = 0;
 
     private bool civilkilled=false;
+
+	public Text TurnText;
 	
 
 	void Awake() {
@@ -77,7 +80,7 @@ public class GameManager : MonoBehaviour {
 			foreach(Player p in AIPlayers)
 			{p.TurnUpdate ();}
 
-			if(TurnCounter>=20)
+			if(TurnCounter>=MaxTurn)
 				Win_Lose_Screen.instance.MissionLost();
 
 		}
@@ -108,6 +111,7 @@ public class GameManager : MonoBehaviour {
 		if (Tooltipshown) {
 			Tooltipshown = false;
 			Tooltipcanvas.enabled = false;
+
 		} else {
 			Tooltipshown = true;
 			Tooltipcanvas.enabled = true;
@@ -538,7 +542,7 @@ public class GameManager : MonoBehaviour {
 	/// </summary>
 	public void nextTurn()
 	{
-		if(TurnCounter<19)
+		if(TurnCounter<MaxTurn-1)
 		StartCoroutine(TurnPic());
 
 		if (!_userturn) {
@@ -604,8 +608,15 @@ public class GameManager : MonoBehaviour {
 	public IEnumerator TurnPic(){
 		TurnImage.instance.TurnOn ();
 		TurnImage.instance.Img.enabled = true;
+
+		int i=MaxTurn-TurnCounter;
+
+		if(!_userturn&&i<=5)
+		TurnText.text="Noch "+i+" Runden verbleibend.";
+		
 		yield return new WaitForSeconds (1f);
 		TurnImage.instance.Img.enabled = false;
+		TurnText.text = "";
 	}
 
 	

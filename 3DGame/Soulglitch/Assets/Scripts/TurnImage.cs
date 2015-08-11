@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class TurnImage : MonoBehaviour {
 
 	public static TurnImage instance;
+
 	
 	void Awake() {
 		instance=this;
