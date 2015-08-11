@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Comments.cs" />
      <Compile Include="Assets\Scripts\ConfirmMenue.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
+     <Compile Include="Assets\Scripts\CursorChange.cs" />
      <Compile Include="Assets\Scripts\DialoughesSzene1.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Healthbar.cs" />
