@@ -68,7 +68,12 @@ public class AIBehave : MonoBehaviour {
 		
 		if (/*destTile.transform.GetComponent<Renderer> ().material.color == Color.magenta && */!destTile.impassible && !destTile.occupied) {
 			//removeTileHighlights ();
-		
+			if(ai.ActionPoints-1>0)
+			{
+				ai.ActionPoints--;
+
+				if(TilePathFinder.FindPath (GameManager.instance.map.Find (t => t.gridPosition == ai.gridPosition), destTile)!=null)
+				{
 			ai.ActionPoints -= TilePathFinder.FindPath (GameManager.instance.map.Find (t => t.gridPosition == ai.gridPosition), destTile).Count;
 		
 			foreach (Tile t in TilePathFinder.FindPath(GameManager.instance.map.Find(t => t.gridPosition==ai.gridPosition),destTile)) {
@@ -78,12 +83,34 @@ public class AIBehave : MonoBehaviour {
 				Debug.Log ("(" + ai.positionQueue [ai.positionQueue.Count - 1].x + "," + ai.positionQueue [ai.positionQueue.Count - 1].y + ")");
 			}			
 			ai.gridPosition = destTile.gridPosition;
-		
+			}
+			}
 		} else {
 			Debug.Log ("destination invalid");
 		}
 
 	}
+
+	public bool AIAim(Player target,Player ai){
+
+		ai.ActionPoints --;
+		
+		Vector3 targetpos=target.transform.position;
+		targetpos-=ai.transform.position;
+		RaycastHit hittarget;
+		
+		Physics.Raycast(ai.transform.position,targetpos,out hittarget);
+		
+		
+		if (hittarget.collider.gameObject.GetComponent<Player> () != null && hittarget.collider.gameObject.GetComponent<Player> ().Equals (target)) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+
 
 	private IEnumerator DrawShootTrail(Player origin,Vector3 target)
 	{
