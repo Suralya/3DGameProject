@@ -35,11 +35,13 @@ public class Scene1MovementPatterns : MovementPatterns {
 		//while (!GameManager.instance._userturn&&TurnOn) {
 
 
-		Debug.Log ("Enemy  movement");
+	//	Debug.Log ("Enemy  movement");
 
 			List<Tile> attacktilesInRange = TileHighlight.FindAtackHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.Weapon.Attackrange);
 			//List<Tile> movementToAttackTilesInRange = TileHighlight.FindHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition),p.ActionPoints- p.Weapon.APCost+  p.Weapon.Attackrange);
 			List<Tile> movementTilesInRange = TileHighlight.FindAIMoveHighlight(GameManager.instance.map.Find(i=>i.gridPosition==p.gridPosition), p.ActionPoints+1000);
+
+
 
 
 
@@ -67,7 +69,7 @@ public class Scene1MovementPatterns : MovementPatterns {
 				List<Tile> path = TilePathFinder.FindAIPath (GameManager.instance.map.Find (i => i.gridPosition == p.gridPosition), GameManager.instance.map.Find (i => i.gridPosition == opponent.gridPosition)/*, GameManager.instance.UserPlayers.Where(x => x.gridPosition != p.gridPosition && x.gridPosition != opponent.gridPosition).Select(x => x.gridPosition).ToArray()*/);
 				//TODO GameManager.instance.moveCurrentPlayer(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), movementPerActionPoint - 1)]);
 				
-				if (path.Count != null) {
+				if (path.Count != null&&path.Count<26) {
 					int indexer = 0;
 					if (p.ActionPoints - 1 > 3) {
 						indexer = (int)Mathf.Min (Mathf.Max (path.Count - 1 - 1, 0), 3);
@@ -121,7 +123,7 @@ public class Scene1MovementPatterns : MovementPatterns {
 			List<Tile> path = TilePathFinder.FindAIPath (GameManager.instance.map.Find (i => i.gridPosition == p.gridPosition), GameManager.instance.map.Find (i => i.gridPosition == opponent.gridPosition)/*, GameManager.instance.UserPlayers.Where(x => x.gridPosition != p.gridPosition && x.gridPosition != opponent.gridPosition).Select(x => x.gridPosition).ToArray()*/);
 			//TODO GameManager.instance.moveCurrentPlayer(path[(int)Mathf.Min(Mathf.Max (path.Count - 1 - 1, 0), movementPerActionPoint - 1)]);
 
-			if (path.Count != null) {
+			if (path.Count != null&&path.Count<26) {
 				int indexer = 0;
 				if (p.ActionPoints - 1 > 3) {
 					indexer = (int)Mathf.Min (Mathf.Max (path.Count - 1 - 1, 0), 3);
