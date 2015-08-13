@@ -1,12 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Scene1MovementPatterns.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CursorChange.cs">
     <Files>
-      <File FileName="..\..\..\ShaderAbgabe_Tina_Plavius_GD0414\HighlightShaderSzene\Assets\TryinHard.shader" Line="1" Column="1" />
-      <File FileName="..\..\..\ShaderAbgabe_Tina_Plavius_GD0414\HighlightShaderSzene\Assets\TryinHard 1.shader" Line="1" Column="1" />
-      <File FileName="..\..\..\ShaderAbgabe_Tina_Plavius_GD0414\HighlightShaderSzene\Assets\TryinHard 2.shader" Line="119" Column="4" />
-      <File FileName="Assets\Scripts\Scene1MovementPatterns.cs" Line="151" Column="5" />
-      <File FileName="Assets\Scripts\AIBehave.cs" Line="71" Column="24" />
+      <File FileName="Assets\Scripts\Scene1MovementPatterns.cs" Line="223" Column="1" />
+      <File FileName="Assets\Scripts\AIBehave.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Waffe.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CursorChange.cs" Line="43" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
