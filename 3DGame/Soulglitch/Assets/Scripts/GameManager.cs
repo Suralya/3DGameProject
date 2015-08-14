@@ -316,7 +316,7 @@ public class GameManager : MonoBehaviour {
 
 							if(target.HP-amountOfDamage>target.MaxHP)
 								target.HP=target.MaxHP;
-							else{target.HP -= amountOfDamage;}
+							else{target.HP += amountOfDamage;}
 
 							hittarget.collider.gameObject.transform.DOJump(target.transform.position,2f,2,0.5f);
 							

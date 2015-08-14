@@ -56,8 +56,9 @@
 			float2 offset = TransformViewToProjection(norm.xy);
  
 				_OutlineColor.rgb=_Color;
-				
+				_OutlineColor.a=0.2;
 			o.color = _OutlineColor;
+			
 			return o;
 	}
 	ENDCG

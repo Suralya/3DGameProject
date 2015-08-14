@@ -124,7 +124,7 @@ public class DialoughesSzene1 : MonoBehaviour {
 
 			int i=1;
 
-			while (i<40&&!Skip)
+			while (i<200&&!Skip)
 			{
 				yield return new WaitForSeconds (0.02f);
 				i++;
