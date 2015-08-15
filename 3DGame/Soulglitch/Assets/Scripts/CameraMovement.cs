@@ -22,6 +22,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+ 
 
         //Cameramovement via WASD
         if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))

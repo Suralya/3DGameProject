@@ -101,8 +101,10 @@ public class DialoughesSzene1 : MonoBehaviour {
 			 if(partindex%2==0)
 			{
 				CharLeft.sprite=SpriteToSet;
+			    CharName.alignment = TextAnchor.UpperLeft;
 			}else{
 				CharRight.sprite=SpriteToSet;
+                CharName.alignment = TextAnchor.UpperRight;
 			}
 
 			CharName.text=Text[1];
