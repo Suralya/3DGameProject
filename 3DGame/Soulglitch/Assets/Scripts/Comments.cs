@@ -28,7 +28,12 @@ public class Comments : MonoBehaviour {
 	void Update () {
 	
 	}
-
+	/// <summary>
+	/// Make Comment unside Game
+	/// </summary>
+	/// <param name="name">Name.</param>
+	/// <param name="avatar">Avatar.</param>
+	/// <param name="txt">Text.</param>
 	public void MakeComment(string name, Sprite avatar, string txt){
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = avatar;
@@ -37,7 +42,13 @@ public class Comments : MonoBehaviour {
 
 		StartCoroutine (WaitTillHide ());
 	}
-
+	/// <summary>
+	/// Make Comment unside Game
+	/// </summary>
+	/// <param name="name">Name.</param>
+	/// <param name="avatar">Avatar.</param>
+	/// <param name="action">Action.</param>
+	/// <param name="id">Identifier.</param>
 	public void MakeComment(string name, Sprite avatar, string action, int id){
 		int ID=id;
 
@@ -64,7 +75,14 @@ public class Comments : MonoBehaviour {
 		
 		StartCoroutine (WaitTillHide ());
 	}
-
+/// <summary>
+	/// Make Comment unside Game
+/// </summary>
+/// <param name="name">Name.</param>
+/// <param name="avatar">Avatar.</param>
+/// <param name="action">Action.</param>
+/// <param name="condition">Condition.</param>
+/// <param name="id">Identifier.</param>
 	public void MakeComment(string name, Sprite avatar, string action,string condition, int id){
 		int ID =id;
 
@@ -92,7 +110,10 @@ public class Comments : MonoBehaviour {
 	}
 
 
-
+	/// <summary>
+	/// Make Comment unside Game	
+	/// </summary>
+	/// <param name="txt">Text.</param>
 	public void MakeComment(string txt){
 		CommentsCanvas.enabled = true;
 		Avatar.overrideSprite = Leader;
@@ -102,7 +123,10 @@ public class Comments : MonoBehaviour {
 
 		StartCoroutine (WaitTillHide ());
 	}
-
+	/// <summary>
+	/// Set Time to read the comment until it'll vanish
+	/// </summary>
+	/// <returns>The till hide.</returns>
 	public IEnumerator WaitTillHide(){
 
 		Counter=Secondsshown;
@@ -117,7 +141,9 @@ public class Comments : MonoBehaviour {
 		}
 
 	}
-
+	/// <summary>
+	/// Hides the comment.
+	/// </summary>
 	public void HideComment(){
 		CommentsCanvas.enabled = false;
 		CommentsText.text = "";

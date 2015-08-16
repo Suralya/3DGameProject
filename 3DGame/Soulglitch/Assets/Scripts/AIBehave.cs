@@ -21,7 +21,11 @@ public class AIBehave : MonoBehaviour {
 	}
 
 
-
+	/// <summary>
+	/// Calls AI Attacking mechanism
+	/// </summary>
+	/// <param name="target">Target.</param>
+	/// <param name="ai">Ai.</param>
 	public void AIAttack(Player target,Player ai) {
 		_lr = GameManager.instance._lr;
 
@@ -61,7 +65,11 @@ public class AIBehave : MonoBehaviour {
 
 		}
 
-
+	/// <summary>
+	/// Calls AIs Movement
+	/// </summary>
+	/// <param name="destTile">Destination tile.</param>
+	/// <param name="ai">Ai.</param>
 	public void AIMove(Tile destTile,Player ai){
 
 	
@@ -80,17 +88,22 @@ public class AIBehave : MonoBehaviour {
 				ai.positionQueue.Add (GameManager.instance.map.Find (delegate(Tile obj) {
 					return obj.gridPosition == t.gridPosition;
 				}).transform.position + Vector3.up);
-				Debug.Log ("(" + ai.positionQueue [ai.positionQueue.Count - 1].x + "," + ai.positionQueue [ai.positionQueue.Count - 1].y + ")");
+			//	Debug.Log ("(" + ai.positionQueue [ai.positionQueue.Count - 1].x + "," + ai.positionQueue [ai.positionQueue.Count - 1].y + ")");
 			}			
 			ai.gridPosition = destTile.gridPosition;
 			}
 			}
 		} else {
-			Debug.Log ("destination invalid");
+		//	Debug.Log ("destination invalid");
 		}
 
 	}
-
+	/// <summary>
+	/// AI Aiming
+	/// </summary>
+	/// <returns><c>true</c>, if aim was AIed, <c>false</c> otherwise.</returns>
+	/// <param name="target">Target.</param>
+	/// <param name="ai">Ai.</param>
 	public bool AIAim(Player target,Player ai){
 
 		ai.ActionPoints --;
@@ -111,7 +124,12 @@ public class AIBehave : MonoBehaviour {
 	}
 
 
-
+/// <summary>
+/// Draws the shoot trail for the attack.
+/// </summary>
+/// <returns>The shoot trail.</returns>
+/// <param name="origin">Origin.</param>
+/// <param name="target">Target.</param>
 	private IEnumerator DrawShootTrail(Player origin,Vector3 target)
 	{
 		_lr.enabled = false;

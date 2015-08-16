@@ -27,7 +27,9 @@ public class Win_Lose_Screen : MonoBehaviour
     private void Update()
     {
     }
-
+	/// <summary>
+	/// Missions is won.
+	/// </summary>
     public void MissionWon()
     {
 		GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking=false;
@@ -45,7 +47,9 @@ public class Win_Lose_Screen : MonoBehaviour
             Debug.Log("Game is Won");
         }
     }
-
+	/// <summary>
+	/// Missions is lost.
+	/// </summary>
     public void MissionLost()
     {
 		GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].attacking=false;
@@ -63,7 +67,9 @@ public class Win_Lose_Screen : MonoBehaviour
             Debug.Log("Game is Lost");
         }
     }
-
+	/// <summary>
+	/// Back to menue.
+	/// </summary>
     public void BacktoMenue()
     {
 		Time.timeScale=1;
@@ -72,7 +78,9 @@ public class Win_Lose_Screen : MonoBehaviour
         Time.timeScale = 1;
         Application.LoadLevel(0);
     }
-
+	/// <summary>
+	/// Starts Scene anew
+	/// </summary>
     public void Retry()
     {
 		Time.timeScale=1;

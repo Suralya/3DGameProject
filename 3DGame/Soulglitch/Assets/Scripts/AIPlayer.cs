@@ -28,22 +28,10 @@ public class AIPlayer : Player {
 	}
 
 	/// <summary>
-	/// enables Movement of the current Player (atm skips the AI turn)
+	/// enables Movement of the current Player 
 	/// </summary>
 	public override void TurnUpdate ()
 	{
-	/*	if (Vector3.Distance(moveDestination, transform.position) > 0.1f) {
-			transform.position += (moveDestination - transform.position).normalized * moveSpeed * Time.deltaTime;
-			
-			if (Vector3.Distance(moveDestination, transform.position) <= 0.1f) {
-				//transform.position = moveDestination;
-				//moveDestination = new Vector3(0 + Mathf.Floor(GameManager.instance.mapSizeX-5),1.5f, -0 + Mathf.Floor(GameManager.instance.mapSizeY-5));
-				//GameManager.instance.nextTurn();
-			}
-		} else {
-			//moveDestination = new Vector3(0 + Mathf.Floor(GameManager.instance.mapSizeX/2),1.5f, -0 + Mathf.Floor(GameManager.instance.mapSizeY/2));
-		//	GameManager.instance.nextTurn();
-		}*/
 
 		if (positionQueue.Count > 0) {
 			transform.position += (positionQueue [0] - transform.position).normalized * moveSpeed * Time.deltaTime;
@@ -60,6 +48,9 @@ public class AIPlayer : Player {
 		base.TurnUpdate ();
 	}
 
+	/// <summary>
+	/// Calls the KI for the specific kind of AI
+	/// </summary>
 	public override void AIMove(){
 		if (civilian) {
 			GameManager.instance.SceneMovePatern.CivilianMove(this);

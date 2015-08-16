@@ -44,7 +44,12 @@ public class TilePathFinder : MonoBehaviour {
 		}
 		return null;
 }
-
+	/// <summary>
+	/// Finds the AI path.
+	/// </summary>
+	/// <returns>The AI path.</returns>
+	/// <param name="originTile">Origin tile.</param>
+	/// <param name="destinationTile">Destination tile.</param>
 	public static List<Tile> FindAIPath(Tile originTile, Tile destinationTile) {
 		List<Tile> closed = new List<Tile>();
 		List<TilePath> open = new List<TilePath>();

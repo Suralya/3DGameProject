@@ -95,7 +95,9 @@ public class Player : MonoBehaviour {
 	}
 
 	public virtual void AIMove(){}
-
+	/// <summary>
+	/// Sets the weapons.
+	/// </summary>
 	public void SetWeapons(){
 
 		switch (WeaponOne) {

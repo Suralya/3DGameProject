@@ -163,13 +163,20 @@ public class GameManager : MonoBehaviour {
 
 		}
 	}
-
+	/// <summary>
+	/// Wait till Plaxer moved
+	/// </summary>
     public IEnumerator Waittillmoved()
     {
         yield return new WaitForSeconds(0.5f);
         movePlayer();
     }
-
+	/// <summary>
+	/// Draws the shoot trail.
+	/// </summary>
+	/// <returns>The shoot trail.</returns>
+	/// <param name="origin">Origin.</param>
+	/// <param name="target">Target.</param>
     private IEnumerator DrawShootTrail(Player origin,Vector3 target)
     {
         _lr.enabled = false;
@@ -263,15 +270,15 @@ public class GameManager : MonoBehaviour {
 								StartCoroutine(DrawShootTrail(UserPlayers[currentPlayerIndex], hittarget.collider.gameObject.transform.position));
 							}
 						
-							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " missed " + target.playerName + "!");
+							//Debug.Log (UserPlayers [currentPlayerIndex].playerName + " missed " + target.playerName + "!");
 						}
 						attackPlayer ();
 					} else {
-						Debug.Log ("Target is not adjacent!");
+						//Debug.Log ("Target is not adjacent!");
 					}
 				
 				} else {
-					Debug.Log ("destination invalid");
+				//	Debug.Log ("destination invalid");
 				}
 			}
 		} else {
@@ -320,17 +327,17 @@ public class GameManager : MonoBehaviour {
 
 							hittarget.collider.gameObject.transform.DOJump(target.transform.position,2f,2,0.5f);
 							
-							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly healed " + target.playerName + " " + amountOfDamage*(-1) + " HP!");
+						//	Debug.Log (UserPlayers [currentPlayerIndex].playerName + " successfuly healed " + target.playerName + " " + amountOfDamage*(-1) + " HP!");
 						} else {
-							Debug.Log (UserPlayers [currentPlayerIndex].playerName + " wasn't able to heal " + target.playerName + "!");
+						//	Debug.Log (UserPlayers [currentPlayerIndex].playerName + " wasn't able to heal " + target.playerName + "!");
 						}
 						attackPlayer ();
 					} else {
-						Debug.Log ("Target is not adjacent!");
+					//	Debug.Log ("Target is not adjacent!");
 					}
 					
 				} else {
-					Debug.Log ("destination invalid");
+				//	Debug.Log ("destination invalid");
 				}
 
 			}
@@ -392,7 +399,7 @@ public class GameManager : MonoBehaviour {
 				}
 				
 			} else {
-				Debug.Log ("destination invalid");
+				//Debug.Log ("destination invalid");
 			}
 		}
 
@@ -412,7 +419,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].gridPosition.y=UserPlayers[currentPlayerIndex].transform.position.z;
 
 
-				Debug.Log("get movin'");
+				//Debug.Log("get movin'");
 				removeTileHighlights ();
 				UserPlayers[currentPlayerIndex].moving=true;
 				UserPlayers[currentPlayerIndex].attacking=false;
@@ -423,7 +430,7 @@ public class GameManager : MonoBehaviour {
 
 				
 			}else{
-				Debug.Log("no movin' today ");
+				//Debug.Log("no movin' today ");
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
@@ -455,7 +462,7 @@ public class GameManager : MonoBehaviour {
 		removeTileHighlights ();
 		Tooltiptext.text=" ";
 
-		Debug.Log("weapon changed ");
+		//Debug.Log("weapon changed ");
 	}
 
 	/// <summary>
@@ -470,7 +477,7 @@ public class GameManager : MonoBehaviour {
 			{
 				//	Comments.instance.MakeComment (UserPlayers[currentPlayerIndex].playerName,UserPlayers[currentPlayerIndex].Avatar, "Assets/Texts/Comment_All_attack_de.txt");
 				removeTileHighlights ();
-				Debug.Log("start attack'");
+				//Debug.Log("start attack'");
 				UserPlayers[currentPlayerIndex].attacking=true;
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
@@ -482,12 +489,12 @@ public class GameManager : MonoBehaviour {
 						Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost;
 					}
 				} else {
-					Debug.Log ("nicht genug AP");
+				//	Debug.Log ("nicht genug AP");
 					Tooltiptext.text="Du hast nicht genug AP um einen Angriff zu machen";
 				}
 				
 			}else{
-				Debug.Log("no attack");
+			//	Debug.Log("no attack");
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
@@ -510,7 +517,7 @@ public class GameManager : MonoBehaviour {
 					
 				{
 					removeTileHighlights ();
-					Debug.Log("Aim");
+					//Debug.Log("Aim");
 					UserPlayers[currentPlayerIndex].attacking=false;
 					UserPlayers[currentPlayerIndex].moving=false;
 					UserPlayers[currentPlayerIndex].aiming=true;
@@ -519,12 +526,12 @@ public class GameManager : MonoBehaviour {
 					Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_aim_de.txt");
 					
 				} else {
-					Debug.Log ("nicht genug AP");
+					//Debug.Log ("nicht genug AP");
 					Tooltiptext.text="Du hast nicht genug AP";
 				}
 				
 			}else{
-				Debug.Log("not aiming");
+				//Debug.Log("not aiming");
 				UserPlayers[currentPlayerIndex].attacking=false;
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
@@ -549,28 +556,14 @@ public class GameManager : MonoBehaviour {
 			//userturn
 			_userturn =true;
 			
-			Debug.Log("It's your turn");
+			//Debug.Log("It's your turn");
 			UserPlayers [currentPlayerIndex].selected =false;
 			currentPlayerIndex = 0;
 			UserPlayers [currentPlayerIndex].selected =true;
 		} else {
 			_userturn =false;
 				TurnCounter++;
-		/*	removeTileHighlights ();
-			foreach(Player User in UserPlayers)
-			{
-				User.ActionPoints=20;
-			}
-			//AIturn
-			_userturn =false;
-			Debug.Log("It's the enemys turn");
-
-			currentPlayerIndex = 0;
-			Tooltiptext.text=" ";
-
-			foreach (Player p in AIPlayers){				
-				yield return new WaitForSeconds(1f);
-				p.AIMove();}*/
+		
 			if(TurnCounter<20)
 			{
 			StartCoroutine(AITurn());
@@ -579,7 +572,7 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
-	// THOMAS FRAGEN FÜRS WARTEN!!!!!
+
 	public IEnumerator AITurn(){
 
 		removeTileHighlights ();
@@ -589,7 +582,7 @@ public class GameManager : MonoBehaviour {
 		}
 		//AIturn
 
-		Debug.Log("It's the enemys turn");
+		//Debug.Log("It's the enemys turn");
 		
 		currentPlayerIndex = 0;
 		Tooltiptext.text=" ";
@@ -604,7 +597,10 @@ public class GameManager : MonoBehaviour {
 			nextTurn();
 		}
 
-
+	/// <summary>
+	/// Showes the curent turn Picture
+	/// </summary>
+	/// <returns>The pic.</returns>
 	public IEnumerator TurnPic(){
 		TurnImage.instance.TurnOn ();
 		TurnImage.instance.Img.enabled = true;
@@ -775,7 +771,9 @@ public class GameManager : MonoBehaviour {
 
 		}
 	}
-
+	/// <summary>
+	/// Checks if Game is won
+	/// </summary>
 	public void WinCheck(){
 		 bool win = true;
 

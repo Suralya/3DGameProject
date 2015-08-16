@@ -47,7 +47,12 @@ public class TileHighlight {
 		return closed;
 	}
 
-
+	/// <summary>
+	/// AI Moement Highlighting
+	/// </summary>
+	/// <returns>The AI move highlight.</returns>
+	/// <param name="originTile">Origin tile.</param>
+	/// <param name="movementPoints">Movement points.</param>
 	public static List<Tile> FindAIMoveHighlight(Tile originTile, int movementPoints) {
 		List<Tile> closed = new List<Tile>();
 		List<TilePath> open = new List<TilePath>();
