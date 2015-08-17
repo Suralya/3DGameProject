@@ -17,7 +17,10 @@ public class Hoverbutton : MonoBehaviour {
 	/// Raises the hover attack tooltip if tooltip is enabled.
 	/// </summary>
 	public void OnHoverAttack(){
-		GameManager.instance.Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost;
+		if(!GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.healing)
+		GameManager.instance.Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost+" AP";
+		else
+		GameManager.instance.Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_heal_de.txt")+GameManager.instance.UserPlayers[GameManager.instance.currentPlayerIndex].Weapon.APCost+" AP";
 	}
 
 	/// <summary>

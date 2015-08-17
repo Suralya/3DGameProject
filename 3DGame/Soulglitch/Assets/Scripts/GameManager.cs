@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		Questlogcanvas.enabled=false;
+		Questlogcanvas.enabled=true;
 
 		findTiles ();
 		for (int i=map.Count-1; i>=0; i--) {
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
 			if(map.Any(t=>t.AptoCurrPlayer>0))
 			APtoUse=map.Find(t=>t.AptoCurrPlayer>0).AptoCurrPlayer;
 			if(APtoUse<=UserPlayers[currentPlayerIndex].ActionPoints)
-           		 Tooltiptext.text = "Deine Bewegung kostet: "+APtoUse+" AP";
+				Tooltiptext.text = System.IO.File.ReadAllText("Assets/Texts/Tooltip_move_de.txt")+"Kosten:"+APtoUse+" AP";
 			else
 				Tooltiptext.text = "Dieser Weg ist zu Weit, die Kosten wären: "+APtoUse+" AP";
 	    }
@@ -483,10 +483,10 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].aiming=false;
 					if(!UserPlayers[currentPlayerIndex].Weapon.healing)
 					{GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.red, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
-					Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost;
+					Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost+" AP";
 					}else{
 						GameManager.instance.highlightAtackTilesAt(UserPlayers[currentPlayerIndex].gridPosition, Color.yellow, UserPlayers[currentPlayerIndex].Weapon.Attackrange);
-						Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost;
+						Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_attack_de.txt")+UserPlayers [currentPlayerIndex].Weapon.APCost+" AP";
 					}
 				} else {
 				//	Debug.Log ("nicht genug AP");

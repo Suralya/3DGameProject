@@ -125,6 +125,7 @@
      <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Davis_2.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Texts\Tooltip_heal_de.txt" />
      <None Include="Assets\Texts\Comments\Comment_Aim_Miss_Phil_1.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
      <None Include="Assets\Texts\Comments\Comment_Attack_Davis_2.txt" />

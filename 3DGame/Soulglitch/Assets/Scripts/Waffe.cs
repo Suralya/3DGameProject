@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Waffe {
@@ -14,7 +14,10 @@ public class Waffe {
 	void Start () {
 	
 	}
-
+/// <summary>
+/// Sets Weapon
+/// </summary>
+/// <param name="name">Name.</param>
 	public Waffe(string name){
 		switch (name){
 		case "None":{
@@ -62,6 +65,6 @@ public class Waffe {
 	
 	// Update is called once per frame
 	void Update () {
-	//Update der Variablen nach Enum für ausgerüstete Waffen
+
 	}
 }
