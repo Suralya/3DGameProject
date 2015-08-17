@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
 	public Text Tooltiptext;
 
 	public Canvas Questlogcanvas;
-	public bool Questlogshown =false;
+	public bool Questlogshown =true;
 	public Text Questlogtext;
 
 	Tile temptile;
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		Questlogcanvas.enabled=true;
+		//Questlogcanvas.enabled=true;
 
 		findTiles ();
 		for (int i=map.Count-1; i>=0; i--) {

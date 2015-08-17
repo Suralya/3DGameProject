@@ -56,6 +56,11 @@ public class Scene1MovementPatterns : MovementPatterns {
 		//KI Attack if Enemy attackable, else Move 1
 
 			if (attacktilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
+
+			if(Random.Range(1,20)<=1)
+				Comments.instance.MakeComment(p.playerName,p.Avatar,"Verschwinde von hier!");
+
+
 			//if(attacktilesInRange.Count>0)
 			Debug.Log ("Someone is in Range");
 			var opponentsInRange = attacktilesInRange.Select (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).Count () > 0 ? GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).First () : null).ToList ();
