@@ -26,7 +26,7 @@ public class Scene1MovementPatterns : MovementPatterns {
 		bool TurnOn=true;
 		while (!GameManager.instance._userturn&&TurnOn) {
 
-			Debug.Log ("Civilian  movement");
+		//	Debug.Log ("Civilian  movement");
 			TurnOn=false;
 		}
 
@@ -118,7 +118,8 @@ public class Scene1MovementPatterns : MovementPatterns {
 
 		else if (movementTilesInRange.Where (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y != this && y.gridPosition == x.gridPosition).Count () > 0).Count () > 0) {
 
-
+			if(Random.Range(1,10)<=1)
+				Comments.instance.MakeComment(p.playerName,p.Avatar,"Dort ist Jemand!");
 
 			var opponentsInRange = movementTilesInRange.Select (x => GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y != this && y.gridPosition == x.gridPosition).Count () > 0 ? GameManager.instance.UserPlayers.Where (y => y.HP > 0 && y.gridPosition == x.gridPosition).First () : null).ToList ();
 			Player opponent = opponentsInRange.OrderBy (x => x != null ? -x.HP : 1000).ThenBy (x => x != null ? TilePathFinder.FindPath (GameManager.instance.map.Find (i => i.gridPosition == p.gridPosition), GameManager.instance.map.Find (i => i.gridPosition == p.gridPosition)).Count () : 1000).First ();
