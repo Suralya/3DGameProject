@@ -110,7 +110,6 @@
      <None Include="Assets\Texts\Comments\Comment_Death_Deera_1.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
-     <None Include="Assets\3D Models\README.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Davis_3.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
@@ -122,6 +121,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Texts\Dialogues\Missiontext_Mission_1_Dialogue_3_Part_1.txt" />
+     <None Include="Assets\Materials\OutlineShader.shader" />
      <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Davis_2.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
@@ -171,7 +171,6 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Texts\Comments\Comment_Kill_Civilian_Davis_1.txt" />
      <None Include="Assets\Texts\Comments\Comment_Attack_Phil_1.txt" />
-     <None Include="Assets\Materials\TryinHard 1.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\Texts\Comments\Comment_Move_Deera_1.txt" />
      <None Include="Assets\Texts\Comments\Comment_Aim_Miss_Platina_1.txt" />
