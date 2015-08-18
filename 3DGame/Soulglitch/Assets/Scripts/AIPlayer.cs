@@ -12,6 +12,7 @@ public class AIPlayer : Player {
 		gridPosition.x = this.transform.position.x;
 		gridPosition.y = this.transform.position.z;
 		base.Ini ();
+		if(!prop)
 		transform.GetComponent<Renderer>().material.color = Color.yellow;
 
 	}

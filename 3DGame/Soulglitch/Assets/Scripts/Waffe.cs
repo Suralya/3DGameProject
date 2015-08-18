@@ -21,7 +21,7 @@ public class Waffe {
 	public Waffe(string name){
 		switch (name){
 		case "None":{
-			Weaponname=name;
+			Weaponname="Unbewaffnet";
 			Attackrange=1;
 			Damage=1f;
 			Hitchance=0.65f;
@@ -29,7 +29,7 @@ public class Waffe {
             healing = false;
 			break;}
 		case "Rifle":{
-			Weaponname=name;
+			Weaponname="Sturmgewehr";
 			Attackrange=24;
 			Damage=6f;
 			Hitchance=0.75f;
@@ -37,7 +37,7 @@ public class Waffe {
             healing = false;
 			break;}
 		case "Gun":{
-			Weaponname=name;
+			Weaponname="Pistole";
 			Attackrange=12;
 			Damage=7f;
 			Hitchance=0.65f;
@@ -45,7 +45,7 @@ public class Waffe {
             healing = false;
 			break;}
 		case "Knife":{
-			Weaponname=name;
+			Weaponname="Messer";
 			Attackrange=1;
 			Damage=3f;
 			Hitchance=0.5f;

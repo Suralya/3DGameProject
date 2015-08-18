@@ -1,4 +1,4 @@
-Initialize engine version: 5.0.2f1 (0b02744d4013)
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -6,38 +6,42 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween.dll into Unity Child Domain
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween43.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween43.dll into Unity Child Domain
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween46.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween46.dll into Unity Child Domain
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween50.dll (this message is harmless)
-Loading C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween50.dll into Unity Child Domain
-- Completed reload, in  0.031 seconds
-desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween.dll into Unity Child Domain
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween43.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween43.dll into Unity Child Domain
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween46.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween46.dll into Unity Child Domain
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween50.dll (this message is harmless)
+Loading G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\DOTween50.dll into Unity Child Domain
+- Completed reload, in  0.057 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Tina Plavius\Desktop\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\System.dll (this message is harmless)
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1ce0 -> priority: 1 
-  Thread -> id: f9c -> priority: 1 
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: G:\Tina\3DGameProject\3DGame\BuildProject\Soulglitch_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 598 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
 Shader 'Outline': fallback shader 'Outlined/Silhouetted Diffuse' not found
-UnloadTime: 2.638040 ms
+UnloadTime: 3.409867 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at AIBehave.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 8037.
-Total: 1.103087 ms (FindLiveObjects: 0.227836 ms CreateObjectMapping: 0.083966 ms MarkObjects: 0.765684 ms  DeleteObjects: 0.025087 ms)
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 8046.
+Total: 1.336939 ms (FindLiveObjects: 0.253116 ms CreateObjectMapping: 0.099838 ms MarkObjects: 0.925105 ms  DeleteObjects: 0.058879 ms)
 
 waffe ausgewählt
  
@@ -111,13 +115,10 @@ waffe ausgewählt
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-Setting up 6 worker threads for Enlighten.
-  Thread -> id: 217c -> priority: 1 
-  Thread -> id: 2060 -> priority: 1 
-  Thread -> id: 908 -> priority: 1 
-  Thread -> id: 20c8 -> priority: 1 
-  Thread -> id: 2284 -> priority: 1 
-  Thread -> id: 8ec -> priority: 1 
+Setting up 3 worker threads for Enlighten.
+  Thread -> id: bd8 -> priority: 1 
+  Thread -> id: a14 -> priority: 1 
+  Thread -> id: 1340 -> priority: 1 
 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -159,6 +160,10 @@ Setting up 6 worker threads for Enlighten.
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Angriff auf23,0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
