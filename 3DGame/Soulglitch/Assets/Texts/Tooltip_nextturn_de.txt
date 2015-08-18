@@ -1,1 +1,3 @@
+Zug Beenden
+
 Beendet den Zug.

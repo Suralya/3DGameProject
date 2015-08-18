@@ -82,7 +82,7 @@ public class Scene1MovementPatterns : MovementPatterns {
             {
                 while (p.ActionPoints > p.Weapon.APCost && opponent.HP > 0)
                     AIBehave.instance.AIAttack(opponent, p);
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0f);
 
             }
             else

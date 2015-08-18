@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour {
 
 		var temp = GameObject.FindGameObjectWithTag ("Tooltip");
 		Tooltiptext = temp.GetComponent<Text>();
+	    Tooltiptext.text= System.IO.File.ReadAllText("Assets/Texts/Tooltip_hotkeys_de.txt") ;
 
 		DialoughesSzene1.instance.TurnOne ();
 		//Comments.instance.MakeComment ("Assets/Texts/Comment_Leader_01_de.txt"); //wird nur Gezeigt wenn in Szene Gestartet wird
@@ -436,7 +437,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
 
-				Tooltiptext.text=" ";
+                Tooltiptext.text = System.IO.File.ReadAllText("Assets/Texts/Tooltip_hotkeys_de.txt");
 			}
 			
 		}
@@ -460,7 +461,7 @@ public class GameManager : MonoBehaviour {
 		UserPlayers[currentPlayerIndex].moving=false;
 		UserPlayers[currentPlayerIndex].aiming=false;
 		removeTileHighlights ();
-		Tooltiptext.text=" ";
+        Tooltiptext.text = System.IO.File.ReadAllText("Assets/Texts/Tooltip_hotkeys_de.txt");
 
 		//Debug.Log("weapon changed ");
 	}
@@ -499,7 +500,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
-				Tooltiptext.text=" ";
+                Tooltiptext.text = System.IO.File.ReadAllText("Assets/Texts/Tooltip_hotkeys_de.txt");
 			}
 			
 		}
@@ -536,7 +537,7 @@ public class GameManager : MonoBehaviour {
 				UserPlayers[currentPlayerIndex].moving=false;
 				UserPlayers[currentPlayerIndex].aiming=false;
 				removeTileHighlights ();
-				Tooltiptext.text=" ";
+                Tooltiptext.text = System.IO.File.ReadAllText("Assets/Texts/Tooltip_hotkeys_de.txt");
 			}
 			
 		}

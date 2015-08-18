@@ -120,6 +120,7 @@
      <None Include="Assets\Texts\Tooltip_weaponchange_de.txt" />
      <None Include="Assets\Texts\Comments\Comment_Kill_Enemy_Davis_1.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Texts\Tooltip_hotkeys_de.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Texts\Dialogues\Missiontext_Mission_1_Dialogue_3_Part_1.txt" />
      <None Include="Assets\Materials\OutlineShader.shader" />
