@@ -8,6 +8,7 @@ public class AIBehave : MonoBehaviour {
 	
 	void Awake() {
 		instance=this;
+        _lr = GameManager.instance._lr;
 	}
 
 	// Use this for initialization
@@ -137,7 +138,7 @@ public class AIBehave : MonoBehaviour {
 		_lr.SetPosition(1, target);
 		
 		_lr.enabled = true;
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(0.2f);
 		_lr.enabled = false;
 	}
 
